@@ -1,0 +1,276 @@
+.contacts {
+   margin-bottom: 20.7rem;
+   &__inner {
+      padding: 5.4rem;
+      background: #E2E9E9;
+      border-radius: 6rem;
+   }
+   &__info {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 4.9rem;
+   }
+   &__item {
+      width: 22.55%;
+      padding: 3.5rem 3.5rem 3.3rem 3.6rem;
+      background-color: $white;
+      border-radius: 3rem;
+      margin-right: 4.9rem;
+      &:nth-child(4n+4) {
+         margin-right: 0;
+      }
+      &-title {
+         margin-bottom: 3.3rem;
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 145%;
+      }
+      &-n {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         height: 73%;
+         &-list {
+            margin-bottom: 3rem;
+            &>li {
+               padding-left: 2.5rem;
+               font-weight: 700;
+               line-height: 150%;
+               position: relative;
+               &:not(:last-child) {
+                  margin-bottom: 1.5rem;
+               }
+               &::after {
+                  position: absolute;
+                  content: '';
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  width: 1rem;
+                  height: 1rem;
+                  border-radius: 50%;
+                  background-color: $green;
+               }
+            }
+         }
+         &-link {
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 150%;
+            text-transform: uppercase;
+            position: relative;
+            width: fit-content;
+            &::after {
+               position: absolute;
+               content: '';
+               left: 0;
+               bottom: 0.2rem;
+               width: 100%;
+               height: 1px;
+               background-color: $fzAll;
+            }
+         }
+      }
+      &-c {
+         &-el {
+            display: flex;
+            &-img {
+               width: 2.4rem;
+               height: 2.4rem;
+               margin-right: 0.9rem;
+               & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+               }
+            }
+            &:not(:last-child) {
+               margin-bottom: 2.2rem;
+            }
+            &-data {
+               font-weight: 700;
+               line-height: 150%;
+               width: 86%;
+            }
+         }
+      }
+      &-t {
+         &-el {
+            padding-left: 0.4rem;
+            &-name {
+               font-weight: 700;
+               line-height: 150%;
+               display: inline-block;
+            }
+            &-data {
+               line-height: 150%;
+            }
+            &:not(:last-child) {
+               margin-bottom: 2.3rem;
+            }
+         }
+      }
+      &-s {
+         &-el {
+            display: flex;
+            align-items: center;
+            &-img {
+               width: 4.5rem;
+               height: 4.5rem;
+               margin-right: 1.5rem;
+               & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+               }
+            }
+            &-data {
+               width: 80%;
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 150%;
+               text-transform: uppercase;
+            }
+            &:not(:last-child) {
+               margin-bottom: 1.5rem;
+            }
+         }
+      }
+   }
+   &__map {
+      width: 100%;
+      height: 44.9rem;
+      border-radius: 3rem;
+      &>div {
+         width: 100%;
+         height: 100%;
+         border-radius: 3rem;
+         & .ymaps-2-1-79-map {
+            border-radius: 5rem;
+         }
+         & .ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before {
+            border-radius: 5rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .contacts {
+      margin-bottom: 31vw;
+      &__inner {
+         padding: 8.47vw 5.13vw 17.45vw 5.13vw;
+         border-radius: 7.7vw;
+      }
+      &__info {
+         display: block;
+         margin-bottom: 7.2vw;
+      }
+      &__item {
+         width: 100%;
+         padding: 8.21vw 5vw 9.24vw 5.13vw;
+         border-radius: 7.7vw;
+         margin-right: 0;
+         &:nth-child(4n+4) {
+            margin-right: 0;
+         }
+         &:not(:last-child) {
+            margin-bottom: 5.13vw;
+         }
+         &-title {
+            margin-bottom: 7.2vw;
+            font-size: 5.13vw;
+            line-height: 145%;
+         }
+         &-n {
+            height: 100%;
+            &-list {
+               margin-bottom: 22.8vw;
+               &>li {
+                  padding-left: 5.9vw;
+                  font-size: 4.62vw;
+                  line-height: 150%;
+                  &:not(:last-child) {
+                     margin-bottom: 3vw;
+                  }
+                  &::after {
+                     width: 2.56vw;
+                     height: 2.56vw;
+                  }
+               }
+            }
+            &-link {
+               font-size: 3.6vw;
+               line-height: 150%;
+               &::after {
+                  bottom: 1vw;
+               }
+            }
+         }
+         &-c {
+            &-el {
+               &-img {
+                  width: 6.16vw;
+                  height: 6.16vw;
+                  margin-right: 2.3vw;
+               }
+               &:not(:last-child) {
+                  margin-bottom: 5.13vw;
+               }
+               &-data {
+                  font-size: 4.62vw;
+                  line-height: 150%;
+                  width: 86%;
+               }
+            }
+         }
+         &-t {
+            &-el {
+               padding-left: 0vw;
+               &-name {
+                  line-height: 150%;
+                  font-size: 4.62vw;
+               }
+               &-data {
+                  line-height: 150%;
+                  font-size: 4.62vw;
+               }
+               &:not(:last-child) {
+                  margin-bottom: 4.5vw;
+               }
+            }
+         }
+         &-s {
+            &-el {
+               &-img {
+                  width: 11.55vw;
+                  height: 11.55vw;
+                  margin-right: 3.85vw;
+               }
+               &-data {
+                  width: 80%;
+                  font-size: 3.6vw;
+                  line-height: 150%;
+               }
+               &:not(:last-child) {
+                  margin-bottom: 3.3vw;
+               }
+            }
+         }
+      }
+      &__map {
+         width: 100%;
+         height: 96.5vw;
+         border-radius: 7.7vw;
+         &>div {
+            border-radius: 7.7vw;
+            & .ymaps-2-1-79-map {
+               border-radius: 7.7vw;
+            }
+            & .ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before {
+               border-radius: 7.7vw;
+            }
+         }
+      }
+   }
+}

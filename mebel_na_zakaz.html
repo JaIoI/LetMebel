@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="another website">
+   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+   <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./css/animate.min.css">
+   <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="./css/simplebar.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Document</title>
+</head>
+<body>
+
+   <header class="header">
+      <div class="container">
+         <div class="header__inner">
+            <div class="header__burger">
+               <img src="./img/icon/burger.svg" alt="">
+            </div>
+            <div class="header__btns">
+               <form class="header__btns-btn mobile">
+                  <div class="header__btns-btn-el dropdown-click">
+                     <img src="./img/icon/search.svg" alt="">
+                  </div>
+                  <!-- <label class="dropdown__content">
+                     <input type="text" placeholder="Поиск..." class="1">
+                     <div class="desctop"><img src="./img/icon/search-black.svg" alt=""></div>
+                     <button class="mobile"><img src="./img/icon/search-black.svg" alt=""></button>
+                     <button class="btn desctop">Найти</button>
+                     <div class="mobile close">
+                        <img src="./img/icon/close.svg" alt="">
+                     </div>
+                  </label> -->
+               </form>
+            </div>
+            <a href="#" class="header__logo">
+               <img src="./img/logo.svg" alt="">
+            </a>
+            <a href="#" class="header__online header__category desctop">Мебель на заказ</a>
+            <div class="header__menu desctop">
+               <a href="#">Интернет-магазин</a>
+               <a href="#">О нас</a>
+               <a href="#">Проекты</a>
+               <a href="#">Услуги</a>
+               <a href="#">Инфо</a>
+               <a href="#">Контакты</a>
+            </div>
+            <div class="header__btns">
+               <form class="header__btns-btn desctop">
+                  <div class="header__btns-btn-el dropdown-click">
+                     <img src="./img/icon/search.svg" alt="">
+                  </div>
+                  <!-- <label class="dropdown__content">
+                     <input type="text" placeholder="Поиск..." class="1">
+                     <div class="desctop"><img src="./img/icon/search-black.svg" alt=""></div>
+                     <button class="mobile"><img src="./img/icon/search-black.svg" alt=""></button>
+                     <button class="btn desctop">Найти</button>
+                     <div class="mobile close">
+                        <img src="./img/icon/close.svg" alt="">
+                     </div>
+                  </label> -->
+               </form>
+
+               <a href="#" class="header__btns-btn">
+                  <div class="header__btns-btn-el">
+                     <img src="./img/icon/user-black.svg" alt="">
+                  </div>
+               </a>
+
+               <a href="#" class="header__btns-btn">
+                  <div class="header__btns-btn-el">
+                     <img src="./img/icon/basket-black.svg" alt="">
+                  </div>
+                  <div class="header__btns-btn-num active">2</div>
+               </a>
+
+            </div>
+            
+            <div class="header__contacts desctop">
+               <a href="tel:8 499 322 41 00" class="header__contacts-phone">8 499 322 41 00</a>
+               <div class="header__contacts-mode">ПН-ПТ 10:00 - 19:00</div>
+            </div>
+         </div>
+      </div>
+      <div class="header__add-wrap">
+         <div class="header__add">
+            <div class="header__add-title">Категории</div>
+            <div class="header__add-close header__category"></div>
+            <div class="header__add-items">
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+               <a href="" class="header__add-item">
+                  <div class="header__add-item-img">
+                     <img src="./img/hang1.png" alt="">
+                  </div>
+                  <div class="header__add-item-name">Лаунж зоны</div>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- <div class="header__bm mobile">
+         <div class="header__bm-inner">
+            <ul class="header__bm-lists">
+               <li>
+                 <span class="akkar">Каталог</span>
+                 <div>
+                  <div>
+                     <span class="akkar2">Анализ физических свойств материалов</span>
+                     <ul class="header__bm-list">
+                         <li><a href="#">Импедансная спектроскопия</a></li>
+                         <li><a href="#">Анализаторы размеров частиц и дзета-потенциала</a></li>
+                         <li><a href="#">Измерения электрических характеристик</a></li>
+                         <li><a href="#">Термический анализ</a></li>
+                         <li><a href="#">Динамический механический анализ</a></li>
+                         <li><a href="#">Термогравиметрия</a></li>
+                      </ul>
+                  </div>
+                  <div>
+                   <span class="akkar2">Испытание материалов</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Управление технологическими процессами</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Элементный и изотопный анализ</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Бренды</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Экологический мониторинг и промышленная экология</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Науки о поверхности и научное материаловедение</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Инспекция и метрология высокой точности</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                 </div>
+               </li>
+               <li><a href="#">Область применения</a></li>
+               <li><a href="#">Магазин</a></li>
+               <li><a href="#">Сервис</a></li>
+               <li>
+                  <span class="akkar">О нас</span>
+                  <ul class="header__bm-list">
+                     <li><a href="#">Импедансная спектроскопия</a></li>
+                     <li><a href="#">Анализаторы размеров частиц и дзета-потенциала</a></li>
+                     <li><a href="#">Измерения электрических характеристик</a></li>
+                     <li><a href="#">Термический анализ</a></li>
+                     <li><a href="#">Динамический механический анализ</a></li>
+                     <li><a href="#">Термогравиметрия</a></li>
+                  </ul>
+               </li>
+           </ul>
+           <div class="header__bm-mess">
+              <a href="#" class="header__bm-mess-i header__bm-mess-t">
+                 <img src="./img/icon/telegram-black.svg" alt="">
+              </a>
+              <a href="#" class="header__bm-mess-i header__bm-mess-y">
+                  <img src="./img/icon/youtube-black.svg" alt="">
+               </a>
+               <a href="#" class="header__bm-mess-i header__bm-mess-w">
+                  <img src="./img/icon/whatsapp-black.svg" alt="">
+               </a>
+               <a href="#" class="header__bm-mess-i">RU</a>
+           </div>
+           <a href="tel:74953740401" class="header__bm-phone">+7 495 374-04-01</a>
+           <div class="header__bm-mail">sales@imc-systems.ru</div>
+        </div>
+     </div> -->
+   </header>
+
+   <main class="main">
+
+      <div class="bc">
+         <div class="container">
+            <a href="#">Главная</a>
+            <a href="#">Каталог</a>
+            <a href="#">Мебель на заказ</a>
+            <span>Ванные на заказ</span>
+         </div>
+      </div>
+
+      <section class="article article__dp1">
+         <div class="container">
+            <div class="article__inner">
+               <div class="article__top">
+                  <div class="article__top-cnt">
+                     <h1>Ванные на заказ</h1>
+                  </div>
+                  <a href="#" class="article__top-btn btn">оставить заявку</a>
+               </div>
+              <div class="article__img">
+                  <div class="swiper-container article__big-swiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article5.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article3.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article3.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__big-slide">
+                        <img src="./img/article3.jpg" alt="">
+                     </div>
+                  </div>
+                  </div>
+                  <div class="swiper-container article__small-swiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article3.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article3.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article2.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide article__small-slide">
+                        <img src="./img/article3.jpg" alt="">
+                     </div>
+                  </div>
+                  </div>
+                  <div class="swiper-button-next article__btn-next btn-next"></div>
+                  <div class="swiper-button-prev article__btn-prev btn-prev"></div>
+                  <div class="article__img-soc desctop">
+                     <div class="article__img-soc-name">мы в сети</div>
+                     <div class="article__img-soc-mess">
+                        <a href="">telegram</a>
+                        <a href="">OK</a>
+                        <a href="">youtube</a>
+                        <a href="">VK</a>
+                     </div>
+                  </div>
+              </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="work wow animate__animated animate__fadeIn">
+         <div class="container">
+            <div class="work__inner">
+               <div class="work__content">
+                  <div class="work__content-title title">Как это работает</div>
+                  <div class="work__content-text">Оставьте заявку, и наш специалист свяжется с вами</div>
+               </div>
+               <div class="swiper-container work__swiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide work__slide">
+                        <div class="work__slide-num">01</div>
+                        <div class="work__slide-wr">
+                           <div class="work__slide-icon">
+                              <img src="./img/icon/work1.svg" alt="">
+                           </div>
+                           <div class="work__slide-name">Оформление заявки</div>
+                           <div class="work__slide-text">Опишите своими словами вашу потребность</div>
+                        </div>
+                        <div class="work__slide-decoration"></div>
+                     </div>
+                     <div class="swiper-slide work__slide">
+                        <div class="work__slide-num">02</div>
+                        <div class="work__slide-wr">
+                           <div class="work__slide-icon">
+                              <img src="./img/icon/work2.svg" alt="">
+                           </div>
+                           <div class="work__slide-name">Согласование</div>
+                           <div class="work__slide-text">Обсуждение проекта, сроков и стоимости</div>
+                        </div>
+                        <div class="work__slide-decoration"></div>
+                     </div>
+                     <div class="swiper-slide work__slide">
+                        <div class="work__slide-num">03</div>
+                        <div class="work__slide-wr">
+                           <div class="work__slide-icon">
+                              <img src="./img/icon/work1.svg" alt="">
+                           </div>
+                           <div class="work__slide-name">Контракт</div>
+                           <div class="work__slide-text">Заключение договора, авансирование, запуск в производство</div>
+                        </div>
+                        <div class="work__slide-decoration"></div>
+                     </div>
+                     <div class="swiper-slide work__slide">
+                        <div class="work__slide-num">04</div>
+                        <div class="work__slide-wr">
+                           <div class="work__slide-icon">
+                              <img src="./img/icon/work1.svg" alt="">
+                           </div>
+                           <div class="work__slide-name">Оформление заявки</div>
+                           <div class="work__slide-text">Опишите своими словами вашу потребность</div>
+                        </div>
+                        <div class="work__slide-decoration"></div>
+                     </div>
+                     <div class="swiper-slide work__slide">
+                        <div class="work__slide-num">05</div>
+                        <div class="work__slide-wr">
+                           <div class="work__slide-icon">
+                              <img src="./img/icon/work2.svg" alt="">
+                           </div>
+                           <div class="work__slide-name">Согласование</div>
+                           <div class="work__slide-text">Обсуждение проекта, сроков и стоимости</div>
+                        </div>
+                        <div class="work__slide-decoration"></div>
+                     </div>
+                     <div class="swiper-slide work__slide">
+                        <div class="work__slide-decoration"></div>
+                        <div class="work__slide-wr">
+                           <div class="work__slide-num">06</div>
+                           <div class="work__slide-icon">
+                              <img src="./img/icon/work1.svg" alt="">
+                           </div>
+                           <div class="work__slide-name">Контракт</div>
+                           <div class="work__slide-text">Заключение договора, авансирование, запуск в производство</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-next work__btn-next btn-next"></div>
+               <div class="work__btn-slash btn-slash"></div>
+               <div class="swiper-button-prev work__btn-prev btn-prev"></div>
+               <div class="work__swiper-pagination swiper-pagination">
+                  <span class="current current9">01</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="cost">
+         <div class="container">
+            <div class="cost__inner">
+               <div class="cost__header">
+                  <div class="cost__header-title title">Сколько это стоит?</div>
+                  <div class="cost__header-subtitle">И сколько времени займет</div>
+               </div>
+               <div class="cost__text">
+                  <p>Наше производство LetMebel занимается производством мебели, включая и мебель для ванной на заказ в Москве. В зависимости от вашего бюджета дизайнер подбирает материалы, подготавливает дизайн-проект в соответствии с вашими пожеланиями, особенностями помещения и бюджетом. Мы можем порекомендовать мебель для на ванной на заказ в Москве недорого из таких влагостойких материалов, как ламинированная ДСП Egger, МДФ с покрытием влагостойкого лака, который может создать глянцевый или матовый эффект. Особенно рекомендуем МДФ – один из самых экологически чистых материалов, за исключением природного массива. Мебель для ванных из массива вы можете посмотреть здесь.</p>
+               </div>
+               <div class="cost__info">
+                  <div class="cost__info-item">
+                     <div class="cost__info-item-c">Цена</div>
+                     <div class="cost__info-item-n">150 000 - 300 000 ₽</div>
+                     <div class="cost__info-item-s">В среднем</div>
+                  </div>
+                  <div class="cost__info-item">
+                     <div class="cost__info-item-c">Сроки</div>
+                     <div class="cost__info-item-n">от 3 до 4 недель</div>
+                     <div class="cost__info-item-s">В среднем</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="description description__mnz wow animate__animated animate__fadeIn">
+         <div class="container">
+            <div class="description__inner">
+               <div class="description__info">
+                  <div class="description__info-title">О мебельной фабрике LETMEBEL</div>
+                  <div class="description__info-img">
+                     <img src="./img/description3.jpg" alt="">
+                     <a href="https://www.youtube.com/watch?v=et281UHNoOU" class="description__info-img-video" data-fancybox></a>
+                  </div>
+               </div>
+               <div class="description__content">
+                  <div class="description__content-title title">Мебель на заказ</div>
+                  <p>Ванная – особенная комната, хотя на первый взгляд об этом можно и не задуматься. Дело в том, что именно эта комната славится перепадами температуры и влажности, что может отрицательно сказаться на той мебели, что обычно устанавливается в ванной комнате. Именно поэтому к мебели для ванной под заказ предъявляются особые требования, чтобы она не ссохлась и не деформировалась от подобных условий.</p>
+                  <p> Наше производство LetMebel занимается производством мебели, включая и мебель для ванной на заказ в Москве. В зависимости от вашего бюджета дизайнер подбирает материалы, подготавливает дизайн-проект в соответствии с вашими пожеланиями, особенностями помещения и бюджетом. Мы можем порекомендовать мебель для на ванной на заказ в Москве недорого из таких влагостойких материалов, как ламинированная ДСП Egger, МДФ с покрытием влагостойкого лака, который может создать глянцевый или матовый эффект. Особенно рекомендуем МДФ – один из самых экологически чистых материалов, за исключением природного массива. Мебель для ванных из массива вы можете посмотреть здесь.</p>
+                  <p>Если же вы хотите приобрести мебель для ванной на заказ недорого, то остановите выбор на МДФ, который отличается повышенной влагостойкостью и не выделяет вредных веществ. Абсолютно безопасно для дома!</p>
+                  <p>Чтобы осуществить заказ мебели для ванной по размерам, нужно определиться не только со стилем мебели, хотя это тоже, безусловно, важно, но и с её количеством. Обычно ванные комнаты не радуют простором, поэтому мебель для них не должна занимать много места, но при этом сохранить высокую функциональность. Обычно в ванную помещают: тумбы, навесные шкафы-пеналы, полки и стеллажи. В зависимости от количества вещей, которые вы планируете хранить в ванной комнате и использовать по назначению.</p>
+                  <p>Наиболее удобным вариантом здесь является встроенные изделия, которые практически не занимают места и скрывают различные недостатки помещения, полученные в результате строительства.</p>
+                  <p>Если вы решите приобрести мебель для ванной комнаты под заказ нашего производства, то в подарок получите комплекс дополнительных бесплатных услуг: помощь дизайнера, доставку, подъём на нужный этаж и сборку в тот же день.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="projects wow animate__animated animate__fadeIn">
+         <div class="container">
+            <div class="projects__inner">
+               <div class="projects__header">
+                  <div class="projects__header-left title">Наши проекты</div>
+                  <div class="projects__header-center toggle-class-parent">
+                     <div class="projects__header-center-btn toggle-class-activ">
+                        <div class="projects__header-center-btn-icon">
+                           <img src="./img/icon/projects-icon1.svg" alt="">
+                        </div>
+                        <div class="projects__header-center-btn-name">аэропорты</div>
+                     </div>
+
+                     <div class="projects__header-center-btn toggle-class-activ">
+                        <div class="projects__header-center-btn-icon">
+                           <img src="./img/icon/projects-icon2.svg" alt="">
+                        </div>
+                        <div class="projects__header-center-btn-name">офисы</div>
+                     </div>
+
+                     <div class="projects__header-center-btn active toggle-class-activ">
+                        <div class="projects__header-center-btn-icon">
+                           <img src="./img/icon/projects-icon3.svg" alt="">
+                        </div>
+                        <div class="projects__header-center-btn-name">стадионы</div>
+                     </div>
+
+                     <div class="projects__header-center-btn toggle-class-activ">
+                        <div class="projects__header-center-btn-icon">
+                           <img src="./img/icon/projects-icon4.svg" alt="">
+                        </div>
+                        <div class="projects__header-center-btn-name">Мед центры</div>
+                     </div>
+
+                     <div class="projects__header-center-btn toggle-class-activ">
+                        <div class="projects__header-center-btn-icon">
+                           <img src="./img/icon/projects-icon5.svg" alt="">
+                        </div>
+                        <div class="projects__header-center-btn-name">horeca</div>
+                     </div>
+
+                     <div class="projects__header-center-btn toggle-class-activ">
+                        <div class="projects__header-center-btn-icon">
+                           <img src="./img/icon/projects-icon6.svg" alt="">
+                        </div>
+                        <div class="projects__header-center-btn-name">retail</div>
+                     </div>
+                  </div>
+                  <div class="projects__header-right">
+                     <div class="projects__header-right-info">2 000
+                        <span>готовых проектов</span>
+                     </div>
+                     <a href="#" class="projects__header-right-link link">смотреть все</a>
+                  </div>
+               </div>
+               <div class="projects__slider">
+                  <div class="swiper-container projects__swiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects1.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon2.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">Офис на Воронцовской</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects2.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon3.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">МГФСО "Вымпел"</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects3.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon4.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">Кабинет осмотра</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects4.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon3.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">Арена Лужники</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects1.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon2.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">Офис на Воронцовской</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects2.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon3.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">МГФСО "Вымпел"</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide projects__slide">
+                           <div class="projects__slide-img">
+                              <img src="./img/projects2.jpg" alt="">
+                           </div>
+                           <div class="projects__slide-content">
+                              <div class="projects__slide-content-icon">
+                                 <img src="./img/icon/projects-icon3.svg" alt="">
+                              </div>
+                              <div class="projects__slide-content-title">МГФСО "Вымпел"</div>
+                              <div class="projects__slide-content-text">Поставка и монтаж оборудования</div>
+                              <a href="#" class="projects__slide-content-link">подробнее</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-next projects__btn-next btn-next"></div>
+               <div class="projects__btn-slash btn-slash"></div>
+               <div class="swiper-button-prev projects__btn-prev btn-prev"></div>
+               <div class="swiper-pagination projects__swiper-bullet pagination-bullet"></div>
+               <div class="projects__swiper-pagination swiper-pagination">
+                  <span class="current current3">01</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="hang hang__ud wow animate__animated animate__fadeIn">
+         <div class="container">
+            <div class="hang__inner">
+               <div class="hang__header">
+                  <div class="hang__header-title title">Почему нас выбирают</div>
+                  <a href="#" class="hang__header-link link">подробнее о нас</a>
+               </div>
+               <div class="hang__elements">
+                  <div class="hang__elements-name">Ключевые особенности</div>
+                  <div class="hang__elements-items">
+                     <div class="hang__elements-item">уникальный сервис</div>
+                     <div class="hang__elements-item">готовые решения</div>
+                     <div class="hang__elements-item">ведущие бренды</div>
+                  </div>
+               </div>
+               <div class="swiper-container hang__swiper-i">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide hang__item">
+                        <div class="hang__item-num">01</div>
+                        <div class="hang__item-img">
+                           <img src="./img/hang1.png" alt="">
+                        </div>
+                        <div class="hang__item-name">Работаем с множеством партнеров</div>
+                        <div class="hang__item-text">Мы - уникальный сервис, реализующий ваши проекты на&nbsp;100%, привлекая к процессу десятки фабрик</div>
+                     </div>
+                     <div class="swiper-slide hang__item">
+                        <div class="hang__item-num">02</div>
+                        <div class="hang__item-img">
+                           <img src="./img/hang2.png" alt="">
+                        </div>
+                        <div class="hang__item-name">Выгодные предложения по&nbsp;цене и срокам</div>
+                        <div class="hang__item-text">Мы делаем проекты изначально вместе с партнерами по уже давно согласованным партнерским оптовым ценам.</div>
+                     </div>
+                     <div class="swiper-slide hang__item">
+                        <div class="hang__item-num">03</div>
+                        <div class="hang__item-img">
+                           <img src="./img/hang3.png" alt="">
+                        </div>
+                        <div class="hang__item-name">Разработка от А до Я под ключ</div>
+                        <div class="hang__item-text">Мы закрываем любую потребность&nbsp;под ключ, какой бы сложной она не была</div>
+                     </div>
+                     <div class="swiper-slide hang__item">
+                        <div class="hang__item-num">04</div>
+                        <div class="hang__item-img">
+                           <img src="./img/hang4.png" alt="">
+                        </div>
+                        <div class="hang__item-name">Собственный интернет-магазин</div>
+                        <div class="hang__item-text">Мы дистрибьютируем готовые изделия, если на ожидание нет времени и не требуются нестандартные решения</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-next hang__btn-next btn-next mobile"></div>
+               <div class="hang__btn-slash btn-slash mobile"></div>
+               <div class="swiper-button-prev hang__btn-prev btn-prev mobile"></div>
+               <div class="hang__swiper-pagination swiper-pagination mobile">
+                  <span class="current current10">01</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="forms wow animate__animated animate__fadeIn">
+         <div class="container">
+            <div class="forms__inner">
+               <div class="forms__imgs">
+                  <div class="forms__img1">
+                     <img src="./img/forms1.png" alt="">
+                  </div>
+                  <div class="forms__img2">
+                     <img src="./img/forms2.png" alt="">
+                  </div>
+               </div>
+               <div class="forms__content">
+                  <div class="forms__content-title title">Воплотим проект в&nbsp;жизнь!
+                     <span>Оставьте заявку, и наш специалист свяжется с вами</span>
+                  </div>
+                  <form class="forms__content-form">
+                     <label>
+                        <input type="text" placeholder="Ваше имя">
+                     </label>
+                     <label>
+                        <input type="text" class="tel" placeholder="Ваш Телефон">
+                     </label>
+                      <label>
+                        <textarea placeholder="КОмментарий..."></textarea>
+                     </label>
+                     <button class="btn">Отправить</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+   </main>
+
+   <footer class="footer wow animate__animated animate__fadeIn">
+      <div class="container">
+         <div class="footer__top">
+            <a href="#" class="footer__top-logo">
+               <img src="./img/logo.svg" alt="">
+            </a>
+            <div class="footer__top-menu">
+               <a href="#" class="footer__top-it">
+                  <img src="./img/icon/footer-car.svg" alt="">
+                  Доставка и оплата
+               </a>
+               <a href="#" class="footer__top-it">
+                  <img src="./img/icon/footer-user.svg" alt="">
+                  Клиентам
+               </a>
+               <a href="#" class="footer__top-it">
+                  <img src="./img/icon/footer-ok.svg" alt="">
+                  Партнерам
+               </a>
+               <a href="#" class="footer__top-it">
+                  <img src="./img/icon/footer-procent.svg" alt="">
+                  Скидки и  акции
+               </a>
+            </div>
+            <div class="footer__top-mess">
+               <a href="#" class="footer__top-mess-it">
+                  <img src="./img/icon/footer-telegram.svg" alt="">
+               </a>
+               <a href="#" class="footer__top-mess-it">
+                  <img src="./img/icon/footer-youtube.svg" alt="">
+               </a>
+               <a href="#" class="footer__top-mess-it">
+                  <img src="./img/icon/footer-vk.svg" alt="">
+               </a>
+            </div>
+         </div>
+         <div class="footer__center">
+            <div class="footer__center-map">
+               <div id="contloc"></div>
+            </div>
+            <div class="footer__center-btns">
+               <a href="#" class="footer__center-btn">Мебель на заказ</a>
+               <a href="#" class="footer__center-btn">Интернет-магазин</a>
+               <a href="#" class="footer__center-btn">Написать директору</a>
+            </div>
+            <ul class="footer__center-list">
+               <li><a href="#">Услуги</a></li>
+               <li><a href="#">О нас</a></li>
+               <li><a href="#">Проекты</a></li>
+               <li><a href="#">Информация</a></li>
+               <li><a href="#">Контакты</a></li>
+               <li><a href="#">Новости</a></li>
+            </ul>
+            <div class="footer__center-add">
+               <div class="footer__center-add-info">
+                  <div class="footer__center-add-info-img">
+                     <img src="./img/icon/footer-info.svg" alt="">
+                  </div>
+                  <div class="footer__center-add-info-text">Мы зарегистрированы на&nbsp;портале поставщиков</div>
+               </div>
+               <div class="footer__center-add-contacts">
+                  <a href="tel:74954806852">+7 (495) 480-68-52</a>
+                  <a href="#">info@letmebel.ru</a>
+               </div>
+               <div class="footer__center-add-qr">
+                  <img src="./img/icon/QR_code.png" alt="">
+               </div>
+               <div class="footer__center-add-label">
+                  <div class="footer__center-add-label-img">
+                     <img src="./img/icon/label.svg" alt="">
+                  </div>
+                  <div class="footer__center-add-label-text">Request
+                     <span>Design</span>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__center-mess">
+               <a href="#" class="footer__center-mess-it">
+                  <img src="./img/icon/footer-telegram-grey.svg" alt="">
+               </a>
+               <a href="#" class="footer__center-mess-it">
+                  <img src="./img/icon/footer-vk-grey.svg" alt="">
+               </a>
+               <a href="#" class="footer__center-mess-it">
+                  <img src="./img/icon/footer-youtube-grey.svg" alt="">
+               </a>
+            </div>
+         </div>
+         <div class="footer__bottom">
+            <div class="footer__bottom-info">
+               <div>2008-2022 ©  ООО«Летвиль». Все&nbsp;права защищены</div>
+               <a href="#">Политика конфиденциальности</a>
+               <div>Информация, размещенная на сайте, не является публичной офертой</div>
+            </div>
+            <div class="footer__bottom-o">
+               <a href="#">
+                  <img src="./img/icon/master card.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="./img/icon/visa.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="./img/icon/mir.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="./img/icon/yandex.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="./img/icon/webmoney.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="./img/icon/qiwi.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="./img/icon/ruble.svg" alt="">
+               </a>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/jquery.fancybox.min.js"></script>
+<script src="./js/wow.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="./js/jquery.maskedinput.js"></script>
+<script src="./js/inputmask.js"></script>
+<script src="./js/parallax.js"></script>
+<script src="./js/simplebar.js"></script>
+<script src="./js/nouislider.min.js"></script>
+<script src="./js/wNumb.min.js"></script>
+<script src="./js/anime.min.js"></script>
+<script src="./js/lottie-player.js"></script>
+<script src="./js/typed.min.js"></script>
+<script defer src="./js/main.js"></script>
+<script src="./js/animate.js"></script>
+<script>
+   new WOW().init();
+ 
+</script>
+</body>
+</html>

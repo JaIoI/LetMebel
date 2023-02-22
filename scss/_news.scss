@@ -1,0 +1,205 @@
+.news {
+   margin-bottom: 16.6rem;
+   position: relative;
+   & h1 {
+      margin-bottom: 6.5rem;
+      text-align: center;
+   }
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+      position: relative;
+      height: 48.6rem;
+      width: 30.28%;
+      margin-right: 7.4rem;
+      margin-bottom: 7.4rem;
+      border-radius: 3.5rem;
+      &:nth-child(3n+3) {
+         margin-right: 0;
+      }
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 3.5rem;
+      }
+      &-data {
+         line-height: 150%;
+         color: $white;
+         padding: 0.5rem 1.4rem 0.4rem 1.6rem;
+         background: $green;
+         box-shadow: 0.6rem 1rem 3rem rgba(0, 0, 0, 0.05);
+         border-radius: 100rem;
+         width: fit-content;
+         position: absolute;
+         left: 2.8rem;
+         top: 3.4rem;
+      }
+      &-content {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: 16.1rem;
+         padding: 3rem 3rem 3.5rem 3.7rem;
+         border-radius: 0 0 3.5rem 3.5rem;
+         z-index: 2;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10rem);
+            z-index: -1;
+            border-radius: 0 0 3.5rem 3.5rem;
+         }
+         &-name {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 145%;
+            color: $white;
+         }
+         &-text {
+            line-height: 150%;
+            color: $white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+         }
+      }
+   }
+   &__btn {
+      width: fit-content;
+      margin: 0 auto;
+      display: block;
+      padding: 2.2rem 4rem 2.1rem 4rem;
+   }
+
+   &__nd {
+      margin-bottom: 9.5rem;
+      .news {
+         &__inner {
+            position: relative;
+         }
+         &__btn-next {
+            top: 1.7rem;
+            right: 1.5rem;
+         }
+         &__btn-prev {
+            left: unset;
+            top: 4rem;
+            right: 8.5rem;
+         }
+         &__btn-slash {
+            right: 5rem;
+            top: 0rem;
+         }
+         &__swiper-pagination {
+            top: 1.5rem;
+            right: 20.5rem;
+         }
+         &__title {
+            text-align: left;
+            margin-bottom: 6.3rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .news {
+      margin-bottom: 25.3vw;
+      &::after {
+         height: 53.6vw;
+      }
+      & h1 {
+         margin-bottom: 10.27vw;
+         text-align: left;
+      }
+      &__items {
+        display: block;
+        margin-bottom: 8.2vw;
+      }
+      &__item {
+         height: 88.8vw;
+         width: 100%;
+         margin-right: 0;
+         margin-bottom: 0;
+         border-radius: 8vw;
+         display: block;
+         & img {
+            border-radius: 8vw;
+         }
+         &:not(:last-child) {
+            margin-bottom: 6.1vw;
+         }
+         &-data {
+            line-height: 150%;
+            font-size: 4.62vw;
+            padding: 1.28vw 3.85vw 1.02vw 3.85vw;
+            box-shadow: 1.2rem 2rem 6rem rgba(0, 0, 0, 0.05);
+            left: 5.13vw;
+            top: 5.13vw;
+         }
+         &-content {
+            height: 37.7vw;
+            padding: 4.1vw 5.13vw;
+            border-radius: 0 0 8vw 8vw;
+            z-index: 2;
+            &::after {
+               border-radius: 0 0 8vw 8vw;
+            }
+            &-name {
+               margin-bottom: 2.05vw;
+               font-size: 5.13vw;
+               line-height: 145%;
+            }
+            &-text {
+               line-height: 128%;
+               font-size: 4.62vw;
+            }
+         }
+      }
+      &__btn {
+         padding: 3.85vw 7.7vw 3.6vw 7.7vw;
+      }
+   
+      &__nd {
+         margin-bottom: 37.5vw;
+         .news {
+            &__btn-next {
+               top: unset;
+               bottom: -3.8vw;
+               right: 3vw;
+            }
+            &__btn-prev {
+               left: unset;
+               top: unset;
+               bottom: -9.5vw;
+               right: 21vw;
+            }
+            &__btn-slash {
+               right: 12vw;
+               top: unset;
+               bottom: 1.6vw;
+            }
+            &__swiper-pagination {
+               top: unset;
+               bottom: -4vw;
+               right: unset;
+               left: 0vw;
+            }
+            &__title {
+               margin-bottom: 8.2vw;
+            }
+         }
+      }
+   }
+}

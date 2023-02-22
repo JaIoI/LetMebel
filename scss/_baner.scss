@@ -1,0 +1,266 @@
+.baner {
+   padding-top: 17.7rem;
+   margin-bottom: 17.1rem;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 40.7rem;
+      background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+      z-index: -1;
+   }
+   &__inner {
+      position: relative;
+   }
+   &__slider {
+      width: 55.3%;
+      position: absolute;
+      right: 0rem;
+      top: 0;
+      display: flex;
+      &::after {
+         position: absolute;
+         content: '';
+         left: -10.6rem;
+         top: 0;
+         width: 49.7rem;
+         height: 68.3rem;
+         background: linear-gradient(0deg, #6CBD50, #6CBD50), linear-gradient(180deg, #A5F18B 0%, #70CD50 0.01%, #EAD042 100%);
+         border-radius: 100rem;
+         z-index: 0;
+      }
+      &::before {
+         position: absolute;
+         content: '';
+         right: 0rem;
+         top: 3rem;
+         width: 20.5rem;
+         height: 11.7rem;
+         background: $white;
+         border-radius: 3rem;
+         z-index: 0;
+      }
+   }
+   &__swiper-small {
+      width: 16rem;
+      margin: 0;
+      // margin-top: 4.1rem;
+      // margin-right: 2.4rem;
+      position: absolute;
+      top: 4.1rem;
+      right: 2.4rem;
+   }
+   &__small-slide {
+      width: 100%;
+      &-img {
+         width: 100%;
+         height: 9.6rem;
+         margin-bottom: 2.9rem;
+         & img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+      &-bottom {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         &-num {
+            font-size: 1.4rem;
+            line-height: 193%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: $grey;
+         }
+         &-title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 193%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-right: 0.6rem;
+         }
+      }
+   }
+   &__swiper-big {
+      width: 80rem;
+      height: 51rem;
+      margin: 0;
+      margin-top: 12.9rem;
+   }
+   &__slide-big {
+      width: 100%;
+      height: 100%;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__content {
+      margin-bottom: 14.8rem;
+      padding-top: 2.8rem;
+      &-subtitle {
+         font-weight: 700;
+         font-size: 1.4rem;
+         line-height: 150%;
+         text-transform: uppercase;
+         margin-bottom: 16.6rem;
+      }
+      &-main {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+         margin-bottom: 3.2rem;
+         &-title {
+            width: 40%;
+         }
+         &-text {
+            width: 14%;
+            line-height: 150%;
+            color: $grey;
+            text-align: right;
+            margin-bottom: 0.6rem;
+         }
+      }
+   }
+   &__bottom {
+      display: flex;
+      align-items: center;
+      &-title {
+         position: relative;
+         font-weight: 700;
+         font-size: 1.4rem;
+         line-height: 193%;
+         text-transform: uppercase;
+         padding-right: 8.3rem;
+         margin-right: 2.4rem;
+         &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5.4rem;
+            height: 1px;
+            background-color: $grey;
+         }
+      }
+      &-items {
+         display: flex;
+         &>a {
+            padding: 1rem;
+            font-size: 1.4rem;
+            line-height: 193%;
+            text-transform: uppercase;
+            color: #91959B;
+            &:not(:last-child) {
+               margin-right: 0.4rem;
+            }
+         }
+      }
+   }
+   &__btn-next {
+      right: 1.3rem;
+      top: unset;
+      bottom: 0.2rem;
+   }
+   &__btn-prev {
+      right: 8.3rem;
+      left: unset;
+      top: unset;
+      bottom: -2rem;
+   }
+   &__btn-slash {
+      bottom: 2.3rem;
+      right: 5rem;
+   }
+   &__swiper-bullet {
+      bottom: 19.6rem;
+      right: 0rem;
+   }
+   &__swiper-pagination {
+      right: 21.3rem;
+      bottom: 5.6rem;
+   }
+}
+
+@media (max-width: 48em) {
+   .baner {
+      padding-top: 30.3vw;
+      margin-bottom: 30.4vw;
+      background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+      &::after {
+         content: none;
+      }
+      &__slider {
+         width: 100%;
+         display: block;
+         position: relative;
+         margin-bottom: 17.1vw;
+         &::after {
+            left: 0;
+            top: unset;
+            bottom: -7.5vw;
+            width: 100%;
+            height: 42.35vw;
+         }
+         &::before {
+            content: none;
+         }
+      }
+      &__swiper-big {
+         width: 100%;
+         height: 61vw;
+         margin: 0;
+         margin-top: 0;
+      }
+      &__content {
+         margin-bottom: 9.9vw;
+         padding-top: 0;
+         &-subtitle {
+            font-size: 3.33vw;
+            line-height: 146%;
+            margin-bottom: 5.3vw;
+         }
+         &-main {
+            display: block;
+            margin-bottom: 7vw;
+            &-title {
+               width: 100%;
+            }
+            &-text {
+               width: 60%;
+               line-height: 128%;
+               font-size: 4.62vw;
+               text-align: left;
+               margin-bottom: 0;
+            }
+         }
+      }
+      &__btn-next {
+         right: 3.2vw;
+         bottom: 9vw;
+      }
+      &__btn-prev {
+         right: 21vw;
+         bottom: 3.1vw;
+      }
+      &__btn-slash {
+         bottom: 14vw;
+         right: 12vw;
+      }
+      &__swiper-bullet {
+         bottom: unset;
+         top: 48.2vw;
+         right: 0;
+      }
+      &__swiper-pagination {
+         right: 5vw;
+         bottom: 23vw;
+      }
+   }
+}

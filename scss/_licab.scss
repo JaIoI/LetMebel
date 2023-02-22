@@ -1,0 +1,518 @@
+.licab {
+   margin-bottom: 16.5rem;
+   margin-top: 10.5rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__main {
+      width: 22.7%;
+      position: relative;
+      height: 47.5rem;
+      padding: 0 5.2rem 4.3rem 4.8rem;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url(../img/icon/lk-main.png);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         z-index: -1;
+      }
+      &-info {
+         padding-bottom: 3.6rem;
+         margin-bottom: 4.2rem;
+         position: relative;
+         margin-top: -4.2rem;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1.2px;
+            background-color: #E2E9E9;
+         }
+         &-img {
+            width: 9.6rem;
+            height: 9.6rem;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: 2.7rem;
+            &>img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border-radius: 50%;
+            }
+            &-ok {
+               width: 3.4rem;
+               height: 3.3rem;
+               position: absolute;
+               bottom: -2rem;
+               left: 50%;
+               transform: translateX(-50%);
+               & img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+               }
+            }
+         }
+         &-name {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 145%;
+            text-align: center;
+         }
+         &-tel {
+            text-align: center;
+            color: #9BA8A8;
+            line-height: 150%;
+         }
+      }
+      &-btns {
+
+      }
+      &-btn {
+         position: relative;
+         color: #9BA8A8;
+         line-height: 150%;
+         font-weight: 700;
+         transition: ease 0.3s;
+         padding-left: 4.4rem;
+         display: block;
+         &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.4rem;
+            height: 2.4rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: ease 0.3s;
+         }
+         &:not(:last-child) {
+            margin-bottom: 3.3rem;
+         }
+         &.active {
+            color: #7AC361;
+         }
+         &-order {
+            &::before {
+               background-image: url(../img/icon/lk-order.svg);
+            }
+            &.active {
+               &::before {
+                  background-image: url(../img/icon/lk-order-green.svg);
+               }
+            }
+         }
+         &-contacts {
+            &::before {
+               background-image: url(../img/icon/lk-contacts.svg);
+            }
+            &.active {
+               &::before {
+                  background-image: url(../img/icon/lk-contacts-green.svg);
+               }
+            }
+         }
+         &-pass {
+            &::before {
+               background-image: url(../img/icon/lk-pass.svg);
+            }
+            &.active {
+               &::before {
+                  background-image: url(../img/icon/lk-pass-green.svg);
+               }
+            }
+         }
+      }
+      &-exit {
+         position: relative;
+         cursor: pointer;
+         color: $fzAll;
+         line-height: 150%;
+         font-weight: 700;
+         transition: ease 0.3s;
+         padding-left: 4.4rem;
+         margin-top: 1.2rem;
+         display: inline-block;
+         &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.4rem;
+            height: 2.4rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: ease 0.3s;
+            background-image: url(../img/icon/lk-exit.svg);
+         } 
+      }
+   }
+   &__content {
+      height: fit-content;
+      width: 71.3%;
+      &-title {
+         display: flex;
+         align-items: flex-end;
+         margin-bottom: 4.5rem;
+         line-height: 104%;
+         font-size: 4.5rem;
+         &>span {
+            margin-left: 1.8rem;
+            line-height: 150%;
+            color: #9BA8A8;
+            font-size: 1.8rem;
+         }
+      }
+      &-items {
+
+      }
+      &-item {
+         position: relative;
+         padding: 3.8rem;
+         padding-top: 2.2rem;
+         height: 22rem;
+         &:not(:last-child) {
+            margin-bottom: 4rem;
+         }
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/icon/licab.svg);
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+         }
+         &-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3.7rem;
+            &-order {
+               font-weight: 700;
+               font-size: 2.2rem;
+               line-height: 145%;
+               display: flex;
+               margin-top: 1.8rem;
+               &>span {
+                  margin-right: 0.6rem;
+               }
+            }
+            &-add {
+               position: relative;
+               &-btn {
+                  width: 15rem;
+                  height: 4.2rem;
+                  background-color: #E2E9E9;
+                  border-radius: 10rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 700;
+                  font-size: 1.4rem;
+                  line-height: 150%;
+                  text-transform: uppercase;
+                  &>svg {
+                     width: 1.6rem;
+                     height: 1.6rem;
+                     display: block;
+                     margin-right: 1.1rem;
+                  }
+               }
+               &-data {
+                  font-size: 1.4rem;
+                  line-height: 150%;
+                  text-transform: uppercase;
+                  color: #9BA8A8;
+                  position: absolute;
+                  bottom: -3.4rem;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  white-space: nowrap;
+               }
+            }
+         }
+         &-info {
+            width: 65%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &-el {
+               line-height: 150%;
+               color: #9BA8A8;
+               width: 50%;
+               &>span {
+                  color: $fzAll;
+               }
+               &:first-child {
+                  margin-bottom: 2.1rem;
+               }
+            }
+         }
+         &-link {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 2.2rem 7.3rem 2.1rem 7.3rem;
+         }
+      }
+      &-contacts {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         &>label {
+            width: 48.7%;
+            height: 6rem;
+            background: #E2E9E9;
+            border-radius: 1.1rem;
+            margin-bottom: 3rem;
+            padding-left: 2.7rem;
+            display: flex;
+            align-items: center;
+            &>input {
+               outline: none;
+               border: none;
+               background-color: transparent;
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 150%;
+               text-transform: uppercase;
+               color: $fzAll;
+               width: 90%;
+               &::placeholder {
+                  font-weight: 700;
+                  font-size: 1.4rem;
+                  line-height: 150%;
+                  text-transform: uppercase;
+                  color: $fzAll;
+               }
+               &:focus::placeholder {
+                  opacity: 0;
+               }
+            }
+            &:nth-child(3) {
+               width: 100%;
+            }
+         }
+         &>button {
+            margin-top: 2rem;
+         }
+      }
+      &-pass {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         &>label {
+            width: 31.5%;
+            height: 6rem;
+            background: #E2E9E9;
+            border-radius: 1.1rem;
+            margin-bottom: 2rem;
+            padding-left: 2.7rem;
+            display: flex;
+            align-items: center;
+            &>input {
+               outline: none;
+               border: none;
+               background-color: transparent;
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 150%;
+               text-transform: uppercase;
+               color: $fzAll;
+               width: 90%;
+               &::placeholder {
+                  font-weight: 700;
+                  font-size: 1.4rem;
+                  line-height: 150%;
+                  text-transform: uppercase;
+                  color: $fzAll;
+               }
+               &:focus::placeholder {
+                  opacity: 0;
+               }
+            }
+         }
+         &>div {
+            margin-bottom: 3.1rem;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: #9BA8A8;
+            width: 100%;
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .licab {
+      margin-bottom: 21.5vw;
+      margin-top: 8vw;
+      &__prev {
+         position: relative;
+         font-weight: 700;
+         font-size: 3.6vw;
+         line-height: 150%;
+         text-transform: uppercase;
+         margin-bottom: 7.7vw;
+         padding-left: 11vw;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            width: 7.2vw;
+            height: 3.4vw;
+            background-image: url(../img/icon/arrow-black.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
+      }
+      &__inner {
+         display: block;
+      }
+      &__content {
+         width: 100%;
+         &-title {
+            margin-bottom: 6.2vw;
+            line-height: 104%;
+            font-size: 7.7vw;
+            &>span {
+               margin-left: 3.85vw;
+               line-height: 150%;
+               font-size: 4.62vw;
+            }
+         }
+         &-item {
+            padding: 5.13vw;
+            padding-top: 5.13vw;
+            height: auto;
+            border-radius: 7vw;
+            background-color: $white;
+            &:not(:last-child) {
+               margin-bottom: 5.13vw;
+            }
+            &::after {
+               content: none;
+            }
+            &-top {
+               align-items: center;
+               margin-bottom: 3.85vw;
+               &-order {
+                  font-size: 4.62vw;
+                  line-height: 145%;
+                  margin-top: 0;
+                  &>span {
+                     margin-right: 0.5vw;
+                  }
+               }
+               &-add {
+                  &-btn {
+                     width: 37.2vw;
+                     height: 10.27vw;
+                     border-radius: 10rem;
+                     font-size: 3.6vw;
+                     line-height: 150%;
+                     &>svg {
+                        width: 4.1vw;
+                        height: 4.1vw;
+                        margin-right: 2vw;
+                     }
+                  }
+                  &-data {
+                     display: none;
+                  }
+               }
+            }
+            &-info {
+               width: 95%;
+               display: block;
+               margin-bottom: 3.85vw;
+               &-el {
+                  line-height: 150%;
+                  font-size: 4.62vw;
+                  width: 100%;
+                  &:first-child {
+                     margin-bottom: 0;
+                  }
+                  &:not(:last-child) {
+                     margin-bottom: 1.3vw;
+                  }
+               }
+            }
+            &-link {
+               position: relative;
+               padding: 3.72vw;
+               width: 100%;
+            }
+         }
+         &-contacts {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &>label {
+               width: 100%;
+               height: 15.4vw;
+               border-radius: 2.8vw;
+               margin-bottom: 3.7vw;
+               padding-left: 4.9vw;
+               &>input {
+                  font-size: 3.6vw;
+                  line-height: 150%;
+                  &::placeholder {
+                     font-size: 3.6vw;
+                     line-height: 150%;
+                  }
+               }
+            }
+            &>button {
+               margin-top: 3vw;
+            }
+         }
+         &-pass {
+            display: block;
+            &>label {
+               width: 100%;
+               height: 15.4vw;
+               border-radius: 2.8vw;
+               margin-bottom: 3.7vw;
+               padding-left: 4.9vw;
+               &>input {
+                  font-size: 3.6vw;
+                  line-height: 150%;
+                  &::placeholder {
+                     font-size: 3.6vw;
+                     line-height: 150%;
+                  }
+               }
+            }
+            &>div {
+               margin-bottom: 3.85vw;
+               font-size: 3.6vw;
+               line-height: 150%;
+            }
+         }
+      }
+   }
+}

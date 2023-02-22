@@ -1,0 +1,111 @@
+.suggest {
+   margin-bottom: 19rem;
+   &__inner {
+      background: $green;
+      border-radius: 6rem;
+      padding: 11rem 0;
+      position: relative;
+   }
+   &__title {
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: $white;
+   }
+   &__btn {
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $white;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 100rem;
+      height: 8.4rem;
+      display: flex;
+      align-items: center;
+      padding: 0 0.8rem 0 4rem;
+      position: relative;
+      padding-right: 19rem;
+      width: fit-content;
+      margin: 0 auto;
+      &::after {
+         position: absolute;
+         content: '';
+         right: 0.8rem;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 7rem;
+         height: 7rem;
+         border-radius: 50%;
+         background-color: $white;
+         background-image: url(../img/icon/arrow-green.svg);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 2.5rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+   &__pp {
+      padding-top: 20.5rem;
+      .suggest {
+         &__bc {
+            margin-bottom: 6rem;
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .suggest {
+      margin-bottom: 38.5vw;
+      &__inner {
+         border-radius: 7.7vw;
+         padding: 13.35vw 0 69.2vw 0;
+         position: relative;
+      }
+      &__title {
+         width: 80%;
+         margin-bottom: 7.5vw;
+      }
+      &__btn {
+         font-size: 3.6vw;
+         line-height: 150%;
+         letter-spacing: 0;
+         height: 13vw;
+         padding-right: 0vw;
+         padding: 0 16.2vw 0 5.65vw;
+         &::after {
+            position: absolute;
+            content: '';
+            right: 2.05vw;
+            width: 9.25vw;
+            height: 9.25vw;
+            background-size: 4.5vw;
+         }
+      }
+      &__img {
+         position: absolute;
+         right: -4vw;
+         bottom: -13.5vw;
+         width: 81.1vw;
+         height: 65.7vw;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &__pp {
+         padding-top: 20.5rem;
+         .suggest {
+            &__bc {
+               margin-bottom: 6rem;
+            }
+         }
+      }
+   }
+}

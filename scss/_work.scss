@@ -1,0 +1,224 @@
+.work {
+   margin-bottom: 19rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+   }
+   &__content {
+      width: 31%;
+      margin-top: 1.9rem;
+      &-title {
+         margin-bottom: 1.4rem;
+      }
+      &-text {
+         line-height: 150%;
+         color: $grey;
+         width: 65%;
+      }
+   }
+   &__swiper {
+      width: 65.5%;
+      padding-top: 1.8rem;
+      margin: 0;
+   }
+   &__slide {
+      position: relative;
+      height: auto;
+      &:last-child {
+         & .work__slide-decoration {
+            display: none;
+         }
+      }
+      &-wr {
+         border-radius: 3rem 3rem 0 3rem;
+         background-color: $green;
+         padding: 4.5rem 5.2rem 4.6rem 3.6rem;
+         height: 100%;
+      }
+      &-decoration {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: -6.2rem;
+         width: 6.8rem;
+         border: 1px dashed #9BA8A8;
+         z-index: 1;
+         &::after {
+            position: absolute;
+            content: '';
+            left: -0.1rem;
+            top: 50%;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: $green;
+            border: 0.3rem solid $white;
+         }
+         &::before{
+            position: absolute;
+            content: '';
+            right: -0.1rem;
+            top: 50%;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: $green;
+            border: 0.3rem solid $white;
+         }
+      }
+      &-num {
+         width: 6.8rem;
+         height: 3.6rem;
+         background-color: $white;
+         border-radius: 10rem;
+         font-weight: 700;
+         line-height: 150%;
+         color: $grey;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         right: 3.3rem;
+         top: -1.8rem;
+      }
+      &-icon {
+         width: 3.8rem;
+         height: 3.8rem;
+         margin-bottom: 4.2rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+         }
+      }
+      &-name {
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 145%;
+         color: $white;
+         margin-bottom: 1.7rem;
+      }
+      &-text {
+         line-height: 150%;
+         color: $white;
+      }
+   }
+   &__btn-next {
+      bottom: -7rem;
+      right: unset;
+      left: 18.5rem;
+   }
+   &__btn-prev {
+      bottom: -11.5rem;
+      left: 11.5rem;
+   }
+   &__swiper-pagination {
+      bottom: 4.8rem;
+      left: 0;
+   }
+   &__btn-slash {
+      bottom: 6rem;
+      left: 15rem;
+   }
+}
+
+@media (max-width: 48em) {
+   .work {
+      margin-bottom: 55vw;
+      &__inner {
+         display: block;
+      }
+      &__content {
+         width: 100%;
+         margin-bottom: 5.4vw;
+         margin-top: 0;
+         &-title {
+            margin-bottom: 5.13vw;
+         }
+         &-text {
+            line-height: 150%;
+            font-size: 4.62vw;
+            width: 90%;
+         }
+      }
+      &__swiper {
+         width: 106%;
+         padding-top: 5.13vw;
+         margin: 0;
+      }
+      &__slide {
+         &-wr {
+            border-radius: 7.7vw 7.7vw 0 7.7vw;
+            padding: 13.14vw 13.35vw 4vw 9.25vw;
+            height: 77.25vw;
+            width: 86%;
+         }
+         &-decoration {
+            right: 0;
+            width: 15.4vw;
+            border: 1px dashed #9BA8A8;
+            &::after {
+               left: 0;
+               width: 3.6vw;
+               height: 3.6vw;
+               border: 0.8vw solid $white;
+            }
+            &::before{
+               content: none;
+            }
+         }
+         &-num {
+            width: 17.45vw;
+            height: 9.25vw;
+            border-radius: 25.6vw;
+            line-height: 150%;
+            font-size: 4.62vw;
+            right: 21.5vw;
+            top: -4.4vw;
+         }
+         &-icon {
+            width: 8.9vw;
+            height: 8.5vw;
+            margin-bottom: 10.75vw;
+         }
+         &-name {
+            font-size: 5.65vw;
+            line-height: 145%;
+            margin-bottom: 4.36vw;
+         }
+         &-text {
+            line-height: 150%;
+            font-size: 4.62vw;
+         }
+         &:last-child {
+            & .work__slide-decoration {
+               display: none;
+            }
+         }
+      }
+      &__btn-next {
+         bottom: -15.6vw;
+         right: 3vw;
+         left: unset;
+         top: unset;
+      }
+      &__btn-prev {
+         bottom: -21.5vw;
+         left: unset;
+         right: 21vw;
+         top: unset;
+      }
+      &__swiper-pagination {
+         bottom: -16vw;
+         left: 0;
+      }
+      &__btn-slash {
+         bottom: -10.5vw;
+         left: unset;
+         right: 11.8vw;
+      }
+   }
+}

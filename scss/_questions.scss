@@ -1,0 +1,250 @@
+.questions {
+   margin-bottom: 19rem;
+   position: relative;
+   &__inner {
+      position: relative;
+      overflow: hidden;
+      &::after {
+         position: absolute;
+         content: '';
+         right: 0rem;
+         top: 0rem;
+         width: 67.5rem;
+         height: 61.5rem;
+         background-image: url(../img/questions0.svg);
+         background-position: center;
+         background-size: contain;
+         background-repeat: no-repeat;
+         border-radius: 0 3rem 0 0;
+      }
+   }
+   &__info {
+      position: absolute;
+      right: 10.5rem;
+      top: 22.5rem;
+      z-index: 5;
+      &-title {
+         margin-bottom: 3.1rem;
+         color: $white;
+      }
+      &-btn {
+         display: inline-block;
+         line-height: 150%;
+         text-transform: uppercase;
+         color: #6CBD50;
+         padding: 2.2rem 4rem 2.1rem 4rem;
+         background-color: $white;
+         border-radius: 100rem;
+         margin-left: 0.6rem;
+      }
+   }
+   & ul {
+      counter-reset: list 0;
+      border-radius: 3rem;
+      & li {
+         position: relative;
+         list-style-type: none;
+         padding: 0 84rem 0 14rem;
+         &:first-child {
+            border-radius: 3rem 3rem 0 0;
+            background-color: #EFF1F3;
+            padding-top: 5.1rem;
+            &::before {
+               top: 8.5rem;
+            }
+         }
+         &:last-child {
+            border-radius: 0 0 3rem 3rem;
+         }
+         &:nth-child(odd) {
+            background-color: #F3F3F7;
+         }
+         &:nth-child(even) {
+            background-color: #E2E9E9;
+         }
+         &.active {
+            &::before {
+               opacity: 0;
+            }
+         }
+      }
+      &>li::before {
+         counter-increment: list;
+         content: counter(list);
+         position: absolute;
+         left: 9.7rem;
+         top: 3.3rem;
+         font-family: 'Circe';
+         font-style: normal;
+         font-weight: 700;
+         font-size: 1.8rem;
+         line-height: 150%;
+         text-transform: uppercase;
+         color: $fzAll;
+         transition: ease 0.3s;
+      }
+      &>li:nth-child(-n+9)::before {
+         content: "0" counter(list);
+      }
+   }
+   &__title {
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 150%;
+      padding: 2.95rem 0 2.95rem 0;
+      position: relative;
+      transition: ease 0.3s;
+      cursor: pointer;
+      padding-right: 5rem;
+      &::after {
+         position: absolute;
+         content: '';
+         right: 0rem;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 2.8rem;
+         height: 2rem;
+         background-image: url(../img/icon/arrow-slider.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+         transition: ease 0.3s;
+      }
+      &.active {
+         font-weight: 700;
+         font-size: 4.5rem;
+         line-height: 104%;
+         padding-top: 5rem;
+         &::after {
+            transform: translateY(-50%) rotate(90deg);
+         }
+      }
+   }
+   &__text {
+      display: none;
+      padding-bottom: 5rem;
+      margin-top: -1rem;
+      &>p {
+         line-height: 150%;
+         &:not(:last-child) {
+            margin-bottom: 4.3rem;
+         }
+      }
+      &.active {
+         display: block;
+      }
+      
+   }
+}
+
+@media (max-width: 48em) {
+   .questions {
+      margin-bottom: 30.5vw;
+      overflow: hidden;
+      &__inner {
+         position: static;
+         overflow: visible;
+         &::after {
+            right: unset;
+            top: -51vw;
+            left: 0;
+            width: 100%;
+            height: 170vw;
+            background-image: url(../img/questions1.png);
+            border-radius: 0;
+            z-index: -1;
+
+         }
+      }
+      &__info {
+         position: absolute;
+         right: unset;
+         top: 24.5vw;
+         z-index: 5;
+         left: 4.5vw;
+         &-title {
+            margin-bottom: 5.65vw;
+         }
+         &-btn {
+            line-height: 150%;
+            font-size: 3.6vw;
+            padding: 4.1vw 6.4vw 3.35vw 6.4vw;
+            margin-left: 0;
+         }
+      }
+      & ul {
+         counter-reset: list 0;
+         border-radius: 0;
+         padding-top: 95vw;
+         margin-left: -4rem;
+         width: 112%;
+         & li {
+            position: relative;
+            list-style-type: none;
+            padding: 6.67vw 5.5vw 6.67vw 15.8vw;
+            &:first-child {
+               border-radius: 0;
+               background-color: #EFF1F3;
+               padding-top: 6.67vw;
+               &::before {
+                  top: 7.5vw;
+               }
+            }
+            &:last-child {
+               border-radius: 0;
+            }
+            &:nth-child(odd) {
+               background-color: #E2E9E9;
+            }
+            &:nth-child(even) {
+               background-color: #EFF1F3;
+            }
+            &.active {
+               &::before {
+                  opacity: 1;
+               }
+            }
+         }
+         &>li::before {
+            left: 4.7vw;
+            top: 7vw;
+            font-size: 5.13vw;
+            line-height: 150%;
+         }
+      }
+      &__title {
+         font-size: 5.13vw;
+         line-height: 145%;
+         padding: 0;
+         padding-right: 12vw;
+         &::after {
+            width: 7vw;
+            height: 4vw;
+         }
+         &.active {
+            font-size: 5.13vw;
+            line-height: 145%;
+            padding-top: 0;
+            &::after {
+               transform: translateY(-50%) rotate(90deg);
+               right: -2.5vw;
+            }
+         }
+      }
+      &__text {
+         display: none;
+         padding-bottom: 3vw;
+         margin-top: 7vw;
+         margin-left: -11vw;
+         line-height: 150%;
+         font-size: 4.62vw;
+         &>p {
+            line-height: 150%;
+            font-size: 4.62vw;
+            &:not(:last-child) {
+               margin-bottom: 7.7vw;
+            }
+         }
+      }
+   }
+}

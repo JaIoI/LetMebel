@@ -1,0 +1,77 @@
+.sad {
+   margin-bottom: 29.3rem;
+   position: relative;
+   &__inner {
+      position: relative;
+   }
+   &__info {
+      width: 60%;
+      &>h1 {
+         margin-bottom: 3.5rem;
+      }
+      &-text {
+         width: 90%;
+         &>div {
+            line-height: 150%;
+            &>span {
+               color: $green;
+            }
+            &:not(:last-child) {
+               margin-bottom: 2.7rem;
+            }
+         }
+      }
+   }
+   &__img {
+      position: absolute;
+      right: -2.2rem;
+      bottom: -16.6rem;
+      width: 86.8rem;
+      height: 63.5rem;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .sad {
+      margin-bottom: 3.5vw;
+      &__info {
+         width: 100%;
+         margin-bottom: 15.15vw;
+         &>h1 {
+            margin-bottom: 5.13vw;
+         }
+         &-text {
+            width: 101%;
+            &>div {
+               line-height: 150%;
+               font-size: 4.62vw;
+               &:not(:last-child) {
+                  margin-bottom: 6.9vw;
+               }
+            }
+         }
+      }
+      &__img {
+         position: static;
+         width: 100%;
+         height: 78.8vw;
+         margin-left: -1.5vw;
+         margin-top: -1vw;
+      }
+      &__label {
+         width: 32.4vw;
+         height: 32.4vw;
+         margin-left: -1.5vw;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+}

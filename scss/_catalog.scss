@@ -1,0 +1,631 @@
+.catalog {
+   margin-bottom: 13.6rem;
+   &__header {
+      margin-bottom: 7.9rem;
+      padding-bottom: 3rem;
+      position: relative;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         height: 1.2px;
+         background-color: #D2DADA;
+      }
+   }
+   & h1 {
+      margin-bottom: 2.2rem;
+      & span {
+         display: inline-block;
+         margin-left: 0.4rem;
+         font-weight: 400;
+         font-size: 1.8rem;
+         line-height: 150%;
+         color: $grey;
+      }
+   }
+   &__btns {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+      &-wrap {
+         display: flex;
+         align-items: center;
+      }
+      &-btn {
+         padding: 1.6rem 2.1rem 1.4rem 2.1rem;
+         font-size: 1.4rem;
+         line-height: 157%;
+         text-transform: uppercase;
+         border: 1px solid #D2DADA;
+         border-radius: 0.8rem;
+         cursor: pointer;
+         transition: ease 0.3s;
+         &:not(:last-child) {
+            margin-right: 2.1rem;
+         }
+         &.active {
+            font-weight: 700;
+            background-color: #E2E9E9;
+            border: 1px solid #E2E9E9;
+         }
+      }
+      &-link {
+         position: relative;
+         font-weight: 700;
+         font-size: 1.4rem;
+         line-height: 193%;
+         text-transform: uppercase;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0.5rem;
+            width: 100%;
+            height: 1px;
+            background-color: $fzAll;
+         }
+      }
+      &-filter {
+         padding: 2.2rem 4rem 2.1rem 7.9rem;
+         background: $green;
+         border-radius: 100rem;
+         position: relative;
+         font-weight: 700;
+         font-size: 1.8rem;
+         line-height: 150%;
+         text-transform: uppercase;
+         color: $white;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 3.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.9rem;
+            height: 2.9rem;
+            background-image: url(../img/icon/filter.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
+         &::before {
+            position: absolute;
+            content: '';
+            right: 3.4rem;
+            top: -0.8rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: #F3D949;
+            box-shadow: 0.6rem 1rem 3rem rgba(0, 0, 0, 0.05);
+         }
+      }
+   }
+   &__selects {
+      display: flex;
+   }
+   &__select {
+      width: 16rem;
+      &:not(:last-child) {
+         margin-right: 3rem;
+      }
+   }
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+      display: block;
+      &-wrap {
+         width: 22.58%;
+         margin-right: 5.2rem;
+         margin-bottom: 4.8rem;
+         padding-bottom: 2.3rem;
+         background: $white;
+         border-radius: 3rem;
+         position: relative;
+         overflow: hidden;
+         &:nth-child(4n+4) {
+            margin-right: 0;
+         }
+      }
+      &-like {
+         right: 1.5rem;
+         top: 1.3rem;
+      }
+      &-discount {
+         position: absolute;
+         font-weight: 700;
+         font-size: 1.6rem;
+         line-height: 150%;
+         text-transform: lowercase;
+         color: $white;
+         left: 3.5rem;
+         top: 2rem;
+         z-index: 2;
+         &::after {
+            position: absolute;
+            content: '';
+            left: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6.2rem;
+            height: 2.8rem;
+            background-image: url(../img/icon/discount.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+         }
+         &::before {
+            position: absolute;
+            content: '';
+            left: -1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: $white;
+         }
+      }
+      &-img {
+         width: 100%;
+         height: 32.3rem;
+         margin-bottom: 1rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &-content {
+         padding: 0 3rem;
+         position: relative;
+         z-index: 2;
+         &::after {
+            position: absolute;
+            content: '';
+            top: -4.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 69.4rem;
+            height: 33.4rem;
+            background-color: $white;
+            z-index: -1;
+            border-radius: 50%;
+            box-shadow: 1.5rem -3rem 4rem rgba(0, 0, 0, 0.05);
+         }
+         &-basket {
+            position: absolute;
+            left: 50%;
+            top: -6.6rem;
+            transform: translateX(-50%);
+            width: 6.6rem;
+            height: 6.6rem;
+            border-radius: 50%;
+            background-color: $green;
+            border: 1rem solid $white;
+            &::after {
+               position: absolute;
+               content: '';
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%, -50%);
+               width: 2.26rem;
+               height: 2.26rem;
+               background-image: url(../img/icon/basket-white.svg);
+               background-position: center;
+               background-size: contain;
+               background-repeat: no-repeat;
+            }
+         }
+         &-name {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 145%;
+            text-align: center;
+            margin-bottom: 0.6rem;
+         }
+         &-size {
+            font-size: 1.9rem;
+            line-height: 147%;
+            text-align: center;
+            text-transform: lowercase;
+            color: $grey;
+            margin-bottom: 0.5rem;
+         }
+         &-costs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         &-cost {
+            display: flex;
+            align-items: flex-start;
+            font-weight: 700;
+            font-size: 2.7rem;
+            line-height: 148%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-right: 1rem;
+            &>span {
+               font-size: 1.5rem;
+               line-height: 215%;
+               margin-left: 0.1rem;
+            }
+         }
+         &-sale {
+            display: flex;
+            align-items: flex-start;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 147%;
+            color: $grey;
+            text-decoration: line-through;
+            &>span {
+               font-size: 1rem;
+               line-height: 185%;
+               text-transform: uppercase;
+               margin-left: 0.2rem;
+            }
+         }
+      }
+   }
+   &__quantity {
+      line-height: 150%;
+      color: $grey;
+   }
+   &__slide {
+      padding-bottom: 2.3rem;
+      background: $white;
+      border-radius: 3rem;
+      position: relative;
+      overflow: hidden;
+   }
+   &__btn-next {
+      top: 1.7rem;
+      right: 1.5rem;
+   }
+   &__btn-prev {
+      left: unset;
+      top: 4rem;
+      right: 8.5rem;
+   }
+   &__btn-slash {
+      right: 5rem;
+      top: 0rem;
+   }
+   &__swiper-pagination {
+      top: 1.5rem;
+      right: 20.5rem;
+   }
+
+   &__cso {
+      .catalog {
+         &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4.9rem;
+         }
+         &__item {
+            &-img {
+               margin-bottom: 2.5rem;
+            }
+            &-content {
+               &::after {
+                  top: -6rem;
+               }
+               &-basket {
+                  top: -8rem;
+               }
+               &-name {
+                  margin-bottom: 1.5rem;
+               }
+               &-size {
+                  margin-bottom: 1.2rem;
+               }
+            }
+         }
+         
+      }
+   }
+
+   &__watched {
+      margin-bottom: 16.5rem;
+      .catalog {
+         &__inner {
+            position: relative;
+         }
+         &__title {
+            margin-bottom: 6.5rem;
+         }
+      }
+   }
+}
+
+@media (min-width: 47.99em) {
+   .catalog {
+      &__item-wrap:hover {
+         & .like {
+            opacity: 1;
+            &.active {
+               &::after {
+                  background-image: url(../img/icon/like-activ.svg);
+               }
+            }
+         }
+      }
+      &__slide:hover {
+         & .like {
+            opacity: 1;
+            &.active {
+               &::after {
+                  background-image: url(../img/icon/like-activ.svg);
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .catalog {
+      margin-bottom: 31.5vw;
+      &__header {
+         margin-bottom: 6.16vw;
+         padding-bottom: 10.5vw;
+      }
+      & h1 {
+         margin-bottom: 5vw;
+         & span {
+            display: block;
+            margin-left: 0;
+            font-size: 4.62vw;
+            line-height: 150%;
+            margin-top: 2.05vw;
+         }
+      }
+      &__btns {
+         display: block;
+         margin-bottom: 7.5vw;
+         &-wrap {
+            overflow: scroll;
+            padding-bottom: 3vw;
+            width: 106%;
+         }
+         &-btn {
+            padding: 3.8vw 5.3vw;
+            font-size: 3.6vw;
+            border-radius: 2.05vw;
+            white-space: nowrap;
+            &:not(:last-child) {
+               margin-right: 5.65vw;
+            }
+         }
+         &-link {
+            font-size: 3.6vw;
+            line-height: 193%;
+            &::after {
+               bottom: 1.5vw;
+            }
+         }
+         &-filter {
+            padding: 3.72vw 4.9vw 3.72vw 13.35vw;
+            font-size: 3.6vw;
+            line-height: 150%;
+            position: absolute;
+            right: 0vw;
+            bottom: 8vw;
+            &::after {
+               left: 5.2vw;
+               width: 6.2vw;
+               height: 6.2vw;
+            }
+            &::before {
+               right: 4.8vw;
+               top: -1.7vw;
+               width: 3.1vw;
+               height: 3.1vw;
+               box-shadow: 1.2rem 2rem 6rem rgba(0, 0, 0, 0.05);
+            }
+         }
+      }
+      &__selects {
+         display: block;
+         width: 50%;
+      }
+      &__select {
+         width: auto;
+         &:not(:last-child) {
+            margin-right: 0;
+         }
+         &:nth-child(2) {
+            display: none;
+         }
+      }
+      &__items {
+         display: block;
+      }
+      &__item {
+         display: block;
+         &-wrap {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 0;
+            padding-bottom: 5.1vw;
+            border-radius: 7.7vw;
+            &:not(:last-child) {
+               margin-bottom: 5.13vw;
+            }
+         }
+         &-like {
+            right: 1.5rem;
+            top: 1.3rem;
+         }
+         &-discount {
+            font-size: 4.1vw;
+            line-height: 150%;
+            left: 9.4vw;
+            top: 5.4vw;
+            z-index: 2;
+            &::after {
+               left: -5.5vw;
+               width: 15.4vw;
+               height: 7.2vw;
+            }
+            &::before {
+               left: -3.4vw;
+               width: 1vw;
+               height: 1vw;
+            }
+         }
+         &-img {
+            width: 100%;
+            height: 82.9vw;
+            margin-bottom: 3vwvw;
+         }
+         &-content {
+            padding: 0 3rem;
+            &::after {
+               top: -11vw;
+               width: 100%;
+               height: 14vw;
+               box-shadow: 3rem -6rem 8rem rgba(0, 0, 0, 0.05);
+            }
+            &-basket {
+               top: -17vw;
+               width: 16.9vw;
+               height: 16.9vw;
+               border: 2.57vw solid $white;
+               &::after {
+                  width: 5.8vw;
+                  height: 5.8vw;
+               }
+            }
+            &-name {
+               font-size: 5.65vw;
+               line-height: 145%;
+               margin-bottom: 0.7vw;
+            }
+            &-size {
+               font-size: 4.62vw;
+               line-height: 150%;
+               margin-bottom: 1.3vw;
+            }
+            &-costs {
+            }
+            &-cost {
+               font-size: 7vw;
+               line-height: 150%;
+               margin-right: 3vw;
+               &>span {
+                  font-size: 3.85vw;
+                  line-height: 215%;
+                  margin-left: -0.5vw;
+               }
+            }
+            &-sale {
+               font-size: 3.85vw;
+               line-height: 150%;
+               &>span {
+                  font-size: 2.57vw;
+                  line-height: 185%;
+                  margin-left: 0.3vw;
+               }
+            }
+         }
+      }
+      &__quantity {
+         line-height: 150%;
+         color: $grey;
+      }
+      &__slide {
+         padding-bottom: 5.9vw;
+         border-radius: 7.7vw;
+      }
+      &__btn-next {
+         top: unset;
+         bottom: -13vw;
+         right: 3vw;
+      }
+      &__btn-prev {
+         left: unset;
+         top: unset;
+         right: 21vw;
+         bottom: -19vw;
+      }
+      &__btn-slash {
+         top: unset;
+         right: 12vw;
+         bottom: -7.6vw;
+      }
+      &__swiper-pagination {
+         top: unset;
+         bottom: -13.5vw;
+         right: unset;
+         left: 0vw;
+      }
+   
+      &__cso {
+         .catalog {
+            &__header {
+              display: block;
+               margin-bottom: 6.2vw;
+               padding-bottom: 6.2vw;
+               position: relative;
+               &::after {
+                  position: absolute;
+                  content: '';
+                  left: 0;
+                  bottom: 0;
+                  width: 100%;
+                  height: 1.2px;
+                  background-color: #D2DADA;
+               }
+            }
+            &__selects {
+               display: flex;
+               justify-content: space-between;
+               width: 84.5%;
+               margin-bottom: 4.1vw;
+            }
+            &__quantity {
+               line-height: 150%;
+               font-size: 4.62vw;
+            }
+            &__item {
+               &-img {
+                  margin-bottom: 6.5vw;
+               }
+               &-content {
+                  &::after {
+                     top: -15vw;
+                  }
+                  &-basket {
+                     top: -21vw;
+                  }
+                  &-name {
+                     margin-bottom: 3vw;
+                  }
+                  &-size {
+                     margin-bottom: 3vw;
+                  }
+               }
+            }
+         }
+      }
+   
+      &__watched {
+         margin-bottom: 52vw;
+         .catalog {
+            &__title {
+               margin-bottom: 10.4vw;
+            }
+         }
+      }
+   }
+}

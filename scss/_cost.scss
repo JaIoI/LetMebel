@@ -1,0 +1,116 @@
+.cost {
+   margin-bottom: 19.7rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__header {
+      width: 25%;
+      &-title {
+         margin-bottom: 1.4rem;
+      }
+      &-subtitle {
+         font-size: 2.2rem;
+         line-height: 145%;
+      }
+   }
+   &__text {
+      width: 43%;
+      margin-left: 6.5%;
+      margin-top: 3.4rem;
+      &>p {
+         line-height: 150%;
+      }
+   }
+   &__info {
+      width: 19.5%;
+      &-item {
+         padding: 2.4rem 1rem;
+         width: 100%;
+         background-color: #EDC900;
+         &:first-child {
+            margin-bottom: 1rem;
+            border-radius: 3rem 3rem 0 3rem;
+         }
+         &:last-child {
+            border-radius: 3rem 0 3rem 3rem;
+         }
+         &-c {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 145%;
+            text-align: center;
+         }
+         &-n {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 104%;
+            text-align: center;
+         }
+         &-s {
+            line-height: 150%;
+            text-align: center;
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .cost {
+      margin-bottom: 30.8vw;
+      &__inner {
+         display: block;
+      }
+      &__header {
+         width: 100%;
+         margin-bottom: 7.7vw;
+         &-title {
+            margin-bottom: 4.9vw;
+         }
+         &-subtitle {
+            font-size: 4.62vw;
+            line-height: 145%;
+         }
+      }
+      &__text {
+         width: 100%;
+         margin-left: 0;
+         margin-top: 0;
+         margin-bottom: 7.7vw;
+         &>p {
+            line-height: 150%;
+            font-size: 4.62vw;
+         }
+      }
+      &__info {
+         width: 100%;
+         &-item {
+            padding: 6.2vw 2.6vw;
+            width: 100%;
+            &:first-child {
+               margin-bottom: 2.6vw;
+               border-radius: 7vw 7vw 0 7vw;
+            }
+            &:last-child {
+               border-radius: 7vw 0 7vw 7vw;
+            }
+            &-c {
+               margin-bottom: 2.6vw;
+               font-size: 5.64vw;
+               line-height: 145%;
+            }
+            &-n {
+               margin-bottom: 2.6vw;
+               font-size: 7.7vw;
+               line-height: 104%;
+            }
+            &-s {
+               line-height: 150%;
+               font-size: 4.62vw;;
+            }
+         }
+      }
+   }
+}

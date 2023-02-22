@@ -1,0 +1,93 @@
+.furniture {
+   margin-bottom: 13.5rem;
+   & h1 {
+      margin-bottom: 6rem;
+   }
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 22.2%;
+      margin-bottom: 6rem;
+      margin-right: 6rem;
+      background: linear-gradient(0deg, #E2E9E9, #E2E9E9), url(image);
+      border-radius: 2.1rem 2.1rem 2.1rem 2.1rem;
+      padding-top: 4.6rem;
+      transition: ease 0.3s;
+      &:nth-child(4n+4) {
+         margin-right: 0;
+      }
+      &-img {
+         width: 27rem;
+         height: 21.1rem;
+         margin: 0 auto;
+         margin-bottom: 4.6rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &-name {
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 145%;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 10.9rem;
+         background-color: $white;
+         border-radius: 0 0 2.1rem 2.1rem;
+         transition: ease 0.3s;
+         padding: 0 1rem;
+      }
+   }
+}
+
+@media (min-width: 47.99em) {
+   .furniture {
+      &__item {
+         &:hover {
+            background: $green;
+            & .furniture__item-name {
+               background-color: $green;
+               color: $white;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 48em) {
+   .furniture {
+      margin-bottom: 25.6vw;
+      & h1 {
+         margin-bottom: 6rem;
+      }
+      &__items {
+         justify-content: space-between;
+      }
+      &__item {
+         width: 47%;
+         margin-bottom: 5.13vw;
+         margin-right: 0;
+         border-radius: 5.4vw;
+         padding-top: 9.25vw;
+         &-img {
+            width: 34.65vw;
+            height: 27vw;
+            margin: 0 auto;
+            margin-bottom: 7.7vw;
+         }
+         &-name {
+            font-size: 4.62vw;
+            line-height: 145%;
+            height: 15.7vw;
+            padding: 0 1vw;
+            border-radius: 0 0 5.4vw 5.4vw;
+         }
+      }
+   }
+}

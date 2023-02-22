@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="another website">
+   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+   <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./css/animate.min.css">
+   <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="./css/simplebar.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Document</title>
+</head>
+<body>
+
+   <header class="header">
+      <div class="container">
+         <div class="header__inner">
+            <div class="header__burger">
+               <span></span>
+            </div>
+            <a href="#" class="header__logo">
+               <img src="./img/logo.svg" alt="">
+            </a>
+            <a href="#" class="header__online">Интернет-магазин</a>
+            <div class="header__menu">
+               <a href="#">Мебель на заказ</a>
+               <a href="#">О нас</a>
+               <a href="#">Проекты</a>
+               <a href="#">Услуги</a>
+               <a href="#">Инфо</a>
+               <a href="#">Контакты</a>
+            </div>
+            <div class="header__btns">
+               <form class="header__btns-btn">
+                  <div class="header__btns-btn-el dropdown-click">
+                     <img src="./img/icon/search.svg" alt="">
+                  </div>
+                  <!-- <label class="dropdown__content">
+                     <input type="text" placeholder="Поиск..." class="1">
+                     <div class="desctop"><img src="./img/icon/search-black.svg" alt=""></div>
+                     <button class="mobile"><img src="./img/icon/search-black.svg" alt=""></button>
+                     <button class="btn desctop">Найти</button>
+                     <div class="mobile close">
+                        <img src="./img/icon/close.svg" alt="">
+                     </div>
+                  </label> -->
+               </form>
+
+               <a href="#" class="header__btns-btn">
+                  <div class="header__btns-btn-el">
+                     <img src="./img/icon/user-black.svg" alt="">
+                  </div>
+               </a>
+
+               <a href="#" class="header__btns-btn">
+                  <div class="header__btns-btn-el">
+                     <img src="./img/icon/basket-black.svg" alt="">
+                  </div>
+                  <div class="header__btns-btn-num active">2</div>
+               </a>
+
+            </div>
+            
+            <div class="header__contacts">
+               <a href="tel:8 499 322 41 00" class="header__contacts-phone">8 499 322 41 00</a>
+               <div class="header__contacts-mode">ПН-ПТ 10:00 - 19:00</div>
+            </div>
+         </div>
+      </div>
+
+      <!-- <div class="header__bm mobile">
+         <div class="header__bm-inner">
+            <ul class="header__bm-lists">
+               <li>
+                 <span class="akkar">Каталог</span>
+                 <div>
+                  <div>
+                     <span class="akkar2">Анализ физических свойств материалов</span>
+                     <ul class="header__bm-list">
+                         <li><a href="#">Импедансная спектроскопия</a></li>
+                         <li><a href="#">Анализаторы размеров частиц и дзета-потенциала</a></li>
+                         <li><a href="#">Измерения электрических характеристик</a></li>
+                         <li><a href="#">Термический анализ</a></li>
+                         <li><a href="#">Динамический механический анализ</a></li>
+                         <li><a href="#">Термогравиметрия</a></li>
+                      </ul>
+                  </div>
+                  <div>
+                   <span class="akkar2">Испытание материалов</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Управление технологическими процессами</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Элементный и изотопный анализ</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Бренды</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Экологический мониторинг и промышленная экология</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Науки о поверхности и научное материаловедение</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                   <div>
+                   <span class="akkar2">Инспекция и метрология высокой точности</span>
+                   <ul class="header__bm-list">
+                       <li><a href="#">Один</a></li>
+                       <li><a href="#">Два</a></li>
+                       <li><a href="#">Три</a></li>
+                       <li><a href="#">Четыре</a></li>
+                    </ul>
+                   </div>
+                 </div>
+               </li>
+               <li><a href="#">Область применения</a></li>
+               <li><a href="#">Магазин</a></li>
+               <li><a href="#">Сервис</a></li>
+               <li>
+                  <span class="akkar">О нас</span>
+                  <ul class="header__bm-list">
+                     <li><a href="#">Импедансная спектроскопия</a></li>
+                     <li><a href="#">Анализаторы размеров частиц и дзета-потенциала</a></li>
+                     <li><a href="#">Измерения электрических характеристик</a></li>
+                     <li><a href="#">Термический анализ</a></li>
+                     <li><a href="#">Динамический механический анализ</a></li>
+                     <li><a href="#">Термогравиметрия</a></li>
+                  </ul>
+               </li>
+           </ul>
+           <div class="header__bm-mess">
+              <a href="#" class="header__bm-mess-i header__bm-mess-t">
+                 <img src="./img/icon/telegram-black.svg" alt="">
+              </a>
+              <a href="#" class="header__bm-mess-i header__bm-mess-y">
+                  <img src="./img/icon/youtube-black.svg" alt="">
+               </a>
+               <a href="#" class="header__bm-mess-i header__bm-mess-w">
+                  <img src="./img/icon/whatsapp-black.svg" alt="">
+               </a>
+               <a href="#" class="header__bm-mess-i">RU</a>
+           </div>
+           <a href="tel:74953740401" class="header__bm-phone">+7 495 374-04-01</a>
+           <div class="header__bm-mail">sales@imc-systems.ru</div>
+        </div>
+     </div> -->
+   </header>
+
+   <main class="main">
+
+      <section class="suggest suggest__pp">
+         <div class="container">
+            <div class="suggest__bc bc">
+               <a href="#">Главная</a>
+               <a href="#">Информация</a>
+               <span>Предложить проект</span>
+            </div>
+            <div class="suggest__inner">
+               <div class="suggest__title title">Давай поработаем и&nbsp;сделаем что-то классное!</div>
+               <a href="#" class="suggest__btn">предложить проект</a>
+            </div>
+         </div>
+      </section>
+
+   </main>
+
+   <footer class="footer wow animate__animated animate__fadeIn">
+      <div class="container">
+
+      </div>
+   </footer>
+
+
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/jquery.fancybox.min.js"></script>
+<script src="./js/wow.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="./js/jquery.maskedinput.js"></script>
+<script src="./js/inputmask.js"></script>
+<script src="./js/parallax.js"></script>
+<script src="./js/simplebar.js"></script>
+<script src="./js/nouislider.min.js"></script>
+<script src="./js/wNumb.min.js"></script>
+<script src="./js/anime.min.js"></script>
+<script src="./js/lottie-player.js"></script>
+<script src="./js/typed.min.js"></script>
+<script defer src="./js/main.js"></script>
+<script src="./js/animate.js"></script>
+<script>
+   new WOW().init();
+ 
+</script>
+</body>
+</html>

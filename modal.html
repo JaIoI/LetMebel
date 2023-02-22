@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="another website">
+   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+   <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./css/animate.min.css">
+   <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="./css/simplebar.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Document</title>
+</head>
+<body>
+
+   <ol class="container" style="margin-top: 8rem;">
+
+      <li style="font-size: 3.4rem;" data-class="video">Модалка видео</li>
+      <br><br><br>
+
+      <li style="font-size: 3.4rem;" data-class="down">Модалка загрузка</li>
+      <br><br><br>
+
+      <li style="font-size: 3.4rem;" data-class="ok">Модалка спасибо за заявку</li>
+      <br><br><br>
+
+       <li style="font-size: 3.4rem;" data-class="box">Модалка корзина</li>
+      <br><br><br>
+   </ol>
+
+         <!-- модалка видео-->
+   <div class="modal modal__video close-x" data-modal="video">
+      <div class="modal__inner">
+         <div class="modal__content">
+            <div class="modal__close close-x">
+               <img class="close-x" src="./img/icon/close-white.svg" alt="">
+            </div>
+            <div class="modal__content-title">О мебельной фабрике LETMEBEL</div>
+            <div class="modal__content-video">
+               <iframe src="./video/vidos.mp4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            </div>
+         </div>
+      </div>
+   </div>
+
+        <!-- модалка загрузка-->
+        <div class="modal modal__down close-x" data-modal="down">
+         <div class="modal__inner">
+            <div class="modal__content">
+               <div class="modal__close close-x">
+                  <img class="close-x" src="./img/icon/close-white.svg" alt="">
+               </div>
+               <div class="modal__content-title">Загрузите ваш проект</div>
+               <div class="modal__content-text">Наши специалисты его внимательно изучат и вернутся с предложением</div>
+               <form>
+                  <div class="modal__content-f">
+                     <label>
+                        <input type="text" placeholder="Ваше ФИО">
+                     </label>
+                     <label>
+                        <input type="text" class="mail" placeholder="E-mail *">
+                     </label>
+                     <label>
+                        <input type="text" class="tel" placeholder="Телефон *">
+                     </label>
+                  </div>
+                  <label class="modal__content-download">
+                     <input type="file" multiple id="upload-file">
+                     <div class="modal__content-download-img">
+                        <img src="./img/icon/modal-down.png" alt="">
+                     </div>
+                     <span class="modal__content-download-rec desctop">Перетащите файлы сюда</span>
+                     <span class="modal__content-download-info">или</span>
+                     <span class="modal__content-download-file">Выбрать файл</span>
+                  </label>
+                  <div class="modal__content-file">
+                     <div class="modal__content-file-title">Загруженные файлы</div>
+                     <div class="modal__content-file-items">
+                     </div>
+                     <label for="upload-file" class="modal__content-file-down">
+                        <span>Загрузить ещё</span>
+                     </label>
+                  </div>
+                  <div class="modal__content-b">
+                     <div>Нажимая на кнопку «Отправить» Вы даете согласие на обработку Ваших персональных данных</div>
+                     <button class="btn close-x">Отправить</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <!-- модалка спасибо за заявку-->
+      <div class="modal modal__ok close-x" data-modal="ok">
+         <div class="modal__inner">
+            <div class="modal__content">
+               <div class="modal__content-img">
+                  <img src="./img/icon/modal-ok.jpg" alt="">
+               </div>
+               <div class="modal__content-title">Спасибо за вашу заявку!</div>
+               <div class="modal__content-text">В ближайшее время с вами свяжется наш менеджер для&nbsp;уточнения необходимой информации</div>
+               <div class="modal__content-btn btn close-x">Понятно</div>
+            </div>
+         </div>
+      </div>
+
+
+        <!-- модалка корзина-->
+        <div class="modal modal__box close-x" data-modal="box">
+         <div class="modal__inner">
+            <div class="modal__content">
+               <div class="modal__close close-x">
+                  <img class="close-x" src="./img/icon/close-white.svg" alt="">
+               </div>
+               <div class="modal__content-title">Подробнее о заказе</div>
+               <div class="modal__content-text">Купленные товары</div>
+               <div class="modal__content-items">
+                  <div class="modal__content-item">
+                     <div class="modal__content-item-img">
+                        <img src="./img/basket1.png" alt="">
+                     </div>
+                     <div class="modal__content-item-wr">
+                        <div class="modal__content-item-content">
+                           <div class="modal__content-item-content-name">Лаунж кресло Slice, шерсть зеленый</div>
+                           <div class="modal__content-item-content-article">Артикул: <span>2000000000855</span></div>
+                           <div class="modal__content-item-content-qua">1шт</div>
+                        </div>
+                        <div class="modal__content-item-sum">26 000 <span>₽</span></div>
+                     </div>
+                  </div>
+                  <div class="modal__content-item">
+                     <div class="modal__content-item-img">
+                        <img src="./img/basket2.png" alt="">
+                     </div>
+                     <div class="modal__content-item-wr">
+                        <div class="modal__content-item-content">
+                           <div class="modal__content-item-content-name">Кресло Роттердам Velvet Yellow</div>
+                           <div class="modal__content-item-content-article">Артикул: <span>2000000000855</span></div>
+                           <div class="modal__content-item-content-qua">1шт</div>
+                        </div>
+                        <div class="modal__content-item-sum">26 000 <span>₽</span></div>
+                     </div>
+                  </div>
+                  <div class="modal__content-item">
+                     <div class="modal__content-item-img">
+                        <img src="./img/basket3.png" alt="">
+                     </div>
+                     <div class="modal__content-item-wr">
+                        <div class="modal__content-item-content">
+                           <div class="modal__content-item-content-name">Столик Бонни</div>
+                           <div class="modal__content-item-content-article">Артикул: <span>20000000</span></div>
+                           <div class="modal__content-item-content-qua">1шт</div>
+                        </div>
+                        <div class="modal__content-item-sum">26 000 <span>₽</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/jquery.fancybox.min.js"></script>
+<script src="./js/wow.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="./js/jquery.maskedinput.js"></script>
+<script src="./js/inputmask.js"></script>
+<script src="./js/parallax.js"></script>
+<script src="./js/simplebar.js"></script>
+<script src="./js/nouislider.min.js"></script>
+<script src="./js/wNumb.min.js"></script>
+<script src="./js/anime.min.js"></script>
+<script src="./js/lottie-player.js"></script>
+<script src="./js/typed.min.js"></script>
+<script defer src="./js/main.js"></script>
+<script src="./js/animate.js"></script>
+<script>
+   new WOW().init();
+ 
+</script>
+</body>
+</html>
