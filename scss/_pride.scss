@@ -16,10 +16,6 @@
    &__items {
       display: flex;
       justify-content: center;
-      &:first-child {
-         margin-left: -13rem;
-         margin-right: -13rem;
-      }
       &:not(:last-child) {
          margin-bottom: 1.8rem;
       }
@@ -57,14 +53,6 @@
          line-height: 140%;
       }
       &__items {
-         width: max-content;
-         &:first-child {
-            margin-left: -15vw;
-            margin-right: -15vw;
-         }
-         &:last-child {
-            margin-left: 2vw;
-         }
          &:not(:last-child) {
             margin-bottom: 2.56vw;
          }

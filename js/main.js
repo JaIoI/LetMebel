@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     slidesPerView: 1,
-    spaceBetween: rem(1),
+    spaceBetween: rem(8),
     speed: 1500,
     breakpoints: {
       769: {
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     slidesPerView: 1,
-    spaceBetween: rem(1),
+    spaceBetween: rem(5),
     speed: 1500,
     breakpoints: {
       769: {
@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     slidesPerView: 1,
-    spaceBetween: rem(1),
+    spaceBetween: rem(4),
     speed: 1500,
     breakpoints: {
       769: {
@@ -531,8 +531,8 @@ $('.article__small-slide').click(function () {
 
     const slider15 = new Swiper(".hang__swiper-i", {
     navigation: {
-      nextEl: ".hang__btn-next-i",
-      prevEl: ".hang__btn-prev-i",
+      nextEl: $('.hang__swiper-i').siblings('.hang__btn-next')[0],
+      prevEl: $('.hang__swiper-i').siblings('.hang__btn-prev')[0],
     },
     on: {
       slideChange: function (swiper) {
@@ -541,7 +541,7 @@ $('.article__small-slide').click(function () {
       }
     },
     slidesPerView: 1,
-    spaceBetween: rem(1),
+    spaceBetween: rem(4),
     speed: 1500,
   });
   function resize() {
@@ -654,6 +654,8 @@ $('.article__small-slide').click(function () {
       var data = $(this).data('question');
       $('.tabs__content').removeClass('active');
       $('.tabs__content[data-question=' + data + ']').toggleClass('active');
+      $('.products__btn-bg svg').removeClass('active');
+      $('.products__btn-bg svg[data-question=' + data + ']').toggleClass('active');
     });
 
   // ЯНДЕКС КАРТА

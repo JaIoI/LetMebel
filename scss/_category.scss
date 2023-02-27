@@ -18,20 +18,6 @@
       padding: 4rem 6.7rem 3.5rem 4.5rem;
       display: flex;
       justify-content: space-between;
-      &::after {
-         position: absolute;
-         content: '';
-         left: 0;
-         top: 0;
-         width: 100%;
-         height: 100%;
-         background-image: url(../img/category-bg.svg);
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
-         z-index: -1;
-         transition: ease 0.4s;
-      }
       &-img {
          left: 50%;
          bottom: 3rem;
@@ -175,9 +161,6 @@
 @media (min-width: 47.99em) {
    .category {
       &__slide {
-         &:hover::after {
-            background-image: url(../img/category-bg2.svg);
-         }
          &:hover .category__slide-name {
             color: $white;
             &::after {
@@ -211,9 +194,6 @@
       &__slide {
          height: 96vw;
          padding: 6.32vw 4.87vw 12.23vw 4.94vw;
-         &::after {
-            background-image: url(../img/category-bg-mob.svg);
-         }
          &-img {
             left: 0%;
             bottom: 12.23vw;
@@ -304,9 +284,6 @@
                width: 100%;
                margin-right: 0;
                margin-bottom: 0;
-               &:not(:last-child) {
-                  margin-bottom: 4.75vw;
-               }
             }
          }
       }

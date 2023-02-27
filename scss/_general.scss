@@ -88,16 +88,15 @@ h1 {
    & .swiper-pagination-bullet {
       width: 0.8rem;
       height: 0.8rem;
+      margin: 0 0.5rem;
       border-radius: 50%;
       background-color: #D1D4D3;
       opacity: 1;
-      &:not(:last-child) {
-         margin-right: 1rem;
-      }
+      transition: margin 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
    }
    & .swiper-pagination-bullet-active {
       background-color: $green;
-      // margin: 0 2.6rem !important;
+      margin: 0 1.5rem;
    }
 }
 .current {
@@ -160,6 +159,10 @@ h1 {
          font-size: 1.8rem;
          line-height: 135%;
          color: $grey;
+      }
+
+      &:hover {
+         color: $fzAll;
       }
    }
    & span {
@@ -352,15 +355,13 @@ h1 {
       font-size: 3.59vw;
    }
    .pagination-bullet {
-      & .swiper-pagination-bullet {
+      .swiper-pagination-bullet {
          width: 2.05vw;
          height: 2.05vw;
-         &:not(:last-child) {
-            margin-right: 2.56vw;
-         }
+         margin: 0 1rem;
       }
-      & .swiper-pagination-bullet-active {
-         // margin: 0 6.67vw !important;
+      .swiper-pagination-bullet-active {
+         margin: 0 2rem;
       }
    }
    .btn-next {

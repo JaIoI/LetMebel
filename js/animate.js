@@ -20,54 +20,45 @@ $(document).ready(function () {
     });
 
     // section pride
-    $('.pride__items').each(function () {
-        new Swiper($(this)[0], {
-            slidesPerView: $(this).find('.swiper-slide').length,
-            spaceBetween: rem(6),
-            speed: 10000,
-            loop: true,
-            grabCursor: true,
-            freeMode: {
-                enabled: true,
-                momentumBounceRatio: 0.1,
-                momentumRatio: 2,
-                momentumVelocityRatio: 0.2,
-            },
+    const prideSlider = new Swiper('.pride__items', {
+        speed: 10000,
+        loop: true,
+        grabCursor: true,
+        freeMode: {
+            enabled: true,
+            momentumBounceRatio: 0.1,
+            momentumRatio: 2,
+            momentumVelocityRatio: 0.2,
+        },
 
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
+        breakpoints: {
+            0: {
+                slidesPerView: 3.1,
+                spaceBetween: rem(2),
             },
+            769: {
+                slidesPerView: 7,
+                spaceBetween: rem(6),
+            },
+        },
 
-            on: {
-                beforeTransitionStart: function (slider) {
-                    slider.$wrapperEl.css('transition-timing-function', 'linear');
-                },
-                touchStart: function (slider) {
-                    slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.165, 0.840, 0.440, 1.000)');
-                },
-            }
-        });
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: false,
+        },
+
+        on: {
+            beforeTransitionStart: function (slider) {
+                slider.$wrapperEl.css('transition-timing-function', 'linear');
+            },
+            touchStart: function (slider) {
+                slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.165, 0.840, 0.440, 1.000)');
+            },
+        }
     });
 
     // catalog cards
-    $('.catalog__item-wrap').mousemove(function(e){
-        let target = this.getBoundingClientRect(),
-            x = ((e.clientX - target.left) / $(this).width() - 0.5) * -10,
-            y = ((e.clientY - target.top) / $(this).height() - 0.5) * 10;
-        $(this).css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
-    });
-
-    // hang cards
-    $('.hang__item-content').mousemove(function(e){
-        let target = this.getBoundingClientRect(),
-            x = ((e.clientX - target.left) / $(this).width() - 0.5) * -10,
-            y = ((e.clientY - target.top) / $(this).height() - 0.5) * 10;
-        $(this).css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
-    });
-
-    // articles cards
-    $('.articles__item-content').mousemove(function(e){
+    $('.catalog__item-wrap, .hang__item-content, .articles__item-content').mousemove(function(e){
         let target = this.getBoundingClientRect(),
             x = ((e.clientX - target.left) / $(this).width() - 0.5) * -10,
             y = ((e.clientY - target.top) / $(this).height() - 0.5) * 10;
