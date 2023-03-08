@@ -19,13 +19,16 @@
       <li style="font-size: 3.4rem;" data-class="video">Модалка видео</li>
       <br><br><br>
 
-      <li style="font-size: 3.4rem;" data-class="down">Модалка загрузка</li>
-      <br><br><br>
-
       <li style="font-size: 3.4rem;" data-class="ok">Модалка спасибо за заявку</li>
       <br><br><br>
 
        <li style="font-size: 3.4rem;" data-class="box">Модалка корзина</li>
+      <br><br><br>
+
+      <li style="font-size: 3.4rem;" data-class="down">Загрузите ваш проект</li>
+      <br><br><br>
+
+      <li style="font-size: 3.4rem;" data-class="question">Задать вопрос</li>
       <br><br><br>
    </ol>
 
@@ -159,6 +162,40 @@
             </div>
          </div>
       </div>
+
+
+   <!-- модалка загрузка-->
+   <div class="modal modal__down close-x" data-modal="question">
+      <div class="modal__inner">
+         <div class="modal__content">
+            <div class="modal__close close-x">
+               <img class="close-x" src="./img/icon/close-white.svg" alt="">
+            </div>
+            <div class="modal__content-title">Загрузите ваш проект</div>
+            <div class="modal__content-text">Наши специалисты его внимательно изучат и вернутся с предложением</div>
+            <form>
+               <div class="modal__content-f">
+                  <label>
+                     <input type="text" placeholder="Ваше ФИО">
+                  </label>
+                  <label>
+                     <input type="text" class="mail" placeholder="E-mail *">
+                  </label>
+                  <label>
+                     <input type="text" class="tel" placeholder="Телефон *">
+                  </label>
+                  <label class="modal__textarea-label">
+                     <textarea class="modal__textarea" placeholder="О чем вы бы хотели узнать?"></textarea>
+                  </label>
+               </div>
+               <div class="modal__content-b">
+                  <div>Нажимая на кнопку «Отправить» Вы даете согласие на обработку Ваших персональных данных</div>
+                  <button class="btn close-x">Отправить</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
 
 
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
