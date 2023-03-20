@@ -20,7 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4.5rem;
+    height: 14rem;
+    margin: -7.5rem -3rem -2rem -3rem;
+    padding: 7.5rem 3rem 2rem 3rem;
+    width: 24rem;
+    overflow: hidden;
   }
 
   &__logo-anim {
@@ -45,6 +49,18 @@
   &__contacts-phone {
     &:hover {
       filter: invert(.3);
+    }
+  }
+
+  &__search-box {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 1.22rem;
+    }
+
+    .header__btns-btn {
+      margin-right: 0;
     }
   }
 }
@@ -333,13 +349,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 18rem;
-    height: 4.5rem;
+    height: 10rem;
+    margin: -3.5rem -3rem -2rem -3rem;
+    padding: 3.5rem 3rem 2rem 3rem;
+    width: 24rem;
+    overflow: hidden;
 
     > * {
       height: 200%;
       width: 200%;
-      transform: scale(2.6);
+      transform: scale(2.6) translateY(2px);
     }
   }
 
@@ -1271,7 +1290,7 @@
 @media (max-width: 48em) {
   .header {
     &__logo {
-      height: 4.6rem;
+      //height: 4.6rem;
     }
 
     &__logo-anim {
@@ -1405,9 +1424,10 @@
     overflow: hidden;
 
     &__logo {
-      width: 30.6rem;
-      height: 7.6rem;
-      margin: 0 auto;
+      width: 40.6rem;
+      height: 19rem;
+      margin: -7rem auto -4rem auto;
+      padding: 7rem 5rem 4rem 5rem;
     }
   }
 

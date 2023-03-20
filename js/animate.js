@@ -169,4 +169,26 @@ $(document).ready(function () {
         });
     });
 
+    //Modal search
+    $('.search-btn').click(function () {
+        $('.modal-search').addClass('active');
+        setTimeout(function () {
+            $('.modal-search__label input').focus();
+        }, 100);
+    });
+    $('.modal-search__close').click(function () {
+        $(this).parents('.modal-search').removeClass('active').find('.modal-search__label input').val('');
+    });
+
+    //Scroll
+    $(document).scroll(function () {
+        if ($('.header').offset().top > 1000) {
+            $('.header').addClass('header--min');
+            $('.modal-search').addClass('modal-search--min');
+        } else {
+            $('.header').removeClass('header--min');
+            $('.modal-search').removeClass('modal-search--min');
+        }
+    });
+
 });
