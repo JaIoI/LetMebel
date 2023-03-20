@@ -396,6 +396,10 @@
             align-items: center;
             padding: 1rem 6.3rem;
          }
+
+         &.no-price {
+            margin-top: 12rem;
+         }
       }
    }
 }
@@ -673,6 +677,10 @@
             &-btn {
                height: 12.8vw;
                padding: 3.7vw 9.75vw;
+            }
+
+            &.no-price {
+               margin-top: 10rem;
             }
          }
       }

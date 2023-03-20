@@ -48,6 +48,12 @@
 @import "modal-search";
 @import "catalog-pagination";
 
+.modal-request {
+  .modal__content {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
 
 
 

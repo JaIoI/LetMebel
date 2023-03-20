@@ -625,6 +625,7 @@ $('.article__small-slide').click(function () {
   let ok = document.querySelector('[data-modal="ok"]') ? new Modal('ok') : null;
   let box = document.querySelector('[data-modal="box"]') ? new Modal('box') : null;
   let question = document.querySelector('[data-modal="question"]') ? new Modal('question') : null;
+  let request = document.querySelector('[data-modal="request"]') ? new Modal('request') : null;
 
 
  

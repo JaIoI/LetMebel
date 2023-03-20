@@ -372,25 +372,8 @@
                         </div>
                      </div>
                   </div>
-                  <div class="card__content-costs">
-                     <div class="card__content-costs-cost">26 000
-                        <span>₽</span>
-                     </div>
-                     <div class="card__content-costs-sale">30 900
-                        <span>₽</span>
-                     </div>
-                  </div>
-                  <div class="card__content-btns">
-                     <div class="card__content-btns-quantity">
-                        <div class="card__content-btns-quantity-minus">
-                           <img src="./img/icon/minus-black.svg" alt="">
-                        </div>
-                        <div class="card__content-btns-quantity-num">1</div>
-                        <div class="card__content-btns-quantity-plus">
-                           <img src="./img/icon/plus-black.svg" alt="">
-                        </div>
-                     </div>
-                     <a href="#" class="card__content-btns-btn btn">заказать</a>
+                  <div class="card__content-btns no-price">
+                     <a href="" class="card__content-btns-btn btn" data-class="request">Запросить цену</a>
                   </div>
                </div>
 
@@ -858,6 +841,35 @@
          </div>
       </div>
    </footer>
+
+   <div class="modal modal__down close-x modal-request" data-modal="request">
+      <div class="modal__inner">
+         <div class="modal__content">
+            <div class="modal__close close-x">
+               <img class="close-x" src="./img/icon/close-white.svg" alt="">
+            </div>
+            <div class="modal__content-title">Запросить стоимость товара</div>
+            <div class="modal__content-text">Заполните данные для запроса цены</div>
+            <form>
+               <div class="modal__content-f">
+                  <label>
+                     <input type="text" placeholder="Ваше ФИО">
+                  </label>
+                  <label>
+                     <input type="text" class="mail" placeholder="E-mail *">
+                  </label>
+                  <label>
+                     <input type="text" class="tel" placeholder="Телефон *">
+                  </label>
+               </div>
+               <div class="modal__content-b">
+                  <div>Нажимая на кнопку «Отправить» Вы даете согласие на обработку Ваших персональных данных</div>
+                  <button class="btn close-x">Отправить</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
 
 
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->

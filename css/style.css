@@ -8278,6 +8278,9 @@ h1 {
           align-items: center;
   padding: 1rem 6.3rem;
 }
+.card__content-btns.no-price {
+  margin-top: 12rem;
+}
 
 @media (max-width: 48em) {
   .card {
@@ -8572,6 +8575,9 @@ h1 {
   .card__content-btns-btn {
     height: 12.8vw;
     padding: 3.7vw 9.75vw;
+  }
+  .card__content-btns.no-price {
+    margin-top: 10rem;
   }
 }
 .hidden {
@@ -17329,4 +17335,7 @@ h1 {
     padding-top: 0.8rem;
     font-size: 3rem;
   }
+}
+.modal-request .modal__content {
+  background: rgba(255, 255, 255, 0.3);
 }
