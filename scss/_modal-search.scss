@@ -1,11 +1,10 @@
 .modal-search {
-  position: fixed;
+  position: absolute;
   left: 50%;
-  top: 2.4rem;
+  top: -0.8rem;
   z-index: 2;
   width: 164rem;
   transform: translateX(-50%);
-  transform-origin: left;
   border-radius: 3.6rem;
   background-color: #E2E9E9;
   box-shadow: 1.5rem 2rem 4rem 0 #0000000D;
@@ -200,7 +199,6 @@
 
 @media (max-width: 48em) {
   .modal-search {
-    top: 3rem;
     z-index: 12;
     width: 71rem;
     border-radius: 6rem;
