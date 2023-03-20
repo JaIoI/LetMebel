@@ -111,6 +111,11 @@
       &:not(:last-child) {
          margin-right: 3rem;
       }
+
+      > input {
+         width: 16rem;
+         border: none;
+      }
    }
    &__items {
       display: flex;

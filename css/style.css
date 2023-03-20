@@ -357,23 +357,11 @@ h1 {
 .select-text, .select-dropdown {
   width: 100%;
 }
-.select-text {
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 150%;
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.select-text::after {
+.select_checked::after {
   content: "";
   position: absolute;
   top: 45%;
-  right: -3.2rem;
+  right: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 1.8rem;
@@ -383,6 +371,19 @@ h1 {
   background-position: center;
   background-size: contain;
   cursor: pointer;
+}
+.select-text {
+  padding-right: 2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  display: block;
 }
 .select-dropdown {
   display: none;
@@ -596,15 +597,15 @@ h1 {
     line-height: 135%;
     font-size: 3.6vw;
   }
+  .select_checked::after {
+    top: 45%;
+    right: 0;
+    width: 4vw;
+    height: 4vw;
+  }
   .select-text {
     font-size: 3.6vw;
     line-height: 150%;
-  }
-  .select-text::after {
-    top: 45%;
-    right: -6vw;
-    width: 4vw;
-    height: 4vw;
   }
   .select-dropdown {
     top: 5vw;
@@ -5186,6 +5187,10 @@ h1 {
 .catalog__select:not(:last-child) {
   margin-right: 3rem;
 }
+.catalog__select > input {
+  width: 16rem;
+  border: none;
+}
 .catalog__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8255,6 +8260,10 @@ h1 {
   text-align: center;
   width: 4rem;
   margin: 0 2.8rem 0 2.6rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
 }
 .card__content-btns-quantity-plus {
   width: 5.5rem;
@@ -8684,6 +8693,9 @@ h1 {
   background: #F2F6F6;
   border-radius: 2.5rem;
   padding: 1.7rem 3.9rem 2rem 4rem;
+}
+.modal__content-form-item > input {
+  display: none;
 }
 .modal__content-form-item:not(:last-child) {
   margin-bottom: 2rem;

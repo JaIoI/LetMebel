@@ -176,20 +176,12 @@ h1 {
    &-dropdown {
       width: 100%;
    }
-   &-text {
-      font-weight: 700;
-      font-size: 1.4rem;
-      line-height: 150%;
-      text-transform: uppercase;
-      cursor: pointer;
-      position: relative;
-      display: block;
-      width: fit-content;
+   &_checked {
       &::after {
          content: '';
          position: absolute;
          top: 45%;
-         right: -3.2rem;
+         right: 0;
          transform: translateY(-50%);
          width: 1.8rem;
          height: 1.5rem;
@@ -199,6 +191,19 @@ h1 {
          background-size: contain;
          cursor: pointer;
       }
+   }
+   &-text {
+      padding-right: 2rem;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 150%;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      display: block;
    }
    &-dropdown {
       display: none;
@@ -416,16 +421,18 @@ h1 {
       }
    }
    .select {
-      &-text {
-         font-size: 3.6vw;
-         line-height: 150%;
+      &_checked {
          &::after {
             top: 45%;
-            right: -6vw;
+            right: 0;
             width: 4vw;
             height: 4vw;
 
          }
+      }
+      &-text {
+         font-size: 3.6vw;
+         line-height: 150%;
       }
       &-dropdown {
          top: 5vw;

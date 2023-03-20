@@ -1599,12 +1599,10 @@
                         <input type="hidden" class="filter__select" value="популярность">
                         <div class="select">
                               <div class="select_checked">
-                                 <span class="select-text">популярность</span>
+                                 <input class="select-text" type="text" value="популярность">
                               </div>
                               <div class="select-dropdown">
-                                 <div class="filter__item filter__item active" data-value="популярность">
-                                    <span>популярность</span>
-                                 </div>
+                                 <div class="filter__item filter__item active" data-value="популярность">Популярность</div>
                                  <div class="filter__item" data-value="Наименование">Наименование</div>
                                  <div class="filter__item" data-value="Цена">Цена</div>
                               </div>
@@ -1615,12 +1613,10 @@
                         <input type="hidden" class="filter__select" value="Показать: все">
                         <div class="select">
                               <div class="select_checked">
-                                 <span class="select-text">Показать: все</span>
+                                 <input class="select-text" type="text" value="Показать: все" disabled>
                               </div>
                               <div class="select-dropdown">
-                                 <div class="filter__item filter__item active" data-value="Показать: все">
-                                    <span>Показать: все</span>
-                                 </div>
+                                 <div class="filter__item filter__item active" data-value="Показать: все">Показать: все</div>
                                  <div class="filter__item" data-value="1">1</div>
                                  <div class="filter__item" data-value="2">2</div>
                                  <div class="filter__item" data-value="3">3</div>
@@ -2249,6 +2245,8 @@
                      <div class="modal__content-form-item">
                         <div class="modal__content-form-item-name">Цена</div>
                         <div class="modal__content-form-item-range range-slider" min="0" max="10000"></div>
+                        <input name="min" type="text">
+                        <input name="max" type="text">
                      </div>
                      <div class="modal__content-form-item">
                         <div class="modal__content-form-item-name">Наличие</div>

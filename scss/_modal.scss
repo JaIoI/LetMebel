@@ -81,6 +81,9 @@
             background: #F2F6F6;
             border-radius: 2.5rem;
             padding: 1.7rem 3.9rem 2rem 4rem;
+            > input {
+               display: none;
+            }
             &:not(:last-child) {
                margin-bottom: 2rem;
             }

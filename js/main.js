@@ -135,12 +135,13 @@ document.addEventListener("DOMContentLoaded", function () {
   $('.select_checked').click(function () {
     $(this).closest('.select_parent').find('.select_checked').next().slideUp();
     $(this).next().slideDown();
+
   });
   $('.filter__item').click(function () {
     var value = $(this).attr('data-value');
     var text = $(this).html();
     $(this).closest('.checkout__forms-select').find('.filter__select').val(value);
-    $(this).closest('.select').find('.select_checked').find('.select-text').text(text);
+    $(this).closest('.select').find('.select_checked').find('.select-text').val(text).trigger("change");
     $(this).parent().slideUp();
   });
 
@@ -636,7 +637,7 @@ $('.article__small-slide').click(function () {
   const slid = noUiSlider.create(rangeSlider[i], {
     start:['30000', '500000'],
     connect: true,
-    step: 1,
+    step: 100,
     tooltips: true,
     range: {
       'min': [0],
@@ -647,6 +648,11 @@ $('.article__small-slide').click(function () {
       thousand: ' ',
   })
   });
+
+  slid.on('change', function (values) {
+    $('.modal__content-form-item').find('[name="min"]').val(values[0])
+        .siblings('[name="max"]').val(values[1]);
+  })
   }
 
     // Табы

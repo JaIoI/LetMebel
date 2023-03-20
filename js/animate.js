@@ -191,4 +191,17 @@ $(document).ready(function () {
         }
     });
 
+    //Card qty
+    $('.card__content-btns-quantity-plus').click(function () {
+        let val = Number($(this).siblings('input').val()) + 1;
+        $(this).siblings('input').val(val);
+    });
+    $('.card__content-btns-quantity-minus').click(function () {
+        let val = Number($(this).siblings('input').val()) - 1;
+
+        if (val > 0) {
+            $(this).siblings('input').val(val);
+        }
+    });
+
 });
