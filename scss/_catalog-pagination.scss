@@ -48,21 +48,19 @@
     font-size: 1.8rem;
     color: #9BA8A8;
 
-    &:nth-last-child(2) {
-      cursor: default;
-    }
-
-    &:hover:not(:nth-last-child(2)) {
+    &:hover {
       color: #1D1F26;
     }
 
     &.active {
       background-color: #7AC361;
-
-      &:not(:nth-last-child(2)) {
-        color: white;
-      }
+      color: white;
     }
+  }
+
+  span.catalog-pagination__page-link {
+    color: #9BA8A8;
+    cursor: default;
   }
 }
 

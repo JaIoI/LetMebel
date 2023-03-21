@@ -809,6 +809,59 @@
          color: $fzAll;
       }
    }
+
+   &__inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+         margin-bottom: 2rem;
+      }
+   }
+
+   &__inputs-name {
+      flex: 100%;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+   }
+
+   &__label {
+      display: flex;
+      align-items: center;
+      width: 23.4rem;
+      height: 6rem;
+      padding: 0 3rem;
+      border-radius: 1.2rem;
+      background-color: #F2F6F6;
+      font-weight: 700;
+      font-size: 1.4rem;
+
+      &:before {
+         margin-right: 1rem;
+      }
+
+      > input {
+         width: 100%;
+         outline: none;
+         border: none;
+         background-color: transparent;
+      }
+
+      &:nth-child(2) {
+         &:before {
+            content: 'ОТ';
+         }
+      }
+
+      &:nth-child(3) {
+         &:before {
+            content: 'ДО';
+         }
+      }
+   }
 }
 .modal.active {
    z-index: 50000;
@@ -1277,6 +1330,42 @@
       &__textarea {
          font-size: 2.8rem;
          line-height: 4rem;
+      }
+
+      &__inputs {
+         &:not(:last-child) {
+            margin-bottom: 4rem;
+         }
+      }
+
+      &__inputs-name {
+         margin-bottom: 3rem;
+         font-size: 3.6rem;
+         line-height: 5.3rem;
+      }
+
+      &__label {
+         width: 31.6rem;
+         height: 12rem;
+         padding: 0 5rem;
+         border-radius: 2.4rem;
+         font-size: 2.8rem;
+
+         &:before {
+            margin-right: 1.4rem;
+         }
+
+         &:nth-child(2) {
+            &:before {
+               transform: translateY(1px);
+            }
+         }
+
+         &:nth-child(3) {
+            &:before {
+               transform: translateY(1px);
+            }
+         }
       }
    }
 }
