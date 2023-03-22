@@ -604,6 +604,7 @@ h1 {
     height: 4vw;
   }
   .select-text {
+    padding-right: 4rem;
     font-size: 3.6vw;
     line-height: 150%;
   }
@@ -8994,6 +8995,7 @@ h1 {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 3rem;
 }
 .modal__down .modal__content-f > label {
   width: 48%;
@@ -9071,7 +9073,6 @@ h1 {
 }
 .modal__down .modal__content-f > label:first-child {
   width: 100%;
-  margin-bottom: 3rem;
 }
 .modal__down .modal__content-download {
   position: relative;
@@ -9203,6 +9204,9 @@ h1 {
   line-height: 98.9%;
   color: #6A8282;
   margin-left: 3.5rem;
+}
+.modal__down .modal__content-b:not(:last-child) {
+  margin-bottom: 4rem;
 }
 .modal__down .modal__content-file {
   margin-bottom: 4rem;
@@ -9880,6 +9884,9 @@ h1 {
     width: 100%;
     padding-left: 3vw;
     padding-right: 3vw;
+  }
+  .modal__down .modal__content-b:not(:last-child) {
+    margin-bottom: 10.27vw;
   }
   .modal__down .modal__content-file {
     margin-bottom: 10.27vw;
@@ -15794,6 +15801,7 @@ h1 {
   top: 0;
   z-index: -1;
   width: 100%;
+  height: 16.3rem;
 }
 .products__bg-box > svg path {
   fill: #F3D949;
@@ -15821,12 +15829,25 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
+  height: 16.3rem;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.41, 1.22);
   transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.41, 1.22);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.41, 1.22);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.41, 1.22), -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.41, 1.22);
+}
+.products__btn-bg > svg:nth-child(1) {
+  height: 16.1rem;
+}
+.products__btn-bg > svg:nth-child(2) {
+  height: 16.3rem;
+}
+.products__btn-bg > svg:nth-child(3) {
+  height: 16.2rem;
+}
+.products__btn-bg > svg:nth-child(4) {
+  height: 15.8rem;
 }
 .products__btn-bg > svg.active {
   -webkit-transform: translateY(0);
@@ -16710,6 +16731,12 @@ h1 {
   .products__bg-box:before {
     height: calc(100% - 8.4rem);
     border-radius: 6rem;
+  }
+  .products__bg-box > svg {
+    height: 16.2rem;
+  }
+  .products__bg-box > svg.desktop {
+    display: none;
   }
   .products__btn-bg > svg.desktop {
     display: none;

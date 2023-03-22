@@ -369,6 +369,7 @@
                display: flex;
                justify-content: space-between;
                flex-wrap: wrap;
+               gap: 3rem;
                &>label {
                   width: 48%;
                   height: 6rem;
@@ -400,7 +401,6 @@
                   }
                   &:first-child {
                      width: 100%;
-                     margin-bottom: 3rem;
                   }
                }
             }
@@ -513,6 +513,10 @@
                   line-height: 98.9%;
                   color: #6A8282;
                   margin-left: 3.5rem;
+               }
+
+               &:not(:last-child) {
+                  margin-bottom: 4rem;
                }
             }
             &-file {
@@ -1156,6 +1160,10 @@
                      width: 100%;
                      padding-left: 3vw;
                      padding-right: 3vw;
+                  }
+
+                  &:not(:last-child) {
+                     margin-bottom: 10.27vw;
                   }
                }
                &-file {

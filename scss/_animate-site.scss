@@ -709,6 +709,7 @@
       top: 0;
       z-index: -1;
       width: 100%;
+      height: 16.3rem;
 
       path {
         fill: #F3D949;
@@ -743,8 +744,25 @@
       top: 0;
       left: 0;
       width: 100%;
+      height: 16.3rem;
       transform: translateY(100%);
       transition: transform .3s cubic-bezier(0.175, 0.885, 0.410, 1.220);
+
+      &:nth-child(1) {
+        height: 16.1rem;
+      }
+
+      &:nth-child(2) {
+        height: 16.3rem;
+      }
+
+      &:nth-child(3) {
+        height: 16.2rem;
+      }
+
+      &:nth-child(4) {
+        height: 15.8rem;
+      }
 
       &.active {
         transform: translateY(0);
@@ -1525,6 +1543,14 @@
       &:before {
         height: calc(100% - 8.4rem);
         border-radius: 6rem;
+      }
+
+      > svg {
+        height: 16.2rem;
+
+        &.desktop {
+          display: none;
+        }
       }
     }
 
