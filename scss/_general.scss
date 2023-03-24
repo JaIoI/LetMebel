@@ -16,6 +16,7 @@ h1 {
    color: $fzAll;
 }
 .btn {
+   height: fit-content;
    font-weight: 700; 
    line-height: 150%;
    text-transform: uppercase;
@@ -325,6 +326,33 @@ h1 {
    color: #fff;
 }
 
+.lk-favorites {
+   &__title {
+      margin-bottom: 4.2rem;
+      font-weight: 700;
+      font-size: 4.5rem;
+      line-height: 4.7rem;
+   }
+
+   .catalog__item-like {
+      opacity: 1;
+   }
+
+   .like.active::after {
+      background-image: url(../img/icon/like-activ.svg);
+   }
+}
+
+.licab__main-btn-favorites {
+   &:before {
+      background-image: url(../img/lk-favorites.svg);
+   }
+
+   &.active:before {
+      background-image: url(../img/lk-favorites-active.svg);
+   }
+}
+
 @media (min-width: 47.99em) {
    // .link:hover::after {
    //    background: linear-gradient(96.39deg, #0D899F -11.35%, #19B8AE 114.56%) !important;
@@ -479,6 +507,17 @@ h1 {
       white-space: nowrap;
       &::before {
          border-radius: 100rem;
+      }
+   }
+   .lk-favorites {
+      &__title {
+         margin-bottom: 6rem;
+         font-size: 6rem;
+         line-height: 7rem;
+      }
+
+      .catalog__item-like {
+         display: none;
       }
    }
 //    .title {

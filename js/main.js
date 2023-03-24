@@ -640,7 +640,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (var i = 0; i < rangeSlider.length; i++) {
 
         const slid = noUiSlider.create(rangeSlider[i], {
-            start: ['0', '50000'],
+            start: ['0', '100000'],
             connect: true,
             step: 100,
             tooltips: true,
@@ -657,11 +657,14 @@ document.addEventListener("DOMContentLoaded", function () {
         slid.on('change', function (values) {
             $('.modal__content-form-item').find('[name="min"]').val(values[0])
                 .siblings('[name="max"]').val(values[1]);
-
+            let colors = [];
+            $("input:checkbox[name=color]:checked").each(function () {
+                colors.push($(this).val());
+            });
             if ($('.uf_filter').hasClass('active')) {
                 var uf_filter = $('.uf_filter.active').text()
             }
-            var data = $('.product-filter').serialize() + '&uf_filter=' + uf_filter + '&sort=' + $('input[name=sort]').val() + '&sort-count=' + $('input[name=sort-count]').val();
+            var data = $('.product-filter').serialize() + '&uf_filter=' + uf_filter + '&sort=' + $('input[name=sort]').val() + '&sort-count=' + $('input[name=sort-count]').val()+'&colors='+colors;
 
             $.ajax({
                 type: 'POST',
@@ -713,7 +716,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let breakpoint = window.matchMedia("(max-width: 48em)");
             let descOptions = {
                 iconLayout: "default#image",
-                iconImageHref: "img/icon/map_logo.svg",
+                iconImageHref: "/local/templates/letmebel/img/icon/map_logo.svg",
                 iconImageSize: [20, 20],
                 iconImageOffset: [-15, -30],
             };
@@ -814,9 +817,9 @@ document.addEventListener("DOMContentLoaded", function () {
         function parseFile(file) {
             let imgURL = function () {
                 if (file.type.includes('image')) {
-                    return './img/icon/modal-d2.svg';
+                    return '/local/templates/letmebel/img/icon/modal-d2.svg';
                 }
-                return './img/icon/modal-d1.svg';
+                return '/local/templates/letmebel/img/icon/modal-d1.svg';
             }
 
             Output(
@@ -826,7 +829,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 '   </div>\n' +
                 '   <div class="modal__content-file-item-name">' + file.name + '</div>\n' +
                 '   <div class="modal__content-file-item-close">\n' +
-                '      <img src="./img/icon/close-grey.svg" alt="">\n' +
+                '      <img src="/local/templates/letmebel/img/icon/close-grey.svg" alt="">\n' +
                 '   </div>\n' +
                 '</div>'
             );

@@ -174,6 +174,9 @@ h1 {
 }
 
 .btn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   font-weight: 700;
   line-height: 150%;
   text-transform: uppercase;
@@ -524,6 +527,26 @@ h1 {
   color: #fff;
 }
 
+.lk-favorites__title {
+  margin-bottom: 4.2rem;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 4.7rem;
+}
+.lk-favorites .catalog__item-like {
+  opacity: 1;
+}
+.lk-favorites .like.active::after {
+  background-image: url(../img/icon/like-activ.svg);
+}
+
+.licab__main-btn-favorites:before {
+  background-image: url(../img/lk-favorites.svg);
+}
+.licab__main-btn-favorites.active:before {
+  background-image: url(../img/lk-favorites-active.svg);
+}
+
 @media (max-width: 48em) {
   .desctop {
     display: none !important;
@@ -654,6 +677,14 @@ h1 {
   .fake3::before {
     border-radius: 100rem;
   }
+  .lk-favorites__title {
+    margin-bottom: 6rem;
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+  .lk-favorites .catalog__item-like {
+    display: none;
+  }
 }
 .header {
   position: fixed;
@@ -676,6 +707,20 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+}
+.header__inner:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: white;
+  -webkit-filter: blur(3.4rem);
+          filter: blur(3.4rem);
 }
 .header__logo {
   width: 18.09rem;
@@ -1399,6 +1444,9 @@ h1 {
 @media (max-width: 48em) {
   .header {
     padding: 6.4vw 0;
+  }
+  .header__inner:before {
+    content: none;
   }
   .header__logo {
     width: 23.5vw;
@@ -11489,6 +11537,9 @@ h1 {
           justify-content: space-between;
   margin-bottom: 5rem;
 }
+.article__top-cnt {
+  width: 96rem;
+}
 .article__top-cnt-author {
   margin-bottom: 2rem;
   line-height: 150%;
@@ -13613,7 +13664,7 @@ h1 {
 .licab__main {
   width: 22.7%;
   position: relative;
-  height: 47.5rem;
+  height: 53.5rem;
   padding: 0 5.2rem 4.3rem 4.8rem;
 }
 .licab__main::after {
@@ -13623,7 +13674,7 @@ h1 {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/icon/lk-main.png);
+  background-image: url(../img/icon/lk-main.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

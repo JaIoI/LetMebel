@@ -13,6 +13,19 @@
       align-items: center;
       justify-content: space-between;
       position: relative;
+
+      &:before {
+         content: '';
+         position: absolute;
+         left: 50%;
+         top: 0;
+         z-index: -1;
+         width: 100vw;
+         height: 100%;
+         transform: translateX(-50%);
+         background: white;
+         filter: blur(3.4rem);
+      }
    }
    &__logo {
       width: 18.09rem;
@@ -644,6 +657,9 @@
    .header {
       padding: 6.4vw 0;
       &__inner {
+         &:before {
+            content: none;
+         }
       }
       &__logo {
          width: 23.5vw;
