@@ -31,10 +31,16 @@
       margin-bottom: 4rem;
       &-wrap {
          display: flex;
+         flex-wrap: wrap;
          align-items: center;
+         max-width: 124rem;
+         margin-bottom: -2rem;
+         margin-right: -2rem;
       }
       &-btn {
          padding: 1.6rem 2.1rem 1.4rem 2.1rem;
+         margin-right: 2rem;
+         margin-bottom: 2rem;
          font-size: 1.4rem;
          line-height: 157%;
          text-transform: uppercase;
@@ -42,9 +48,6 @@
          border-radius: 0.8rem;
          cursor: pointer;
          transition: ease 0.3s;
-         &:not(:last-child) {
-            margin-right: 2.1rem;
-         }
          &.active {
             font-weight: 700;
             background-color: #E2E9E9;
@@ -53,6 +56,8 @@
       }
       &-link {
          position: relative;
+         margin-right: 2rem;
+         margin-bottom: 2rem;
          font-weight: 700;
          font-size: 1.4rem;
          line-height: 193%;
@@ -66,8 +71,21 @@
             height: 1px;
             background-color: $fzAll;
          }
+
+         & ~ .catalog__btns-btn {
+            display: none;
+         }
+
+         &.active {
+            display: none;
+
+            & ~ .catalog__btns-btn {
+               display: block;
+            }
+         }
       }
       &-filter {
+         height: fit-content;
          padding: 2.2rem 4rem 2.1rem 7.9rem;
          background: $green;
          border-radius: 100rem;
@@ -398,9 +416,12 @@
          display: block;
          margin-bottom: 7.5vw;
          &-wrap {
+            max-width: none;
+            flex-wrap: nowrap;
             overflow: scroll;
-            padding-bottom: 3vw;
-            width: 106%;
+            width: calc(100% + 8rem);
+            margin: 0 -4rem;
+            padding: 0 4rem 3vw 4rem;
          }
          &-btn {
             padding: 3.8vw 5.3vw;
@@ -412,10 +433,15 @@
             }
          }
          &-link {
+            display: none;
             font-size: 3.6vw;
             line-height: 193%;
             &::after {
                bottom: 1.5vw;
+            }
+
+            & ~ .catalog__btns-btn {
+               display: block;
             }
          }
          &-filter {

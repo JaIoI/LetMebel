@@ -104,7 +104,8 @@
                display: flex;
                justify-content: space-between;
                flex-wrap: wrap;
-               &>label {
+               &>label,
+               &>button {
                   display: flex;
                   align-items: center;
                   width: 47.8%;
@@ -118,6 +119,7 @@
                }
                &-more {
                   position: relative;
+                  width: fit-content;
                   text-transform: uppercase;
                   font-size: 1.4rem;
                   margin-right: -0.3rem;
@@ -135,6 +137,18 @@
                      background-size: 1.4rem;
                      background-position: center;
                      background-repeat: no-repeat;
+                  }
+
+                  & ~ label {
+                     display: none;
+                  }
+
+                  &.active {
+                     display: none;
+
+                     & ~ label {
+                        display: flex;
+                     }
                   }
                }
             }

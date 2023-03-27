@@ -5149,12 +5149,19 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 124rem;
+  margin-bottom: -2rem;
+  margin-right: -2rem;
 }
 .catalog__btns-btn {
   padding: 1.6rem 2.1rem 1.4rem 2.1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   font-size: 1.4rem;
   line-height: 157%;
   text-transform: uppercase;
@@ -5164,9 +5171,6 @@ h1 {
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
 }
-.catalog__btns-btn:not(:last-child) {
-  margin-right: 2.1rem;
-}
 .catalog__btns-btn.active {
   font-weight: 700;
   background-color: #E2E9E9;
@@ -5174,6 +5178,8 @@ h1 {
 }
 .catalog__btns-link {
   position: relative;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 193%;
@@ -5188,7 +5194,19 @@ h1 {
   height: 1px;
   background-color: #1D1F26;
 }
+.catalog__btns-link ~ .catalog__btns-btn {
+  display: none;
+}
+.catalog__btns-link.active {
+  display: none;
+}
+.catalog__btns-link.active ~ .catalog__btns-btn {
+  display: block;
+}
 .catalog__btns-filter {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 2.2rem 4rem 2.1rem 7.9rem;
   background: #7AC361;
   border-radius: 100rem;
@@ -5528,9 +5546,13 @@ h1 {
     margin-bottom: 7.5vw;
   }
   .catalog__btns-wrap {
+    max-width: none;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow: scroll;
-    padding-bottom: 3vw;
-    width: 106%;
+    width: calc(100% + 8rem);
+    margin: 0 -4rem;
+    padding: 0 4rem 3vw 4rem;
   }
   .catalog__btns-btn {
     padding: 3.8vw 5.3vw;
@@ -5542,11 +5564,15 @@ h1 {
     margin-right: 5.65vw;
   }
   .catalog__btns-link {
+    display: none;
     font-size: 3.6vw;
     line-height: 193%;
   }
   .catalog__btns-link::after {
     bottom: 1.5vw;
+  }
+  .catalog__btns-link ~ .catalog__btns-btn {
+    display: block;
   }
   .catalog__btns-filter {
     padding: 3.72vw 4.9vw 3.72vw 13.35vw;
@@ -8776,7 +8802,7 @@ h1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.modal__content-form-item-colors > label {
+.modal__content-form-item-colors > label, .modal__content-form-item-colors > button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8787,7 +8813,7 @@ h1 {
   margin-bottom: 1.2rem;
   cursor: pointer;
 }
-.modal__content-form-item-colors > label .fake {
+.modal__content-form-item-colors > label .fake, .modal__content-form-item-colors > button .fake {
   background-color: #ffffff;
   -webkit-box-shadow: 0.85rem 0.85rem 2rem rgba(108, 189, 80, 0.11);
           box-shadow: 0.85rem 0.85rem 2rem rgba(108, 189, 80, 0.11);
@@ -8795,6 +8821,9 @@ h1 {
 }
 .modal__content-form-item-colors-more {
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-transform: uppercase;
   font-size: 1.4rem;
   margin-right: -0.3rem;
@@ -8814,6 +8843,17 @@ h1 {
   background-size: 1.4rem;
   background-position: center;
   background-repeat: no-repeat;
+}
+.modal__content-form-item-colors-more ~ label {
+  display: none;
+}
+.modal__content-form-item-colors-more.active {
+  display: none;
+}
+.modal__content-form-item-colors-more.active ~ label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .modal__content-form-item-range {
   margin-bottom: 4.3rem;

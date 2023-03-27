@@ -863,5 +863,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    $('.catalog__btns-link').click(function () {
+        $(this).addClass('active');
+    });
+
+    $('.modal__content-form-item-colors-more').click(function () {
+        $(this).addClass('active');
+    });
+
 
 });
