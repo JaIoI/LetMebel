@@ -30,6 +30,9 @@
 
       <li style="font-size: 3.4rem;" data-class="question">Задать вопрос</li>
       <br><br><br>
+
+      <li style="font-size: 3.4rem;" onclick="$('[data-modal=order]').addClass('active'); $('body').addClass('hidden');">Ваш заказ оформлен</li>
+      <br><br><br>
    </ol>
 
          <!-- модалка видео-->
@@ -107,6 +110,43 @@
             </div>
          </div>
       </div>
+
+   <!-- модалка ваш заказ оформлен -->
+   <div class="modal modal__order close-x" data-modal="order">
+      <div class="modal__inner">
+         <div class="modal__content">
+            <div class="modal__content-img">
+               <img src="./img/icon/modal-ok.jpg" alt="">
+            </div>
+            <div class="modal__content-title">Ваш заказ оформлен</div>
+            <div class="modal__content-text">
+               Ваш заказ успешно оформлен. В ближайшее время по указанному телефону с Вами свяжется наш менеджер.
+               <br>Номер вашего заказа: <a href="" class="black">#6092397</a>
+            </div>
+            <div class="modal__content-btn-box">
+               <button type="button" class="modal__content-btn modal__content-btn--white btn close-x">Продолжить покупки</button>
+               <a href="" class="modal__content-btn btn">Мои заказы</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- модалка спасибо за заявку-->
+   <!-- Вешаем атрибут data-complete и модалка перестаёт открываться -->
+   <div class="modal modal__cookie close-x" data-modal="cookie">
+      <div class="modal__inner">
+         <div class="modal__content">
+            <div class="modal__content-img">
+               <img src="./img/cookie.png" alt="">
+            </div>
+            <div class="modal__content-title">Мы используем cookie</div>
+            <div class="modal__content-text">
+               Этот сайт использует файлы cookie для хранения данных. Продолжая использовать сайт, вы даете согласие на работу с&nbsp;этими файлами.
+            </div>
+            <div class="modal__content-btn btn close-x">Принять и закрыть</div>
+         </div>
+      </div>
+   </div>
 
 
         <!-- модалка корзина-->

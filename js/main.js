@@ -633,6 +633,37 @@ document.addEventListener("DOMContentLoaded", function () {
     let box = document.querySelector('[data-modal="box"]') ? new Modal('box') : null;
     let question = document.querySelector('[data-modal="question"]') ? new Modal('question') : null;
     let request = document.querySelector('[data-modal="request"]') ? new Modal('request') : null;
+    let order = document.querySelector('[data-modal="order"]') ? new Modal('order') : null;
+    let cookie = document.querySelector('[data-modal="cookie"]') ? new Modal('cookie') : null;
+
+    $('[data-modal=order] .close-x').click(function (e) {
+        $('body').removeClass('hidden');
+        $('[data-modal=order]').removeClass('active');
+    });
+
+    $('[data-modal=order].close-x').click(function (e) {
+        if (e.target.classList.contains('close-x')) {
+            $('body').removeClass('hidden');
+            $('[data-modal=order]').removeClass('active');
+        }
+    });
+
+    $('[data-modal=cookie] .close-x').click(function (e) {
+        $('body').removeClass('hidden');
+        $('[data-modal=cookie]').removeClass('active');
+    });
+
+    $('[data-modal=cookie].close-x').click(function (e) {
+        if (e.target.classList.contains('close-x')) {
+            $('body').removeClass('hidden');
+            $('[data-modal=cookie]').removeClass('active');
+        }
+    });
+
+    if ($('[data-modal=cookie]').length && $('[data-modal=cookie]').attr('data-complete') === undefined) {
+        $('[data-modal=cookie]').addClass('active');
+        $('body').addClass('hidden');
+    }
 
 
     const rangeSlider = document.getElementsByClassName('range-slider');

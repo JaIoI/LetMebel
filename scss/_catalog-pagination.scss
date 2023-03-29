@@ -56,11 +56,11 @@
       background-color: #7AC361;
       color: white;
     }
-  }
 
-  span.catalog-pagination__page-link {
-    color: #9BA8A8;
-    cursor: default;
+    &.more {
+      color: #9BA8A8;
+      cursor: default;
+    }
   }
 }
 
