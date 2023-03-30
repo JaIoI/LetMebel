@@ -636,18 +636,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let order = document.querySelector('[data-modal="order"]') ? new Modal('order') : null;
     let cookie = document.querySelector('[data-modal="cookie"]') ? new Modal('cookie') : null;
 
-    $('[data-modal=order] .close-x').click(function (e) {
-        $('body').removeClass('hidden');
-        $('[data-modal=order]').removeClass('active');
-    });
-
-    $('[data-modal=order].close-x').click(function (e) {
-        if (e.target.classList.contains('close-x')) {
-            $('body').removeClass('hidden');
-            $('[data-modal=order]').removeClass('active');
-        }
-    });
-
     $('[data-modal=cookie] .close-x').click(function (e) {
         $('body').removeClass('hidden');
         $('[data-modal=cookie]').removeClass('active');
@@ -661,8 +649,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if ($('[data-modal=cookie]').length && $('[data-modal=cookie]').attr('data-complete') === undefined) {
-        $('[data-modal=cookie]').addClass('active');
-        $('body').addClass('hidden');
+        setTimeout(function () {
+            $('[data-modal=cookie]').addClass('active');
+            $('body').addClass('hidden');
+        }, 3000);
     }
 
 
