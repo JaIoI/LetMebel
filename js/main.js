@@ -139,7 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var value = $(this).attr('data-value');
         var text = $(this).html();
         $(this).closest('.checkout__forms-select').find('.filter__select').val(value);
-        $(this).closest('.select').find('.select_checked').find('.select-text').html(text).trigger("change");
+        $(this).closest('.select').find('.select_checked').find('.select-text').val(text).trigger("change");
+        $(this).closest('.select').find('.select_checked').find('.select-text-del').html(text).trigger("change");
         $(this).parent().slideUp();
     });
 
