@@ -61,7 +61,6 @@
       margin-bottom: 3.6rem;
       position: relative;
       display: flex;
-      justify-content: space-between;
       &::after {
          position: absolute;
          content: '';
@@ -72,8 +71,9 @@
          background-color: #D2DADA;
       }
       &-map {
-         width: 31.9rem;
-         height: 40.8rem;
+         width: 36rem;
+         height: 21rem;
+         margin-right: 6rem;
          border-radius: 3rem;
          &>div {
             width: 100%;
@@ -88,8 +88,8 @@
          }
       }
       &-btns {
-         width: 13%;
-         margin-left: -5%;
+         width: 20.8rem;
+         margin-right: 7.4rem;
       }
       &-btn {
          display: block;
@@ -103,11 +103,11 @@
          }
       }
       &-list {
-         width: 15%;
-         margin-left: 1.8%;
+         width: 28rem;
+         padding-right: 2rem;
          &>li {
             &:not(:last-child) {
-               margin-bottom: 2rem;
+               margin-bottom: 1rem;
             }
             &>a {
                line-height: 150%;
@@ -115,7 +115,7 @@
          }
       }
       &-add {
-         width: 22%;
+         width: 35.8rem;
          &-info {
             display: flex;
             align-items: center;
@@ -123,7 +123,7 @@
             padding: 2.9rem 2.7rem 2.9rem 4.9rem;
             background: #F3F3F7;
             border-radius: 3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             &-img {
                width: 4.8rem;
                height: 4.8rem;
@@ -283,7 +283,6 @@
          }
          &-btns {
             width: 53%;
-            margin-left: 0;
             margin: 0 auto;
             margin-bottom: 7.7vw;
          }
@@ -296,7 +295,21 @@
             }
          }
          &-list {
-            display: none;
+            width: 100%;
+            padding: 0 6rem;
+            margin-bottom: 3.2rem;
+            text-align: center;
+            &>li {
+               &:not(:last-child) {
+                  margin-bottom: 3.2rem;
+               }
+               &>a {
+                  font-size: 3.6rem;
+               }
+            }
+            &:not(.footer__center-list--mob) {
+               display: none;
+            }
          }
          &-add {
             width: 100%;

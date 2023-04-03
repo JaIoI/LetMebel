@@ -14799,9 +14799,6 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .footer__center::after {
   position: absolute;
@@ -14813,8 +14810,9 @@ h1 {
   background-color: #D2DADA;
 }
 .footer__center-map {
-  width: 31.9rem;
-  height: 40.8rem;
+  width: 36rem;
+  height: 21rem;
+  margin-right: 6rem;
   border-radius: 3rem;
 }
 .footer__center-map > div {
@@ -14829,8 +14827,8 @@ h1 {
   border-radius: 3rem;
 }
 .footer__center-btns {
-  width: 13%;
-  margin-left: -5%;
+  width: 20.8rem;
+  margin-right: 7.4rem;
 }
 .footer__center-btn {
   display: block;
@@ -14844,17 +14842,17 @@ h1 {
   margin-bottom: 2rem;
 }
 .footer__center-list {
-  width: 15%;
-  margin-left: 1.8%;
+  width: 28rem;
+  padding-right: 2rem;
 }
 .footer__center-list > li:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .footer__center-list > li > a {
   line-height: 150%;
 }
 .footer__center-add {
-  width: 22%;
+  width: 35.8rem;
 }
 .footer__center-add-info {
   display: -webkit-box;
@@ -14869,7 +14867,7 @@ h1 {
   padding: 2.9rem 2.7rem 2.9rem 4.9rem;
   background: #F3F3F7;
   border-radius: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .footer__center-add-info-img {
   width: 4.8rem;
@@ -15053,7 +15051,6 @@ h1 {
   }
   .footer__center-btns {
     width: 53%;
-    margin-left: 0;
     margin: 0 auto;
     margin-bottom: 7.7vw;
   }
@@ -15066,6 +15063,18 @@ h1 {
     margin-bottom: 5.3vw;
   }
   .footer__center-list {
+    width: 100%;
+    padding: 0 6rem;
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+  .footer__center-list > li:not(:last-child) {
+    margin-bottom: 3.2rem;
+  }
+  .footer__center-list > li > a {
+    font-size: 3.6rem;
+  }
+  .footer__center-list:not(.footer__center-list--mob) {
     display: none;
   }
   .footer__center-add {
@@ -15667,9 +15676,11 @@ h1 {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
-.footer__center-list li:hover {
-  -webkit-transform: translateX(0.6rem);
-          transform: translateX(0.6rem);
+@media (min-width: 48.01em) {
+  .footer__center-list li:hover {
+    -webkit-transform: translateX(0.6rem);
+            transform: translateX(0.6rem);
+  }
 }
 .footer__bottom-info a:hover:after {
   background-color: transparent;

@@ -368,8 +368,10 @@
     li {
       transition: transform .5s ease;
 
-      &:hover {
-        transform: translateX(0.6rem);
+      @media (min-width: 48.01em) {
+        &:hover {
+          transform: translateX(0.6rem);
+        }
       }
     }
   }
