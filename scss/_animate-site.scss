@@ -261,6 +261,11 @@
   &__wrap {
     position: relative;
     height: 46rem;
+
+    @media (min-width: 1920px) {
+      width: 1920px;
+      margin: 0 auto;
+    }
   }
 
   &__items {
