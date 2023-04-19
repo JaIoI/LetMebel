@@ -5,13 +5,17 @@
 }
 html {
     font-family: 'Circe', sans-serif; // шрифт по умолчанию по сайту
-    font-size: 0.520835vw; // на разрешении 1920 0.520835vw === 10px
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     -webkit-animation: bugfix infinite 1s;
     line-height: 110%;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 1920px) {
+        font-size: 0.520835vw; // на разрешении 1920 0.520835vw === 10px
+    }
 }
 body {
     font-style: normal;
