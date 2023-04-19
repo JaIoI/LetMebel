@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
     const rem = function (rem) {
-        if ($(window).width() > 768) {
+        if ($(window).width() > 1920) {
+            return 10 * rem;
+        } else if ($(window).width() > 768) {
             return 0.005208335 * $(window).width() * rem;
         } else {
-            // где 414 это ширина моб версии макета
             return (100/375) * (0.1 * $(window).width()) * rem;
         }
     }
