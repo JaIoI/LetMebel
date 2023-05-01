@@ -898,9 +898,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // 01-05-2023
 
 const swiper_block = new Swiper('.swiper_block', {
-
     loop: true,
-
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -909,18 +907,54 @@ const swiper_block = new Swiper('.swiper_block', {
         el: '.swiper-pagination',
         clickable: true
     },
-
     effect: 'fade',
     on: {
-        slideChange: function (swiper) {
-            let currentSlide = document.querySelector('.swiper_control .current');
+        init: function () {
+            this.DUPLICATE_SLIDES = 2;
+            this.main_wrapper = document.querySelector('.block_wrap');
+            this.main_wrapper.classList.add(`position_${this.realIndex + 1}`);
+            this.paginationEl = document.querySelector('.swiper_block .pagination');
+            this.slidesNumber = this.slides.length - this.DUPLICATE_SLIDES;
 
-            swiper.slides.forEach(element => {
-                if(element.classList.contains('swiper-slide-next')) {
-                    let index =+ element.dataset.swiperSlideIndex;
-                    currentSlide.innerHTML = index + 1 < 10 ? `0${index + 1}` : `${index + 1}`;
+            this.bullet = document.createElement('span');
+            this.bullet.classList.add('active');
+            this.paginationEl.append(this.bullet);
+            this.BULLET_WIDTH = this.bullet.offsetWidth;
+            this.bullet.style.left = this.BULLET_WIDTH * i / 10 + `rem`;
+            this.paginationEl.style.width = (this.BULLET_WIDTH * this.slidesNumber) / 10 + `rem`;
+            this.paginationEl.style.height = this.BULLET_WIDTH / 10 + `rem`;
+            this.paginationEl.append(this.bullet);
+            this.bulletsPos = [];
+            for(i = 0; i < this.slidesNumber; i++) {
+                if (i == 0) {
+                    this.bulletsPos.push(this.BULLET_WIDTH * i / 10 + `rem`);
+                    continue;
                 }
-            });
+                const bullet = document.createElement('span');
+                bullet.style.left = this.BULLET_WIDTH * i / 10 + `rem`;
+                this.bulletsPos.push(this.BULLET_WIDTH * i / 10 + `rem`);
+                this.paginationEl.append(bullet);
+            }
+
+            this.block_names_wrap = document.querySelector('.block__names_wrap');
+            this.block_namesEl = this.block_names_wrap.querySelector('.block__names');
+            this.block_names = this.block_names_wrap.querySelectorAll('.block__names span');
+            this.block_name_width = this.block_names[this.realIndex].offsetWidth / 10;
+            this.block_names_wrap.style.maxWidth = this.block_name_width  + 'rem';
+
+        },
+        slideChange: function (swiper) {
+            let currentSlide = document.querySelector('.swiper_block .current');
+            currentSlide.innerHTML = this.realIndex + 1 < 10 ? `0${this.realIndex + 1}` : `${this.realIndex + 1}`;
+            if (this.main_wrapper) {
+                this.main_wrapper.className = 'block_wrap';
+                this.main_wrapper.classList.add(`position_${this.realIndex + 1}`);
+            }
+
+            if (this.block_names_wrap) {
+                this.block_name_width = this.block_names[this.realIndex - 1].offsetWidth / 10;
+                this.block_names_wrap.style.maxWidth = this.block_name_width + 'rem';
+            }
         }
     },
     slidesPerView: 1,
