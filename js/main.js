@@ -895,4 +895,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+// 01-05-2023
+
+const swiper_block = new Swiper('.swiper_block', {
+
+    loop: true,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+
+    effect: 'fade',
+    on: {
+        slideChange: function (swiper) {
+            let currentSlide = document.querySelector('.swiper_control .current');
+
+            swiper.slides.forEach(element => {
+                if(element.classList.contains('swiper-slide-next')) {
+                    let index =+ element.dataset.swiperSlideIndex;
+                    currentSlide.innerHTML = index + 1 < 10 ? `0${index + 1}` : `${index + 1}`;
+                }
+            });
+        }
+    },
+    slidesPerView: 1,
+});
+
+
+    // $('.anim_btn').on('click', function(evt) {
+    //     document.getElementById('polygon_animate').beginElement()
+    // });
+
 });
