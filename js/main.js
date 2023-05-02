@@ -915,12 +915,12 @@ const swiper_block_thumbs = new Swiper('.swiper_block_thumbs', {
     on: {
         init: function () {
             this.polygon = document.querySelector('.polygon');
-            this.activeSlideWidth = this.slides[this.realIndex].querySelector('span').offsetWidth;
-            this.el.style.maxWidth = this.activeSlideWidth / 10 + 'rem';
+            // this.activeSlideWidth = this.slides[this.realIndex].querySelector('span').offsetWidth;
+            // this.el.style.maxWidth = this.activeSlideWidth / 10 + 'rem';
         },
         slideChange: function () {
-            this.activeSlideWidth = this.slides[this.realIndex].querySelector('span').offsetWidth;
-            this.el.style.maxWidth = this.activeSlideWidth / 10 + 'rem';
+            // this.activeSlideWidth = this.slides[this.realIndex].querySelector('span').offsetWidth;
+            // this.el.style.maxWidth = this.activeSlideWidth / 10 + 'rem';
         },
         slideNextTransitionStart: function () {
             transformImage({ rotate: 72 }, this.polygon)
@@ -946,9 +946,9 @@ const swiper_block = new Swiper('.swiper_block', {
         swiper: swiper_block_thumbs,
     },
     effect: 'fade',
-    autoplay: {
-        delay: 4000,
-    },
+    // autoplay: {
+    //     delay: 4000,
+    // },
     on: {
         init: function () {
             this.DUPLICATE_SLIDES = 2;
