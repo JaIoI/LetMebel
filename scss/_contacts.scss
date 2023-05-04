@@ -9,6 +9,11 @@
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 4.9rem;
+
+      &_undermap {
+         margin-bottom: 0;
+         margin-top: 4.9rem;
+      }
    }
    &__item {
       width: 22.55%;
@@ -165,6 +170,10 @@
       &__info {
          display: block;
          margin-bottom: 7.2vw;
+         &_undermap {
+            margin-bottom: 0;
+            margin-top: 7.2vw;
+         }
       }
       &__item {
          width: 100%;

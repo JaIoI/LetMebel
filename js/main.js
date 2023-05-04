@@ -991,8 +991,42 @@ const swiper_block = new Swiper('.swiper_block', {
 });
 
 
-    // $('.anim_btn').on('click', function(evt) {
-    //     document.getElementById('polygon_animate').beginElement()
-    // });
+    $('.catalog__item-content-basket').on('click', function(evt) {
+        let cart = $('.header__btns-btn--basket');
+
+        let imgtodrag = $(this).parent().parent().find('.catalog__item-img img').eq(0);
+
+        if (imgtodrag) {
+            let imgclone = imgtodrag.clone()
+                .offset({
+                top: imgtodrag.offset().top + 100,
+                left: imgtodrag.offset().left + 100
+            })
+                .css({
+                'opacity': '0.7',
+                    'position': 'absolute',
+                    'height': '15rem',
+                    'width': '15rem',
+                    'z-index': '100' 
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top + 20,
+                    'left': cart.offset().left + 20,
+                    'width': 75,
+                    'height': 75
+            }, 800, 'easeInOutExpo');
+
+
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+    });
+
+
 
 });

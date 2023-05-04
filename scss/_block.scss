@@ -80,6 +80,9 @@ $spanSize: 1.8rem;
    }
 
    &_wrap {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
 
       &.position_1 {
          .pagination span {
@@ -96,12 +99,12 @@ $spanSize: 1.8rem;
 
             &:nth-child(4) {
                top: -100rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(5) {
                top: 10rem;
-               left: -100rem;
+               left: -200rem;
             }
          }
 
@@ -126,7 +129,7 @@ $spanSize: 1.8rem;
          .image {
             &:nth-child(1) {
                top: 10rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(2) {
@@ -141,7 +144,7 @@ $spanSize: 1.8rem;
 
             &:nth-child(5) {
                top: -100rem;
-               left: -100rem;
+               left: -200rem;
             }
          }
 
@@ -169,12 +172,12 @@ $spanSize: 1.8rem;
          .image {
             &:nth-child(1) {
                top: -100rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(2) {
                top: 10rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(3) {
@@ -220,12 +223,12 @@ $spanSize: 1.8rem;
 
             &:nth-child(2) {
                top: -100rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(3) {
                top: 10rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(4) {
@@ -270,12 +273,12 @@ $spanSize: 1.8rem;
 
             &:nth-child(3) {
                top: -100rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(4) {
                top: 10rem;
-               left: -100rem;
+               left: -200rem;
             }
 
             &:nth-child(5) {
@@ -472,6 +475,7 @@ $spanSize: 1.8rem;
 
 @media (max-width: 48em) {
    .block {
+      .pagination,
       .current {
          display: none;
       }
@@ -489,6 +493,24 @@ $spanSize: 1.8rem;
          font-size: 5.7rem;
          line-height: 111%;
       }
+
+      .polygon {
+         top: -32rem;
+         left: -18rem;
+         width: 100rem;
+         height: 100rem;
+      }
+
+      .images {
+         top: 19rem;
+         left: 0;
+      }
+
+      .image {
+         width: 77rem;
+         height: 77rem;
+      }
+
    }
 
    .swiper_control {
@@ -522,7 +544,28 @@ $spanSize: 1.8rem;
       }
 
    }
-   .slide__inner {
-      margin: 0;
+   .slide {
+      padding-top: 90rem;
+      padding-bottom: 7.8rem;
+
+      &__inner {
+         margin: 0;
+      }
+
+      &__title {
+         margin-bottom: 2.8rem;
+         font-size: 5.75rem;
+         line-height: 111%;
+      }
+
+      &__text {
+         margin-bottom: 5.6rem;
+         font-size: 3.45rem;
+      }
+
+      &__btn {
+         padding: 3.9rem 6.1rem 3.6rem;
+         font-size: 2.7rem;
+      }
    }
 }
