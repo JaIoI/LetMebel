@@ -1027,6 +1027,21 @@ const swiper_block = new Swiper('.swiper_block', {
         }
     });
 
+    let article_images = $('.article__text img');
+
+    if (article_images) {
+        article_images.each((index, elem) => {
+            let $img = $(elem);
+            let img_width = $img.attr('width');
+            let img_height = $img.attr('height');
+            if (img_width) {
+                $img.width(img_width);
+            }
+            if (img_height) {
+                $img.height(img_height);
+            }
+        });
+    }
 
 
 });
