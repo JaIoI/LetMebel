@@ -113,6 +113,19 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".header__category2").click(function (event) {
         $(".header__category2,.header__add-wrap2").toggleClass("active");
         $('html').toggleClass('no__scroll');
+
+        $('.dropdown-n').removeClass('active');
+        $('.dropdown-content-n').removeClass('active').slideUp(300);
+
+    });
+
+    $(document).mouseup( function(evt){
+        let header__add = $('.header__add-wrap1 .header__add');
+        if ( !header__add.is(evt.target)
+            && header__add.has(evt.target).length === 0 ) {
+            $(".header__category1,.header__add-wrap1").removeClass("active");
+            $('html').removeClass('no__scroll');
+        }
     });
 
     $(".checkout__forms-a").click(function (event) {
@@ -157,6 +170,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    let bigBanerSlidesImages = $('.baner__swiper-big .swiper-slide img.mobile');
+    let smallBanerWrapper = $('.baner__swiper-small .swiper-wrapper');
+
+    bigBanerSlidesImages.each((index, elem) => {
+        let imgSrc = $(elem).attr('src');
+        let newSlide = $(`<div class="swiper-slide"><img src="${imgSrc}"></div>`);
+        smallBanerWrapper.append(newSlide);
+    })
+
+    const banerSwiperSmall = new Swiper(".baner__swiper-small", {
+        speed: 1200,
+        spaceBetween: rem(1),
+        loop: true,
+        effect: 'fade',
+        allowTouchMove: false,
+        fadeEffect: {
+            crossFade: true
+        },
+        on: {
+            slideChange: function (swiper) {
+                let currentSlide = document.querySelector('.baner__small-bottom-num');
+                currentSlide.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
+            }
+        },
+    });
+
     const slider1 = new Swiper(".baner__swiper-big", {
         navigation: {
             nextEl: ".baner__btn-next",
@@ -171,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slideChange: function (swiper) {
                 let currentSlide = document.querySelector('.current');
                 currentSlide.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
+                banerSwiperSmall.slideTo(swiper.realIndex + 2)
             }
         },
         spaceBetween: rem(1),
@@ -187,29 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 speed: 1500,
                 loop: true,
                 // allowTouchMove: false,
-            }
-        },
-
-        thumbs: {
-            swiper: {
-                el: '.baner__swiper-small',
-                speed: 1200,
-                spaceBetween: rem(1),
-                watchSlidesProgress: true,
-                loop: true,
-                breakpoints: {
-                    769: {
-                        spaceBetween: rem(1),
-                        speed: 1200,
-                        allowTouchMove: false,
-                        watchSlidesProgress: true,
-                        loop: true,
-                        effect: 'fade',
-                        fadeEffect: {
-                            crossFade: true
-                        },
-                    }
-                },
             }
         },
     });
@@ -659,6 +676,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const rangeSlider = document.getElementsByClassName('range-slider');
+    const clearBtn = document.getElementsByClassName('modal__content-header-clear');
 
     for (var i = 0; i < rangeSlider.length; i++) {
 
@@ -678,6 +696,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         slid.on('change', function (values) {
+
             $('.modal__content-form-item').find('[name="min"]').val(values[0])
                 .siblings('[name="max"]').val(values[1]);
             let colors = [];
@@ -719,7 +738,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
         })
     }
+    $('.modal__content-header-clear').on('click', function () {
+        rangeSlider[0].noUiSlider.reset()
+        $('.product-filter')[0].reset();
+        let colors = [];
+        $("input:checkbox[name=color]:checked").each(function () {
+            colors.push($(this).val());
+        });
+        if ($('.uf_filter').hasClass('active')) {
+            var uf_filter = $('.uf_filter.active').text()
+        }
+        var data = $('.product-filter').serialize() + '&uf_filter=' + uf_filter+'&sort='+$('input[name=sort]').val()+'&sort-count='+$('input[name=sort-count]').val()+'&colors='+colors;
 
+        $.ajax({
+            type: 'POST',
+            url: '/ajax/filters/filter.php',
+            data: data,
+            success: function (d) {
+                $('.filter-ajax').html(d)
+                $.ajax({
+                    type: 'POST',
+                    url: '/ajax/filters/count.php',
+                    data: data,
+                    success: function (data) {
+
+                        $('#filter-count').html(data)
+                        $('.catalog__header h1 span').html(data)
+                        $('.catalog__quantity').html(data)
+                    },
+                    error: function (data) {
+                        console.log(data)
+                        console.log(false)
+                    }
+                })
+
+            },
+            error: function (data) {
+                console.log(data)
+                console.log(false)
+            }
+        })
+    })
     // Табы
     $('.tabs__btn').click(function () {
         $('.tabs__btn').removeClass('active');
@@ -946,9 +1005,9 @@ const swiper_block = new Swiper('.swiper_block', {
         swiper: swiper_block_thumbs,
     },
     effect: 'fade',
-    // autoplay: {
-    //     delay: 4000,
-    // },
+    autoplay: {
+        delay: 4000,
+    },
     on: {
         init: function () {
             this.DUPLICATE_SLIDES = 2;

@@ -183,7 +183,7 @@ $(document).ready(function () {
 
     //Scroll
     $(document).scroll(function () {
-        if ($('.header').offset().top > 1000) {
+        if ($('.header').offset().top > 1) {
             $('.header').addClass('header--min');
             $('.modal-search').addClass('modal-search--min');
         } else {
