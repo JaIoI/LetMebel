@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Аккордеон
     $('.accordion').click(function (event) {
-        $(this).toggleClass('active').next().slideToggle(300);
+        $(this).toggleClass('active').next().slideToggle(700);
         $(this).parent().toggleClass('active');
     });
 
@@ -190,8 +190,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         on: {
             slideChange: function (swiper) {
-                let currentSlide = document.querySelector('.baner__small-bottom-num');
-                currentSlide.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
+                let currentSlide = document.querySelector('.baner__swiper-small-bottom-num');
+                if(currentSlide) {
+                    currentSlide.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
+                }
             }
         },
     });

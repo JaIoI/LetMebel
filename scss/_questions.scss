@@ -81,7 +81,7 @@
          line-height: 150%;
          text-transform: uppercase;
          color: $fzAll;
-         transition: ease 0.3s;
+         transition: ease 0.7s;
       }
       &>li:nth-child(-n+9)::before {
          content: "0" counter(list);
@@ -93,7 +93,7 @@
       line-height: 150%;
       padding: 2.95rem 0 2.95rem 0;
       position: relative;
-      transition: ease 0.3s;
+      transition: ease 0.7s;
       cursor: pointer;
       padding-right: 5rem;
       &::after {
@@ -108,13 +108,13 @@
          background-repeat: no-repeat;
          background-size: contain;
          background-position: center;
-         transition: ease 0.3s;
+         transition: ease 0.7s;
       }
       &.active {
-         font-weight: 700;
-         font-size: 4.5rem;
-         line-height: 104%;
-         padding-top: 5rem;
+         // font-weight: 700;
+         // font-size: 4.5rem;
+         // line-height: 104%;
+         // padding-top: 5rem;
          &::after {
             transform: translateY(-50%) rotate(90deg);
          }

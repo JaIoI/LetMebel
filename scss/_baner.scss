@@ -52,29 +52,30 @@
       position: absolute;
       top: 3.3rem;
       right: 2.4rem;
+      overflow: visible;
       
       .swiper-wrapper {
          min-height: 10.8rem;
       }
 
       &-bottom {
+         position: absolute;
+         bottom: -4.7rem;
+         left: 50%;
+         width: 21.2rem;
+         padding-left: 0.7rem;
+         transform: translateX(-50%);
          display: flex;
          justify-content: space-between;
          align-items: center;
+         font-size: 1.4rem;
+         line-height: 2.1rem;
+         text-transform: uppercase;
          &-num {
-            font-size: 1.4rem;
-            line-height: 193%;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
             color: $grey;
          }
          &-title {
             font-weight: 700;
-            font-size: 1.4rem;
-            line-height: 193%;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-right: 0.6rem;
          }
       }
    }
