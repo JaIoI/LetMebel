@@ -53,6 +53,8 @@
       top: 3.3rem;
       right: 2.4rem;
       overflow: visible;
+      z-index: 2;
+      cursor: pointer;
       
       .swiper-wrapper {
          min-height: 10.8rem;

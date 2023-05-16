@@ -96,9 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // БУРГЕР
 
-    $(".header__burger").click(function (event) {
-        $(".header__burger,.header__bm").toggleClass("active");
-        $('html').toggleClass('no__scroll');
+    $('.header__burger').click(function (evt) {
+        evt.preventDefault();
+        $('html').toggleClass('mob_menu_active');
+        $('.header__burger').toggleClass('cross');
     });
 
     $(".add_c").click(function (event) {
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     $(".header__add-close").click(function (event) {
-        $(".header__category2, .header__add-wrap2").removeClass("active");
+        $(".header__category2, .header__add-wrap2").removeClass("active").scrollTop(0);
         $('html').removeClass('no__scroll');
 
         $('.dropdown-n').removeClass('active');
@@ -130,14 +131,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
 
-    // $(document).mouseup( function(evt){
-    //     let header__add = $('.header__add-wrap1 .header__add');
-    //     if ( !header__add.is(evt.target)
-    //         && header__add.has(evt.target).length === 0 ) {
-    //         $(".header__category1,.header__add-wrap1").removeClass("active");
-    //         $('html').removeClass('no__scroll');
-    //     }
-    // });
+    $(document).mouseup( function(evt){
+        let header__add = $('.header__add-wrap1 .header__add');
+        if ( !header__add.is(evt.target)
+            && header__add.has(evt.target).length === 0 ) {
+            $(".header__category1,.header__add-wrap1").removeClass("active");
+            $('html').removeClass('no__scroll');
+        }
+    });
 
     $(".checkout__forms-a").click(function (event) {
         $(".checkout__forms-a,.checkout__forms-u-info").toggleClass("active");
@@ -182,7 +183,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let bigBanerSlidesImages = $('.baner__swiper-big .swiper-slide img.mobile');
-    let smallBanerWrapper = $('.baner__swiper-small .swiper-wrapper');
+    let smallBaner = $('.baner__swiper-small');
+    let smallBanerWrapper = smallBaner.find('.swiper-wrapper');
 
     bigBanerSlidesImages.each((index, elem) => {
         let imgSrc = $(elem).attr('src');
@@ -209,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    const slider1 = new Swiper(".baner__swiper-big", {
+    const banerSwiperBig = new Swiper(".baner__swiper-big", {
         navigation: {
             nextEl: ".baner__btn-next",
             prevEl: ".baner__btn-prev",
@@ -244,6 +246,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    smallBaner.on('click', function(evt) {
+        evt.preventDefault();
+        banerSwiperBig.slideNext(500)
+    })
 
     const slider2 = new Swiper(".category__swiper", {
         navigation: {

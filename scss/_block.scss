@@ -81,8 +81,19 @@ $spanSize: 1.8rem;
 
    &_wrap {
       position: relative;
-      max-width: 1920px;
+      max-width: 192rem;
       margin: 0 auto;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 110%;
+         bottom: 0;
+         width: 100rem;
+         background: linear-gradient(90deg, $green 70%, rgba(#000, 0) 100%);
+         z-index: 4;
+      }
 
       &.position_1 {
          .pagination span {
@@ -99,12 +110,12 @@ $spanSize: 1.8rem;
 
             &:nth-child(4) {
                top: -100rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(5) {
                top: 10rem;
-               left: -200rem;
+               left: -150rem;
             }
          }
 
@@ -129,7 +140,7 @@ $spanSize: 1.8rem;
          .image {
             &:nth-child(1) {
                top: 10rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(2) {
@@ -144,7 +155,7 @@ $spanSize: 1.8rem;
 
             &:nth-child(5) {
                top: -100rem;
-               left: -200rem;
+               left: -150rem;
             }
          }
 
@@ -172,12 +183,12 @@ $spanSize: 1.8rem;
          .image {
             &:nth-child(1) {
                top: -100rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(2) {
                top: 10rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(3) {
@@ -223,12 +234,12 @@ $spanSize: 1.8rem;
 
             &:nth-child(2) {
                top: -100rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(3) {
                top: 10rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(4) {
@@ -273,12 +284,12 @@ $spanSize: 1.8rem;
 
             &:nth-child(3) {
                top: -100rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(4) {
                top: 10rem;
-               left: -200rem;
+               left: -150rem;
             }
 
             &:nth-child(5) {
