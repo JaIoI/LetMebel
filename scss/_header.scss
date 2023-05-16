@@ -280,23 +280,26 @@
 
    &__add {
       width: 32.5%;
-      height: auto;
       background-color: $white;
-      border-radius: 6rem 0 0 6rem;
+      border-radius: 5rem 5rem 0 0;
       padding: 4.4rem 0 7rem 14.6rem;
 
       &-wrap {
-         display: none;
+         pointer-events: none;
          position: absolute;
          left: 0;
          top: 11.8rem;
          z-index: 1000;
          width: 100%;
          height: 100vh;
-         overflow: scroll;
+         overflow-y: auto;
+         overflow-x: hidden;
+         transform: translateY(110%);
+         transition: 300ms;
 
          &.active {
-            display: block;
+            pointer-events: auto;
+            transform: translateY(0);
          }
       }
 
@@ -461,20 +464,19 @@
 
       &-wrap2 {
          width: 100%;
-         height: 96vh;
+         height: calc(100vh - 11.8rem);
 
          &.header__add-wrap {
             & .header__add {
                width: 100%;
-               height: 99%;
-               padding: 4.3rem 15rem 15rem 15rem;
+               min-height: 100%;
+               padding: 4.3rem 15rem 6rem 15rem;
 
                &-items {
-                  display: flex;
-                  flex-direction: column;
-                  flex-wrap: wrap;
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  grid-gap: 1rem;
                   height: 100%;
-
                }
 
                &-close {
@@ -483,9 +485,10 @@
                }
 
                &-content {
-                  border-radius: 6rem 0 0 6rem;
+                  border-radius: 5rem 5rem 0 0;
                   padding: 4.3rem 15rem;
                   z-index: 10;
+                  height: 100%;
 
                   &.active {
                      width: 100%;
@@ -497,6 +500,31 @@
 
                   &-menu {
                      width: 100%;
+
+                     &-els {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 1rem;
+                     }
+         
+                     &-el {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin: 0;
+         
+                        &:hover {
+                           color: #7AC361;
+                        }
+         
+                        img {
+                           flex-shrink: 0;
+                           width: 5rem;
+                           margin-right: 2rem;
+                           height: 5rem;
+                           object-fit: contain;
+                        }
+                     }
 
                      &-link {
                         cursor: pointer;
@@ -543,16 +571,9 @@
                         line-height: 145%;
                      }
 
-                     &-el {
-                        width: 22%;
-                        margin-bottom: 3rem;
-                     }
                   }
                }
 
-               &-wr {
-                  width: 33%;
-               }
             }
          }
       }
