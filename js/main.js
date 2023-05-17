@@ -491,6 +491,8 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 1200,
         spaceBetween: rem(4.8),
         watchSlidesProgress: true,
+        allowTouchMove: false,
+        cssMode: true,
         breakpoints: {
             769: {
                 slidesPerView: 6,
@@ -517,9 +519,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    $('.article__more').click(function () {
-        slider11.destroy(false);
-        $('.article__small-swiper').addClass('slider-active');
+    setTimeout((() => {
+        if ($('.article__small-slide').length > 6) {
+            $('.article__more').css('display', 'block');
+        }
+        }
+    ), 400)
+
+    $('.article__more').on('click', function () {
+        $('.article__img').toggleClass('show_all');
     });
 
 
@@ -1135,6 +1143,6 @@ const swiper_block = new Swiper('.swiper_block', {
         }
 
         setTimeout(findText, 500);
-    })
+    });
 
 });

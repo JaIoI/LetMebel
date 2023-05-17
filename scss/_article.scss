@@ -176,18 +176,6 @@
             &-swiper {
                width: 100%;
                height: 11.5rem;
-               &.slider-active {
-                  height: auto !important;
-                  overflow: visible;
-                  .swiper-wrapper {
-                     flex-wrap: wrap;
-                     gap: 2.8rem;
-                  }
-                  .swiper-slide {
-                     width: 15%;
-                     height: 11.5rem;
-                  }
-               }
             }
             &-slide {
                height: 100%;
@@ -201,6 +189,9 @@
             }
          }
          &__more {
+            display: none;
+            min-width: 30rem;
+            height: 4rem;
             font-weight: 700;
             font-size: 1.4rem;
             line-height: 150%;
@@ -212,7 +203,20 @@
             cursor: pointer;
             position: relative;
             padding-right: 2rem;
-            width: fit-content;
+
+            span {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               left: 0;
+               width: 100%;
+
+            }
+
+            .article__hide {
+               opacity: 0;
+            }
+
             &::after {
                position: absolute;
                content: '';
@@ -485,18 +489,6 @@
                &-swiper {
                   width: 106%;
                   height: 27vw;
-                  &.slider-active {
-                     height: auto !important;
-                     overflow: visible;
-                     .swiper-wrapper {
-                        flex-wrap: wrap;
-                        gap: 6.16vw;
-                     }
-                     .swiper-slide {
-                        width: 44%;
-                        height: 27vw;
-                     }
-                  }
                }
                &-slide {
                   border-radius: 7.7vw;
@@ -609,6 +601,37 @@
                }
             }
          }
+      }
+   }
+}
+
+.show_all {
+   .article__small-swiper {
+      overflow: visible;
+      height: auto;
+
+      .swiper-wrapper {
+         display: grid;
+         grid-template-columns: repeat(6, 1fr);
+         grid-gap: 2.6rem;
+      }
+
+      .swiper-slide {
+         height: 11.5rem;
+         margin: 0 !important;
+      }
+   }
+
+   .article__more {
+      .article__show {
+         opacity: 0;
+      }
+      .article__hide {
+         opacity: 1;
+      }
+
+      &::after {
+         transform: translateY(-50%) rotate(-90deg);
       }
    }
 }
