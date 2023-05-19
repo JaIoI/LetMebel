@@ -107,6 +107,30 @@
    }
 }
 
+.checkout__forms {
+   label {
+      position: relative;
+   }
+}
+.inn-error {
+   position: absolute;
+   top: -0.8rem;
+   right: 1.3rem;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 150%;
+      background: #e2e9e9;
+      border-radius: 1.1rem;
+      transform: translate(-50%,-50%);
+      z-index: -1;
+   }
+}
+
 @media (max-width: 48em) {
    .lk {
       margin-bottom: 58.5vw;

@@ -490,15 +490,11 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1.7,
         speed: 1200,
         spaceBetween: rem(4.8),
-        watchSlidesProgress: true,
-        allowTouchMove: false,
-        cssMode: true,
+        mousewheel: false,
         breakpoints: {
             769: {
                 slidesPerView: 6,
-                speed: 1200,
                 spaceBetween: rem(2.7),
-                watchSlidesProgress: true,
             }
         },
     });
