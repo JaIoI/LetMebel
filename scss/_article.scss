@@ -614,6 +614,7 @@
          display: grid;
          grid-template-columns: repeat(6, 1fr);
          grid-gap: 2.6rem;
+         transform: none !important;
       }
 
       .swiper-slide {
