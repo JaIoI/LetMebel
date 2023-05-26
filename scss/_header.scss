@@ -9,6 +9,14 @@
    // background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
    padding: 3rem 0;
 
+   &--min {
+      padding-bottom: 0;
+
+      .container {
+         width: auto;
+      }
+   }
+
 
 
    &__inner {
