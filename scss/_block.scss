@@ -6,6 +6,11 @@ $spanSize: 1.8rem;
    margin-bottom: 10rem;
    overflow: hidden;
 
+   &.disabled *,
+   &.disabled {
+      pointer-events: none;
+   }
+
    .container {
       position: relative;
    }
@@ -472,6 +477,7 @@ $spanSize: 1.8rem;
    }
 
    &__btn {
+      pointer-events: auto !important;
       display: block;
       padding: 2.7rem 3rem 2.4rem;
       background: $white;

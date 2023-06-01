@@ -131,11 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
 
-    $(document).mouseup( function(evt){
-        let header__add = $('.header__add-wrap1 .header__add');
+    $(document).mouseup( function(evt) {
+        let header__add = $('.header__add-items');
         if ( !header__add.is(evt.target)
             && header__add.has(evt.target).length === 0 ) {
-            $(".header__category1,.header__add-wrap1").removeClass("active");
+            $(".header__category1,.header__add-wrap1,.header__category2,.header__add-wrap2").removeClass("active");
             $('html').removeClass('no__scroll');
         }
     });
@@ -1014,8 +1014,15 @@ const swiper_block_thumbs = new Swiper('.swiper_block_thumbs', {
 });
 
 
+
+function centeredBlock() {
+    $('html, body').animate({
+        scrollTop: $('.block').offset().top - 80
+    }, 1000);
+}
+
 const swiper_block = new Swiper('.swiper_block', {
-    loop: true,
+    // loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -1028,12 +1035,14 @@ const swiper_block = new Swiper('.swiper_block', {
         swiper: swiper_block_thumbs,
     },
     effect: 'fade',
-    autoplay: {
-        delay: 4000,
+    mousewheel: {
+        eventsTarget: '.block',
+        releaseOnEdges: true,
+        thresholdTime: 1000,
     },
     on: {
         init: function () {
-            this.DUPLICATE_SLIDES = 2;
+            this.DUPLICATE_SLIDES = 0;
             this.main_wrapper = document.querySelector('.block_wrap');
             this.main_wrapper.classList.add(`position_${this.realIndex + 1}`);
             this.paginationEl = document.querySelector('.swiper_block .pagination');
@@ -1067,10 +1076,46 @@ const swiper_block = new Swiper('.swiper_block', {
                 this.main_wrapper.className = 'block_wrap';
                 this.main_wrapper.classList.add(`position_${this.realIndex + 1}`);
             }
-        }
+        },
+        slideChangeTransitionStart: centeredBlock,
     },
     slidesPerView: 1,
 });
+
+
+// function addOnWheel(elem, handler) {
+//     if (elem.addEventListener) {
+//         if ('onwheel' in document) {
+//         // IE9+, FF17+
+//         elem.addEventListener('wheel', handler);
+//         } else if ('onmousewheel' in document) {
+//             // устаревший вариант события
+//             elem.addEventListener('mousewheel', handler);
+//         } else {
+//             // 3.5 <= Firefox < 17, более старое событие DOMMouseScroll пропустим
+//             elem.addEventListener('MozMousePixelScroll', handler);
+//         }
+//     }
+// }
+
+// addOnWheel($('.block')[0], function(e) {
+
+//     let delta = e.deltaY || e.detail || e.wheelDelta;
+
+//     if (delta > 0) {
+//         if (swiper_block.realIndex + 1 != swiper_block.slides.length) { 
+//             e.preventDefault();
+//         }
+//         swiper_block.slideNext();
+//     } else {
+//         if (swiper_block.realIndex > 0) { 
+//             e.preventDefault();
+//         }
+//         swiper_block.slidePrev();
+//     }
+//     // отменим прокрутку
+// });
+
 
 
     $('.catalog__item-content-basket').on('click', function(evt) {
@@ -1139,6 +1184,12 @@ const swiper_block = new Swiper('.swiper_block', {
         }
 
         setTimeout(findText, 500);
+    });
+
+    // открыть галерею по нажатию на большую картинку
+    $('.article__big-slide').on('click', function(evt){
+        evt.preventDefault();
+        $('.article__small-slide.swiper-slide-active img').trigger('click');
     });
 
 });

@@ -258,13 +258,17 @@
             width: 100%;
             margin-right: 0;
             line-height: 150%;
-            margin-bottom: 5.5vw;
+            margin-bottom: 20vw;
             font-size: 4.62vw;
          }
          &-items {
-            width: 106%;
-            overflow: scroll;
+            width: calc(100% + 8rem);
+            margin-left: -4rem;
+            margin-right: -4rem;
+            overflow-x: auto;
             padding-bottom: 3vw;
+            padding-left: 4rem;
+            padding-right: 4rem;
          }
          &-item {
             padding: 4.3vw 5.9vw 3.3vw 5.9vw;
@@ -280,6 +284,7 @@
             margin-left: 0;
             position: absolute;
             left: 0;
+            line-height: 200%;
             top: 13.9vw;
          }
       }

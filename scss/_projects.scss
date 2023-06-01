@@ -117,6 +117,7 @@
          position: relative;
          padding: 3.8rem 4rem 3.2rem 2.9rem;
          width: 100%;
+         z-index: 1;
          &::after {
             position: absolute;
             content: '';
@@ -178,7 +179,15 @@
             border-radius: 100rem;
             z-index: 5;
          }
-       
+         
+         &-link-hide {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+         }
       }
    }
    &__btn-next {
@@ -242,15 +251,11 @@
 
 @media (min-width: 47.99em) {
    .projects {
-      &__slide {
-         &-content {
-            &-link {
-               transition: ease 0.3s;
-               &:hover {
-                  background-color: $green;
-                  color: $white;
-               }
-            }
+      &__slide:hover {
+         .projects__slide-content-link {
+            transition: ease 0.3s;
+            background-color: $green;
+            color: $white;
          }
       }
    }
