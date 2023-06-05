@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    let bigBanerSlidesImages = $('.baner__swiper-big .swiper-slide img.mobile');
+    let bigBanerSlidesImages = $('.baner__swiper-big .swiper-slide img');
     let smallBaner = $('.baner__swiper-small');
     let smallBanerWrapper = smallBaner.find('.swiper-wrapper');
 
