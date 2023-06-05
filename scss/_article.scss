@@ -177,6 +177,7 @@
             &-swiper {
                width: 100%;
                height: 11.5rem;
+               transition: height 500ms;
             }
             &-slide {
                height: 100%;

@@ -523,7 +523,25 @@ document.addEventListener("DOMContentLoaded", function () {
     ), 400)
 
     $('.article__more').on('click', function () {
-        $('.article__img').toggleClass('show_all');
+        let $this = $(this);
+        let $parent = $this.closest('.article__img');
+        let $swiper = $parent.find('.article__small-swiper');
+        let $slide = $swiper.find('.article__small-slide');
+        let oldHeight = $slide.height();
+        let newHeight = 0;
+
+        $parent.toggleClass('show_all');
+
+        newHeight = $swiper.height();
+        if (newHeight == oldHeight) {
+            $swiper.animate({
+                height: (oldHeight / 10) + 'rem'
+            });
+        } else {
+            $swiper.animate({
+                height: (newHeight / 10) + 'rem'
+            });
+        }
     });
 
 

@@ -26,9 +26,12 @@
                justify-content: center;
                margin-bottom: 0.9rem;
                & img {
-                  width: 60%;
-                  height: 55%;
+                  width: 6rem;
+                  height: 6rem;
+                  object-fit: contain;
                   mix-blend-mode: multiply;
+                  filter: grayscale(1);
+                  transition: filter 500ms;
                }
             }
             &-name {
@@ -39,14 +42,20 @@
                letter-spacing: 0.05em;
                text-transform: uppercase;
                color: $grey;
+               transition: color 500ms;
             }
             &:not(:last-child) {
                margin-right: 6rem;
             }
+            &:hover,
             &.active {
-               & .projects__header-center-btn-icon {
-                  background-color: #F3D949;
+               .projects__header-center-btn-icon img {
+                  filter: grayscale(0);
                }
+               .projects__header-center-btn-name {
+                  color: #1d1f26;
+               }
+
             }
          }
       }
@@ -96,6 +105,7 @@
       padding-right: 2%;
    }
    &__slide {
+      max-width: 35rem;
       height: 48.6rem;
       border-radius: 3.5rem;
       position: relative;
@@ -145,7 +155,11 @@
             z-index: 5;
             & img {
                width: 55%;
-               height: 50%;
+               height: 55%;
+               object-fit: contain;
+               mix-blend-mode: multiply;
+               filter: grayscale(1);
+               transition: filter 500ms;
             }
          }
          &-title {
@@ -299,11 +313,6 @@
                }
                &:not(:last-child) {
                   margin-right: 4.9vw;
-               }
-               &.active {
-                  & .projects__header-center-btn-icon {
-                     background-color: #F3D949;
-                  }
                }
             }
          }
