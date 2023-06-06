@@ -522,26 +522,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ), 400)
 
-    $('.article__more').on('click', function () {
+    $(document).on('click', '.article__more.display_swiper', function () {
+        let $this = $(this);
+        let $parent = $this.closest('.article__img');
+        let $swiper = $parent.find('.article__small-swiper');
+        let $swiper_wrap = $swiper.find('.swiper-wrapper');
+        let newHeight;
+
+        $swiper.height(($swiper.height() / 10) + 'rem');
+        $this.addClass('display_grid').removeClass('display_swiper');
+        $parent.addClass('show_all');
+
+        newHeight = $swiper_wrap.height();
+
+        $swiper.animate({
+            height: (newHeight / 10) + 'rem'
+        }, 200, 'linear');
+    });
+
+    $(document).on('click', '.article__more.display_grid', function () {
         let $this = $(this);
         let $parent = $this.closest('.article__img');
         let $swiper = $parent.find('.article__small-swiper');
         let $slide = $swiper.find('.article__small-slide');
         let oldHeight = $slide.height();
-        let newHeight = 0;
 
-        $parent.toggleClass('show_all');
+        $this.addClass('display_swiper').removeClass('display_grid');
 
-        newHeight = $swiper.height();
-        if (newHeight == oldHeight) {
-            $swiper.animate({
-                height: (oldHeight / 10) + 'rem'
-            });
-        } else {
-            $swiper.animate({
-                height: (newHeight / 10) + 'rem'
-            });
-        }
+        $swiper.animate({
+            height: (oldHeight / 10) + 'rem'
+        }, 200, 'linear');
+
+        setTimeout(()=>{
+            $parent.removeClass('show_all');
+        }, 500)
+
     });
 
 
@@ -831,56 +846,70 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.products__btn-bg svg[data-question=' + data + ']').toggleClass('active');
     });
 
-    // ЯНДЕКС КАРТА
-    if ($('#contloc').length) {
-        ymaps.ready(init);
+    // // ЯНДЕКС КАРТА
+    // if ($('#contloc').length) {
+    //     ymaps.ready(init);
 
-        function init() {
-            let breakpoint = window.matchMedia("(max-width: 48em)");
-            let descOptions = {
-                iconLayout: "default#image",
-                iconImageHref: "/local/templates/letmebel/img/icon/map_logo.svg",
-                iconImageSize: [20, 20],
-                iconImageOffset: [-15, -30],
-            };
-            if (breakpoint) {
-                descOptions.iconImageSize = [70, 96];
-                descOptions.iconImageOffset = [-15, -30];
-            }
+    //     function init() {
+    //         let breakpoint = window.matchMedia("(max-width: 48em)");
+    //         let descOptions = {
+    //             iconLayout: "default#image",
+    //             iconImageHref: "/local/templates/letmebel/img/icon/map_logo.svg",
+    //             iconImageSize: [20, 20],
+    //             iconImageOffset: [-15, -30],
+    //         };
+    //         if (breakpoint) {
+    //             descOptions.iconImageSize = [70, 96];
+    //             descOptions.iconImageOffset = [-15, -30];
+    //         }
 
-            var myMap = new ymaps.Map("contloc", {
-                    center: [55.876152, 37.588808],
-                    zoom: 10,
-                    controls: ["zoomControl"],
-                    behaviors: ["drag"],
-                }),
-                myPlacemark = new ymaps.Placemark(
-                    [55.876152, 37.588808],
-                    {
-                        hintContent: "Россия, Москва, Алтуфьевское шоссе, 48 к. 2, офис 603",
-                        //  balloonContent: "SmartFood",
-                    },
-                    descOptions
-                );
+    //         var myMap = new ymaps.Map("contloc", {
+    //                 center: [55.876152, 37.588808],
+    //                 zoom: 10,
+    //                 controls: ["zoomControl"],
+    //                 behaviors: ["drag"],
+    //             }),
+    //             myPlacemark = new ymaps.Placemark(
+    //                 [55.876152, 37.588808],
+    //                 {
+    //                     hintContent: "Россия, Москва, Алтуфьевское шоссе, 48 к. 2, офис 603",
+    //                     //  balloonContent: "SmartFood",
+    //                 },
+    //                 descOptions
+    //             );
 
-            myMap.behaviors.disable('scrollZoom');
-            myMap.geoObjects.add(myPlacemark);
-        }
-    }
+    //         myMap.behaviors.disable('scrollZoom');
+    //         myMap.geoObjects.add(myPlacemark);
+    //     }
+    // }
 
 
     // ЯКОРЬ
-    const anchors = document.querySelectorAll('a[href*="#"]')
-    for (let anchor of anchors) {
-        anchor.addEventListener("click", function (event) {
-            event.preventDefault();
-            const blockID = anchor.getAttribute('href')
-            document.querySelector('' + blockID).scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            })
-        })
-    }
+    // const anchors = document.querySelectorAll('a[href*="#"]')
+    // for (let anchor of anchors) {
+    //     anchor.addEventListener("click", function (event) {
+    //         event.preventDefault();
+    //         const blockID = anchor.getAttribute('href')
+    //         document.querySelector('' + blockID).scrollIntoView({
+    //             behavior: "smooth",
+    //             block: "start"
+    //         })
+    //     })
+    // }
+
+    $('a[href*="#"]').on("click", function (evt) {
+        evt.preventDefault();
+        let href = $(this).attr("href");
+    
+        $("html, body").animate({
+            scrollTop: $(href).offset().top - 100
+        }, {
+            duration: 1500,   // по умолчанию «400»
+            easing: "swing" // по умолчанию «swing»
+        });
+    
+        return false;
+    });
 
     // Загрузка файлов
     /* вывод файлов */

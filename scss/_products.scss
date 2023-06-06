@@ -73,9 +73,12 @@
          }
       }
       &-el {
+         position: relative;
          display: none;
+         z-index: 1;
          &.active {
             display: block;
+            z-index: 2;
          }
          &>svg {
             width: 100%;

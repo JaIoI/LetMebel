@@ -71,7 +71,7 @@ $(document).ready(function () {
         let lottieLogoHeader = document.querySelector('.header__logo-anim').getLottie();
         setTimeout(function () {
             lottieLogoHeader.play();
-        }, 5000);
+        }, 15000);
         lottieLogoHeader.addEventListener("complete", () => {
             setTimeout(function () {
                 lottieLogoHeader.stop();
