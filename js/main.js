@@ -347,22 +347,62 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         on: {
             init: function (swiper) {
-                for(let i = 0; swiper.slides.length > i; i++) {
-                    $(swiper.slides[i]).addClass('slide' + swiper.activeIndex);
+                let startslide = Math.trunc((swiper.slides.length - 1) / 2);
+                swiper.slideTo(startslide, 1);
+
+                console.log(Math.trunc((swiper.slides.length - 1) / 2));
+                let num = 0;
+                for(let i = swiper.activeIndex - 1; i >= 0; i--) {
+                    ++num;
+                    $(swiper.slides[i]).addClass('before_slide' + num);
+                }
+                num = 0;
+                for(let i = swiper.activeIndex + 1; swiper.slides.length > i; i++) {
+                    ++num;
+                    $(swiper.slides[i]).addClass('after_slide' + num);
                 }
             },
             slideChange: function (swiper) {
                 let currentSlide = document.querySelector('.current_reviews');
                 currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
+
+                for(let i = 0;  swiper.slides.length > i; i++) {
+                    $(swiper.slides[i]).removeClass(['after_slide0',
+                                                    'after_slide1',
+                                                    'after_slide2',
+                                                    'after_slide3',
+                                                    'after_slide4',
+                                                    'after_slide5',
+                                                    'after_slide6',
+                                                    'after_slide7']);
+                    $(swiper.slides[i]).removeClass(['before_slide0',
+                                                    'before_slide1',
+                                                    'before_slide2',
+                                                    'before_slide3',
+                                                    'before_slide4',
+                                                    'before_slide5',
+                                                    'before_slide6',
+                                                    'before_slide7']);
+                }
+
+                let num = 0;
+                for(let i = swiper.activeIndex - 1; i >= 0; i--) {
+                    ++num;
+                    $(swiper.slides[i]).addClass('before_slide' + num);
+                }
+                num = 0;
+                for(let i = swiper.activeIndex + 1; swiper.slides.length > i; i++) {
+                    ++num;
+                    $(swiper.slides[i]).addClass('after_slide' + num);
+                }
             },
         },
         slidesPerView: 1,
         speed: 1500,
-        loop: true,
         centeredSlides: true,
         breakpoints: {
             769: {
-                slidesPerView: 4,
+                slidesPerView: 5.472972972972973,
             }
         },
     });
