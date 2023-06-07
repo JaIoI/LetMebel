@@ -1,0 +1,162 @@
+.reviews {
+	position: relative;
+	padding-bottom: 30rem;
+
+	&__inner {
+		position: relative;
+	}
+
+	&__title {
+		margin-bottom: 5.5rem;
+	}
+
+	&__slider {
+		$margin: 10rem;
+		width: calc(100% + $margin * 2);
+		margin: -$margin;
+		padding: $margin;
+		overflow: hidden;
+	}
+	
+	&__swiper {
+		overflow: visible;
+	}
+
+	&__slide {
+		position: relative;
+		box-shadow: 0 0 3rem 0 #999;
+		border-radius: 10px;
+		overflow: hidden;
+		z-index: 1;
+
+		&.swiper-slide-active {
+			z-index: 99;
+		}
+
+		&-img {
+			width: 41rem;
+			height: 70.5rem;
+
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+	}
+
+	&__btn-next {
+		top: unset;
+		right: unset;
+		bottom: -11.1rem;
+		left: 19rem;
+
+		&::after {
+			background-image: url(../img/icon/arrow-slider.svg);
+		}
+	}
+
+	&__btn-prev {
+		top: unset;
+		bottom: -13.3rem;
+		left: 12rem;
+
+		&::after {
+			background-image: url(../img/icon/arrow-slider.svg);
+		}
+	}
+
+	&__btn-slash {
+		bottom: -9.2rem;
+		left: 15.3rem;
+		z-index: 2;
+
+		&::after {
+			background-color: #c7cbcc;
+		}
+	}
+
+	&__swiper-pagination {
+		bottom: -10.8rem;
+		left: -0.2rem;
+
+		& .current {
+			color: $fzAll;
+		}
+	}
+
+	&__swiper-bullet {
+		bottom: -13.5rem;
+		right: 0;
+
+		& .swiper-pagination-bullet {
+			background-color: #d5dfdf;
+		}
+
+		& .swiper-pagination-bullet-active {
+			background-color: #7ac361;
+		}
+	}
+}
+
+@media (max-width: 48em) {
+	.reviews {
+
+		&__title {
+			margin-bottom: 3.3vw;
+		}
+
+		&__slide {
+
+			&-img {
+				width: 58vw;
+				height: 69.3vw;
+				margin-left: 17vw;
+				margin-bottom: 12vw;
+				z-index: 2;
+			}
+
+		}
+
+		&__btn-next {
+			top: unset;
+			right: 3vw;
+			bottom: -16vw;
+			left: unset;
+		}
+
+		&__btn-prev {
+			top: unset;
+			bottom: -22vw;
+			left: unset;
+			right: 21vw;
+		}
+
+		&__btn-slash {
+			bottom: -11vw;
+			left: unset;
+			right: 12vw;
+		}
+
+		&__swiper-pagination {
+			bottom: -16.5vw;
+			left: 0;
+		}
+
+		&__swiper-bullet {
+			bottom: unset;
+			top: 3.2vw;
+			right: 0vw;
+
+			& .swiper-pagination-bullet {
+				background-color: #D1D4D3;
+			}
+
+			& .swiper-pagination-bullet-active {
+				background-color: $green;
+			}
+		}
+	}
+}

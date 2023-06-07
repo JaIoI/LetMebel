@@ -335,6 +335,38 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    const reviews__swiper = new Swiper(".reviews__swiper", {
+        navigation: {
+            nextEl: ".reviews__btn-next",
+            prevEl: ".reviews__btn-prev",
+        },
+        pagination: {
+            el: ".reviews__swiper-bullet",
+            type: 'bullets',
+            clickable: true
+        },
+        on: {
+            init: function (swiper) {
+                for(let i = 0; swiper.slides.length > i; i++) {
+                    $(swiper.slides[i]).addClass('slide' + swiper.activeIndex);
+                }
+            },
+            slideChange: function (swiper) {
+                let currentSlide = document.querySelector('.current_reviews');
+                currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
+            },
+        },
+        slidesPerView: 1,
+        speed: 1500,
+        loop: true,
+        centeredSlides: true,
+        breakpoints: {
+            769: {
+                slidesPerView: 4,
+            }
+        },
+    });
+
     const slider5 = new Swiper(".steps__swiper", {
         navigation: {
             nextEl: ".steps__btn-next",
