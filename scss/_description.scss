@@ -17,6 +17,7 @@
    }
    &__inner {
       display: flex;
+      align-items: center;
       justify-content: space-between;
    }
    &__info {
@@ -142,6 +143,7 @@
                height: 39.8rem;
                border-radius: 0 0 3rem 3rem;
                position: relative;
+               overflow: hidden;
                &-video {
                   position: absolute;
                   left: 50%;

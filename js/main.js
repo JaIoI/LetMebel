@@ -615,7 +615,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         $swiper.animate({
             height: swiperHeight + 'rem'
-        }, 200, 'linear');
+        }, 0);
     });
 
     $(document).on('click', '.article__more.display_grid', function () {
@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         $swiper.animate({
             height: articleSmallSwiper.slideHeight + 'rem'
-        }, 200, 'linear');
+        }, 0);
 
         setTimeout(()=>{
             $parent.removeClass('show_all');
@@ -922,42 +922,42 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.products__btn-bg svg[data-question=' + data + ']').toggleClass('active');
     });
 
-    // // ЯНДЕКС КАРТА
-    // if ($('#contloc').length) {
-    //     ymaps.ready(init);
+    // ЯНДЕКС КАРТА
+    if ($('#contloc').length) {
+        ymaps.ready(init);
 
-    //     function init() {
-    //         let breakpoint = window.matchMedia("(max-width: 48em)");
-    //         let descOptions = {
-    //             iconLayout: "default#image",
-    //             iconImageHref: "/local/templates/letmebel/img/icon/map_logo.svg",
-    //             iconImageSize: [20, 20],
-    //             iconImageOffset: [-15, -30],
-    //         };
-    //         if (breakpoint) {
-    //             descOptions.iconImageSize = [70, 96];
-    //             descOptions.iconImageOffset = [-15, -30];
-    //         }
+        function init() {
+            let breakpoint = window.matchMedia("(max-width: 48em)");
+            let descOptions = {
+                iconLayout: "default#image",
+                iconImageHref: "/local/templates/letmebel/img/icon/map_logo.svg",
+                iconImageSize: [20, 20],
+                iconImageOffset: [-10, -20],
+            };
+            if (breakpoint) {
+                descOptions.iconImageSize = [70, 96];
+                descOptions.iconImageOffset = [-35, -96];
+            }
 
-    //         var myMap = new ymaps.Map("contloc", {
-    //                 center: [55.876152, 37.588808],
-    //                 zoom: 10,
-    //                 controls: ["zoomControl"],
-    //                 behaviors: ["drag"],
-    //             }),
-    //             myPlacemark = new ymaps.Placemark(
-    //                 [55.876152, 37.588808],
-    //                 {
-    //                     hintContent: "Россия, Москва, Алтуфьевское шоссе, 48 к. 2, офис 603",
-    //                     //  balloonContent: "SmartFood",
-    //                 },
-    //                 descOptions
-    //             );
+            var myMap = new ymaps.Map("contloc", {
+                    center: [55.876152, 37.588808],
+                    zoom: 10,
+                    controls: ["zoomControl"],
+                    behaviors: ["drag"],
+                }),
+                myPlacemark = new ymaps.Placemark(
+                    [55.876152, 37.588808],
+                    {
+                        hintContent: "Россия, Москва, Алтуфьевское шоссе, 48 к. 2, офис 603",
+                        //  balloonContent: "SmartFood",
+                    },
+                    descOptions
+                );
 
-    //         myMap.behaviors.disable('scrollZoom');
-    //         myMap.geoObjects.add(myPlacemark);
-    //     }
-    // }
+            myMap.behaviors.disable('scrollZoom');
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
 
 
     // ЯКОРЬ
