@@ -336,6 +336,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const reviews__swiper = new Swiper(".reviews__swiper", {
+        slidesPerView: 5.472972972972973,
+        allowTouchMove: false,
+        speed: 1500,
+        centeredSlides: true,
         navigation: {
             nextEl: ".reviews__btn-next",
             prevEl: ".reviews__btn-prev",
@@ -349,8 +353,6 @@ document.addEventListener("DOMContentLoaded", function () {
             init: function (swiper) {
                 let startslide = Math.trunc((swiper.slides.length - 1) / 2);
                 swiper.slideTo(startslide, 1);
-
-                console.log(Math.trunc((swiper.slides.length - 1) / 2));
                 let num = 0;
                 for(let i = swiper.activeIndex - 1; i >= 0; i--) {
                     ++num;
@@ -362,11 +364,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     $(swiper.slides[i]).addClass('after_slide' + num);
                 }
             },
+            click: function (swiper) {
+                swiper.slideTo(swiper.clickedIndex, 1500)
+            },
             slideChange: function (swiper) {
                 let currentSlide = document.querySelector('.current_reviews');
                 currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
 
                 for(let i = 0;  swiper.slides.length > i; i++) {
+                    $(swiper.slides[i]).attr('data-index', i)
                     $(swiper.slides[i]).removeClass(['after_slide0',
                                                     'after_slide1',
                                                     'after_slide2',
@@ -396,14 +402,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     $(swiper.slides[i]).addClass('after_slide' + num);
                 }
             },
-        },
-        slidesPerView: 1,
-        speed: 1500,
-        centeredSlides: true,
-        breakpoints: {
-            769: {
-                slidesPerView: 5.472972972972973,
-            }
         },
     });
 
@@ -1310,5 +1308,63 @@ const swiper_block = new Swiper('.swiper_block', {
         evt.preventDefault();
         $('.article__small-slide.swiper-slide-active img').trigger('click');
     });
+
+function wordAnimation() {
+    var words = document.getElementsByClassName('word');
+    var wordArray = [];
+    var currentWord = 0;
+    
+    words[currentWord].style.opacity = 1;
+    for (var i = 0; i < words.length; i++) {
+        splitLetters(words[i]);
+    }
+    
+    function changeWord() {
+        var cw = wordArray[currentWord];
+        var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+        for (var i = 0; i < cw.length; i++) {
+            animateLetterOut(cw, i);
+        }
+
+        for (var i = 0; i < nw.length; i++) {
+            nw[i].className = 'letter behind';
+            nw[0].parentElement.style.opacity = 1;
+            animateLetterIn(nw, i);
+        }
+
+        currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+    }
+
+    function animateLetterOut(cw, i) {
+        setTimeout(function() {
+            cw[i].className = 'letter out';
+        }, i*80);
+    }
+
+    function animateLetterIn(nw, i) {
+        setTimeout(function() {
+            nw[i].className = 'letter in';
+        }, 340+(i*80));
+    }
+
+    function splitLetters(word) {
+        var content = word.innerHTML;
+        word.innerHTML = '';
+        var letters = [];
+        for (var i = 0; i < content.length; i++) {
+            var letter = document.createElement('span');
+            letter.className = 'letter';
+            letter.innerHTML = content.charAt(i);
+            word.appendChild(letter);
+            letters.push(letter);
+        }
+
+        wordArray.push(letters);
+    }
+
+    changeWord();
+    setInterval(changeWord, 4000);
+}
+wordAnimation();
 
 });

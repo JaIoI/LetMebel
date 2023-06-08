@@ -1,12 +1,15 @@
 .reviews {
 	position: relative;
-	padding-bottom: 20rem;
+	padding-bottom: 31.3rem;
 
 	&__inner {
 		position: relative;
 	}
 
 	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		text-align: center;
 		margin-bottom: 5.5rem;
 	}
@@ -18,7 +21,7 @@
 		padding: $margin;
 		overflow: hidden;
 	}
-	
+
 	&__swiper {
 		overflow: visible;
 	}
@@ -29,89 +32,18 @@
 		height: 63.6rem;
 		position: relative;
 		z-index: 1;
-		transform: scale(0);
 		transition: transform 1s;
+		user-select: none;
+		cursor: pointer;
 
-		&.swiper-slide-active {
-			z-index: 99;
-			transform: scale(1) !important;
-		}
-
-		$translate: 20%;
-		$scale: 0.8141891891891892;
-
-		&.before_slide {
-			&1 {
-				transform: scale($scale) translateX($translate);
-				z-index: 9;
-			}
-
-			&2 {
-				transform: scale(0.75) translateX($translate * 4);
-				z-index: 8;
-			}
-
-			&3 {
-				transform: scale(0.6) translateX($translate * 8);
-				z-index: 7;
-			}
-
-			&4 {
-				transform: scale(0.45) translateX($translate * 17);
-				z-index: 6;
-			}
-
-			&5 {
-				transform: scale(0.3) translateX($translate * 32);
-				z-index: 5;
-			}
-
-			&6 {
-				transform: scale(0.15) translateX($translate * 64);
-				z-index: 4;
-			}
-
-			&7 {
-				transform: scale(0) translateX($translate * 128);
-				z-index: 3;
-			}
-		}
-
-		&.after_slide {
-			&1 {
-				transform: scale($scale) translateX(-$translate);
-				z-index: 9;
-			}
-
-			&2 {
-				transform: scale(0.75) translateX(-$translate * 4);
-				z-index: 8;
-			}
-
-			&3 {
-				transform: scale(0.6) translateX(-$translate * 8);
-				z-index: 7;
-			}
-
-			&4 {
-				transform: scale(0.45) translateX(-$translate * 17);
-				z-index: 6;
-			}
-
-			&5 {
-				transform: scale(0.3) translateX(-$translate * 32);
-				z-index: 5;
-			}
-
-			&6 {
-				transform: scale(0.15) translateX(-$translate * 70);
-				z-index: 4;
-			}
-
-			&7 {
-				transform: scale(0) translateX(-$translate * 128);
-				z-index: 3;
-			}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transition: 500ms;
 		}
 
 		img {
@@ -119,9 +51,114 @@
 			width: 100%;
 			height: auto;
 			object-fit: cover;
-			box-shadow: 0 0 3rem 0 #999;
+			box-shadow: 0 0 2rem 0 rgba(221, 221, 221, 0.7);
 			border-radius: 10px;
 			overflow: hidden;
+		}
+
+		a {
+			display: block;
+			pointer-events: none;
+		}
+
+		&.swiper-slide-active {
+			z-index: 99;
+			transform: scale(1) !important;
+
+			&::before {
+				pointer-events: none;
+			}
+
+			a {
+				pointer-events: auto;
+			}
+		}
+
+		$translate: 20%;
+		$scale1: 0.8141891891891892;
+		$scale2: 0.6148648648648649;
+		$scale3: 0.4966216216216216;
+		$scale4: 0.3175675675675676;
+		$scale5: 0.222972972972973;
+
+		
+		&.after_slide,
+		&.before_slide {
+			&1 {
+				transform: scale($scale1) translateX($translate);
+				z-index: 9;
+				&::before {
+					background: rgba(255, 255, 255, 0.2);
+				}
+			}
+			
+			&2 {
+				transform: scale($scale2) translateX($translate * 4);
+				z-index: 8;
+				&::before {
+					background: rgba(255, 255, 255, 0.25);
+					backdrop-filter: blur(0.5px);
+				}
+			}
+
+			&3 {
+				transform: scale($scale3) translateX($translate * 9.8);
+				z-index: 7;
+				&::before {
+					background: rgba(255, 255, 255, 0.3);
+					backdrop-filter: blur(1px);
+				}
+			}
+
+			&4 {
+				transform: scale($scale4) translateX($translate * 25);
+				z-index: 6;
+				&::before {
+					background: rgba(255, 255, 255, 0.45);
+					backdrop-filter: blur(1.5px);
+				}
+			}
+			
+			&5 {
+				transform: scale($scale5) translateX($translate * 53);
+				z-index: 5;
+				&::before {
+					background: rgba(255, 255, 255, 0.6);
+					backdrop-filter: blur(2px);
+				}
+			}
+
+			&6 {
+				transform: scale(0.2) translateX($translate * 45);
+				opacity: 0.5;
+				z-index: 4;
+			}
+		}
+
+		&.after_slide {
+			&1 {
+				transform: scale($scale1) translateX(-$translate);
+			}
+
+			&2 {
+				transform: scale($scale2) translateX(-$translate * 4);
+			}
+
+			&3 {
+				transform: scale($scale3) translateX(-$translate * 9.8);
+			}
+
+			&4 {
+				transform: scale($scale4) translateX(-$translate * 25);
+			}
+
+			&5 {
+				transform: scale($scale5) translateX(-$translate * 53);
+			}
+
+			&6 {
+				transform: scale(0.2) translateX(-$translate * 45);
+			}
 		}
 
 	}
@@ -129,7 +166,7 @@
 	&__btn-next {
 		top: unset;
 		right: unset;
-		bottom: -11.1rem;
+		bottom: -6.1rem;
 		left: 19rem;
 
 		&::after {
@@ -139,7 +176,7 @@
 
 	&__btn-prev {
 		top: unset;
-		bottom: -13.3rem;
+		bottom: -8.3rem;
 		left: 12rem;
 
 		&::after {
@@ -148,7 +185,7 @@
 	}
 
 	&__btn-slash {
-		bottom: -9.2rem;
+		bottom: -3.8rem;
 		left: 15.3rem;
 		z-index: 2;
 
@@ -158,7 +195,7 @@
 	}
 
 	&__swiper-pagination {
-		bottom: -10.8rem;
+		bottom: -5.8rem;
 		left: -0.2rem;
 
 		& .current {
@@ -167,7 +204,7 @@
 	}
 
 	&__swiper-bullet {
-		bottom: -13.5rem;
+		bottom: -8.1rem;
 		right: 0;
 
 		& .swiper-pagination-bullet {
@@ -179,6 +216,66 @@
 		}
 	}
 }
+
+
+.text_anim {
+	position: relative;
+	width: 31rem;
+	height: 6.8rem;
+}
+
+.word {
+	position: absolute;
+	top: 0;
+	right: 2rem;
+	opacity: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.letter {
+	display: inline-block;
+	position: relative;
+	transform: translateZ(25px);
+	transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+	transform: rotateX(90deg);
+	transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+	transform: rotateX(-90deg);
+}
+
+.letter.in {
+	transform: rotateX(0deg);
+	transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+	color: #8e44ad;
+}
+
+.belize {
+	color: #2980b9;
+}
+
+.pomegranate {
+	color: #c0392b;
+}
+
+.green {
+	color: #16a085;
+}
+
+.midnight {
+	color: #2c3e50;
+}
+
 
 @media (max-width: 48em) {
 	.reviews {
