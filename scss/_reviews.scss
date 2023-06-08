@@ -278,6 +278,9 @@
 	color: #2c3e50;
 }
 
+.fancybox__container {
+    --fancybox-bg: rgba(255, 255, 255, 0.7);
+}
 
 @media (max-width: 48em) {
 	.reviews {
