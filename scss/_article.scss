@@ -493,13 +493,11 @@
             }
             &__small {
                &-swiper {
-                  width: 106%;
-                  height: 27vw;
                }
                &-slide {
-                  border-radius: 7.7vw;
+                  border-radius: 2.7vw;
                   & img {
-                     border-radius: 7.7vw;
+                     border-radius: 2.7vw;
                   }
                }
             }
@@ -614,7 +612,7 @@
 .show_all {
    .article__small-swiper {
       overflow: visible;
-      height: auto;
+      height: 11.5rem;
       min-height: 11.5rem !important;
 
       .swiper-wrapper {
@@ -643,4 +641,19 @@
          transform: translateY(-50%) rotate(-90deg);
       }
    }
+}
+
+
+@media (max-width: 48em) {
+
+.show_all {
+   .article__small-swiper {
+
+      .swiper-wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 2rem;
+      }
+   }
+}
+
 }

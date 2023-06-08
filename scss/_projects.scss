@@ -353,6 +353,7 @@
          padding-right: 2%;
       }
       &__slide {
+         max-width: 100%;
          height: 118vw;
          border-radius: 9vw;
          &-img {
@@ -395,7 +396,6 @@
                line-height: 150%;
                box-shadow: 1.2rem 2rem 8.8rem rgba(0, 0, 0, 0.05);
             }
-          
          }
       }
       &__btn-next {

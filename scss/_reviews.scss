@@ -213,6 +213,7 @@
 
 		& .swiper-pagination-bullet-active {
 			background-color: #7ac361;
+			margin: 0 0.5rem;
 		}
 	}
 }
@@ -230,6 +231,7 @@
 	right: 2rem;
 	opacity: 0;
 	width: 100%;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -284,7 +286,15 @@
 			margin-bottom: 3.3vw;
 		}
 
+		&__slider {
+			$margin: 4rem;
+			width: calc(100% + $margin * 2);
+			margin: -$margin;
+			padding: $margin;
+		}
+
 		&__slide {
+			height: auto;
 
 			&-img {
 				width: 58vw;
@@ -322,16 +332,17 @@
 		}
 
 		&__swiper-bullet {
-			bottom: unset;
-			top: 3.2vw;
-			right: 0vw;
+			right: 50%;
+			transform: translateX(50%);
 
 			& .swiper-pagination-bullet {
 				background-color: #D1D4D3;
+				margin: 0 0.5rem;
 			}
 
 			& .swiper-pagination-bullet-active {
 				background-color: $green;
+				margin: 0 0.5rem;
 			}
 		}
 	}

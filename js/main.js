@@ -336,8 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const reviews__swiper = new Swiper(".reviews__swiper", {
-        slidesPerView: 5.472972972972973,
-        allowTouchMove: false,
+        slidesPerView: 2.5,
         speed: 1500,
         centeredSlides: true,
         navigation: {
@@ -348,6 +347,12 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".reviews__swiper-bullet",
             type: 'bullets',
             clickable: true
+        },
+        breakpoints: {
+            769: {
+                slidesPerView: 5.472972972972973,
+                allowTouchMove: false,
+            }
         },
         on: {
             init: function (swiper) {
@@ -556,10 +561,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    const slider11 = new Swiper(".article__small-swiper", {
-        slidesPerView: 1.7,
+    const articleSmallSwiper = new Swiper(".article__small-swiper", {
+        slidesPerView: 3,
         speed: 1200,
-        spaceBetween: rem(4.8),
+        spaceBetween: rem(1),
         mousewheel: false,
         breakpoints: {
             769: {
@@ -580,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         on: {
             slideChange: function (swiper) {
-                slider11.slideToLoop(swiper.activeIndex);
+                articleSmallSwiper.slideToLoop(swiper.activeIndex);
             },
         }
     });
@@ -596,17 +601,20 @@ document.addEventListener("DOMContentLoaded", function () {
         let $this = $(this);
         let $parent = $this.closest('.article__img');
         let $swiper = $parent.find('.article__small-swiper');
-        let $swiper_wrap = $swiper.find('.swiper-wrapper');
-        let newHeight;
+        articleSmallSwiper.slideHeight = 11.5;
+        let slidesGap = 2.6;
+        let slidesPerView = 3;
+        if ($(window).width() >= 769) {
+            slidesPerView = 6;
+        }
+        let slidesRows = Math.ceil(articleSmallSwiper.slides.length / slidesPerView);
+        let swiperHeight = (articleSmallSwiper.slideHeight * slidesRows) + ((slidesRows - 1) * slidesGap);
 
-        $swiper.height(($swiper.height() / 10) + 'rem');
         $this.addClass('display_grid').removeClass('display_swiper');
         $parent.addClass('show_all');
 
-        newHeight = $swiper_wrap.height();
-
         $swiper.animate({
-            height: (newHeight / 10) + 'rem'
+            height: swiperHeight + 'rem'
         }, 200, 'linear');
     });
 
@@ -614,13 +622,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let $this = $(this);
         let $parent = $this.closest('.article__img');
         let $swiper = $parent.find('.article__small-swiper');
-        let $slide = $swiper.find('.article__small-slide');
-        let oldHeight = $slide.height();
 
         $this.addClass('display_swiper').removeClass('display_grid');
 
         $swiper.animate({
-            height: (oldHeight / 10) + 'rem'
+            height: articleSmallSwiper.slideHeight + 'rem'
         }, 200, 'linear');
 
         setTimeout(()=>{
