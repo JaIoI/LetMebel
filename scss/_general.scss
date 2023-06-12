@@ -89,7 +89,7 @@ h1 {
    & .swiper-pagination-bullet {
       width: 0.8rem;
       height: 0.8rem;
-      margin: 0 0.5rem;
+      margin: 0 0.5rem !important;
       border-radius: 50%;
       background-color: #D1D4D3;
       opacity: 1;
@@ -353,6 +353,17 @@ h1 {
    }
 }
 
+
+.hide_control {
+   .btn-slash,
+   .swiper-pagination,
+   .swiper-button-prev,
+   .swiper-button-next {
+      display: none;
+   }
+}
+
+
 @media (min-width: 47.99em) {
    // .link:hover::after {
    //    background: linear-gradient(96.39deg, #0D899F -11.35%, #19B8AE 114.56%) !important;
@@ -364,6 +375,9 @@ h1 {
    //    height: 1.5rem;
    // }
 }
+
+
+
 
 
 

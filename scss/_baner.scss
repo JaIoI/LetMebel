@@ -193,10 +193,14 @@
       right: 5rem;
    }
    &__swiper-bullet {
-      bottom: 19.6rem;
-      right: 0rem;
+      width: auto !important;
+      left: auto !important;
+      bottom: 19.6rem !important;
+      right: 0;
    }
    &__swiper-pagination {
+      width: auto !important;
+      left: auto !important;
       right: 21.3rem;
       bottom: 5.6rem;
    }

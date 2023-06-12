@@ -1,5 +1,5 @@
 .projects {
-   margin-bottom: 26.7rem;
+   margin-bottom: 16rem;
    &__inner {
       position: relative;
    }
@@ -258,6 +258,17 @@
             }
             &-content {
             }
+         }
+      }
+   }
+   &__items {
+      &_grid {
+         display: grid !important;
+         grid-template-columns: repeat(4, 1fr);
+         grid-gap: 9.2rem;
+         .projects__slide {
+            margin: 0;
+            width: 100%;
          }
       }
    }

@@ -290,6 +290,11 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true
         },
         on: {
+            afterInit: function (swiper) {
+                if (swiper.slides.length < 5) {
+                    $(swiper.el).closest('.projects').addClass('hide_control');
+                }
+            },
             slideChange: function (swiper) {
                 let currentSlide = document.querySelector('.current3');
                 currentSlide.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.activeIndex + 1}` : `${swiper.activeIndex + 1}`;
@@ -336,9 +341,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const reviews__swiper = new Swiper(".reviews__swiper", {
+        modules: [EffectCarousel],
+        loop: true,
+        grabCursor: true,
+        loopedSlides: 4,
         slidesPerView: 2.5,
         speed: 1500,
         centeredSlides: true,
+        effect: 'carousel',
         navigation: {
             nextEl: ".reviews__btn-next",
             prevEl: ".reviews__btn-prev",
@@ -351,61 +361,13 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             769: {
                 slidesPerView: 5.472972972972973,
-                allowTouchMove: false,
+                // allowTouchMove: false,
             }
         },
         on: {
-            init: function (swiper) {
-                let startslide = Math.trunc((swiper.slides.length - 1) / 2);
-                swiper.slideTo(startslide, 1);
-                let num = 0;
-                for(let i = swiper.activeIndex - 1; i >= 0; i--) {
-                    ++num;
-                    $(swiper.slides[i]).addClass('before_slide' + num);
-                }
-                num = 0;
-                for(let i = swiper.activeIndex + 1; swiper.slides.length > i; i++) {
-                    ++num;
-                    $(swiper.slides[i]).addClass('after_slide' + num);
-                }
-            },
-            click: function (swiper) {
-                swiper.slideTo(swiper.clickedIndex, 1500)
-            },
             slideChange: function (swiper) {
                 let currentSlide = document.querySelector('.current_reviews');
                 currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : `${swiper.realIndex + 1}`;
-
-                for(let i = 0;  swiper.slides.length > i; i++) {
-                    $(swiper.slides[i]).attr('data-index', i)
-                    $(swiper.slides[i]).removeClass(['after_slide0',
-                                                    'after_slide1',
-                                                    'after_slide2',
-                                                    'after_slide3',
-                                                    'after_slide4',
-                                                    'after_slide5',
-                                                    'after_slide6',
-                                                    'after_slide7']);
-                    $(swiper.slides[i]).removeClass(['before_slide0',
-                                                    'before_slide1',
-                                                    'before_slide2',
-                                                    'before_slide3',
-                                                    'before_slide4',
-                                                    'before_slide5',
-                                                    'before_slide6',
-                                                    'before_slide7']);
-                }
-
-                let num = 0;
-                for(let i = swiper.activeIndex - 1; i >= 0; i--) {
-                    ++num;
-                    $(swiper.slides[i]).addClass('before_slide' + num);
-                }
-                num = 0;
-                for(let i = swiper.activeIndex + 1; swiper.slides.length > i; i++) {
-                    ++num;
-                    $(swiper.slides[i]).addClass('after_slide' + num);
-                }
             },
         },
     });
