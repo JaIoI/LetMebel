@@ -1,5 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    const debounced = [];
+    const cancelFunc = (timeout) => () => {
+        clearTimeout(timeout);
+    };
+    let debounce = (fn, wait, ...args) => {
+        let d = debounced.find(({ funcString }) => funcString === fn.toString());
+
+        if (d) {
+            d.cancel();
+        } else {
+            d = {};
+            debounced.push(d);
+        }
+
+        d.func = fn;
+        d.funcString = fn.toString();
+        d.timeout = setTimeout(fn, wait, ...args);
+        d.cancel = cancelFunc(d.timeout);
+    };
+
     $('.click_btn').click(function () {
         $(this).toggleClass('active');
     });
@@ -1334,5 +1354,12 @@ function wordAnimation() {
     setInterval(changeWord, 4000);
 }
 wordAnimation();
+
+$(document).on('input', 'textarea', function () {
+    debounce(() => {
+        this.style.height = 'auto';
+        $(this).outerHeight((this.scrollHeight / 10) + 'rem');
+    }, 100);
+});
 
 });
