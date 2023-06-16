@@ -6,6 +6,8 @@ $spanSize: 1.8rem;
    margin-bottom: 10rem;
    overflow: hidden;
 
+   pointer-events: none;
+
    &.disabled *,
    &.disabled {
       pointer-events: none;
