@@ -1,377 +1,379 @@
 .forms {
-   margin-bottom: 16rem;
+	margin-bottom: 16rem;
 
-   &__inner {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-   }
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
 
-   &__imgs {
-      margin-left: 2.9rem;
-   }
+	&__imgs {
+		margin-left: 2.9rem;
+	}
 
-   &__img1 {
-      position: absolute;
-      left: -0.7rem;
-      top: -1.8rem;
-      width: 14.8rem;
-      height: 14.8rem;
+	&__img1 {
+		position: absolute;
+		left: -0.7rem;
+		top: -1.8rem;
+		width: 14.8rem;
+		height: 14.8rem;
 
-      & img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-      }
-   }
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
-   &__img2 {
-      width: 80.2rem;
-      height: 53.5rem;
-      margin-top: 1rem;
+	&__img2 {
+		width: 80.2rem;
+		height: 53.5rem;
+		margin-top: 1rem;
 
-      & img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-      }
-   }
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
-   &__content {
-      width: 48.4%;
-      margin-top: 5.8rem;
+	&__content {
+		width: 48.4%;
+		margin-top: 5.8rem;
 
-      &-title {
-         margin-bottom: 5.4rem;
-         width: 72%;
+		&-title {
+			margin-bottom: 5.4rem;
+			width: 72%;
 
-         & span {
-            font-weight: 400;
-            font-size: 1.8rem;
-            line-height: 156%;
-            color: $grey;
-            display: inline-block;
-            width: 50%;
-            margin-left: 2rem;
-         }
-      }
+			& span {
+				font-weight: 400;
+				font-size: 1.8rem;
+				line-height: 156%;
+				color: $grey;
+				display: inline-block;
+				width: 50%;
+				margin-left: 2rem;
+			}
+		}
 
-      &-form {
-         display: flex;
-         justify-content: space-between;
-         flex-wrap: wrap;
+		&-form {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
 
 
-         label {
-            width: 48%;
-            height: 6rem;
-            background: #E2E9E9;
-            border-radius: 1.1rem;
-            padding-left: 3rem;
-            margin-bottom: 2.4rem;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
+			label {
+				width: 48%;
+				height: 6rem;
+				background: #E2E9E9;
+				border-radius: 1.1rem;
+				padding-left: 3rem;
+				margin-bottom: 2.4rem;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
 
-            &:nth-child(3) {
-               width: 100%;
-            }
+				&:nth-child(3) {
+					width: 100%;
+				}
 
-            &>input {
-               border: none;
-               outline: none;
-               background-color: transparent;
-               width: 90%;
-               font-weight: 700;
-               font-size: 1.4rem;
-               line-height: 157%;
-               text-transform: uppercase;
-               color: $fzAll;
+				&>input {
+					border: none;
+					outline: none;
+					background-color: transparent;
+					width: 90%;
+					font-weight: 700;
+					font-size: 1.4rem;
+					line-height: 157%;
+					text-transform: uppercase;
+					color: $fzAll;
 
-               &::placeholder {
-                  font-weight: 700;
-                  font-size: 1.4rem;
-                  line-height: 157%;
-                  text-transform: uppercase;
-                  color: $fzAll;
-               }
+					&::placeholder {
+						font-weight: 700;
+						font-size: 1.4rem;
+						line-height: 157%;
+						text-transform: uppercase;
+						color: $fzAll;
+					}
 
-               &:focus::placeholder {
-                  opacity: 0;
-                  transition: ease 0.3s;
-               }
-            }
+					&:focus::placeholder {
+						opacity: 0;
+						transition: ease 0.3s;
+					}
+				}
 
-            &>textarea {
-               border: none;
-               outline: none;
-               background-color: transparent;
-               width: 95%;
-               font-weight: 700;
-               font-size: 1.4rem;
-               line-height: 157%;
-               text-transform: uppercase;
-               color: $fzAll;
-               resize: none;
-               overflow: hidden;
+				&>textarea {
+					border: none;
+					outline: none;
+					background-color: transparent;
+					width: 95%;
+					font-weight: 700;
+					font-size: 1.4rem;
+					line-height: 157%;
+					text-transform: uppercase;
+					color: $fzAll;
+					resize: none;
+					overflow: hidden;
 
-               &::placeholder {
-                  font-weight: 700;
-                  font-size: 1.4rem;
-                  line-height: 157%;
-                  text-transform: uppercase;
-                  color: $fzAll;
-               }
+					&::placeholder {
+						font-weight: 700;
+						font-size: 1.4rem;
+						line-height: 157%;
+						text-transform: uppercase;
+						color: $fzAll;
+					}
 
-               &:focus::placeholder {
-                  opacity: 0;
-                  transition: ease 0.3s;
-               }
-            }
-         }
+					&:focus::placeholder {
+						opacity: 0;
+						transition: ease 0.3s;
+					}
+				}
+			}
 
-         .textarea_wrap {
-            position: relative;
-            width: 100%;
+			.textarea_wrap {
+				position: relative;
+				width: 100%;
 
-            label {
-               width: 100%;
-               height: auto;
-               margin: 0;
-               padding-top: 1.9rem;
-               padding-bottom: 1.9rem;
-            }
-         }
+				label {
+					width: 100%;
+					height: auto;
+					margin: 0;
+					padding-top: 1.9rem;
+					padding-bottom: 1.9rem;
+				}
+			}
 
-         .files_wrap {
-            width: 100%;
+			.files_wrap {
+				width: 100%;
 
-            .file {
-               position: absolute;
-               bottom: 1rem;
-               right: 1rem;
-               width: 3.5rem;
-               height: 3.5rem;
-               padding: 0;
-               margin: 0;
+				.file {
+					position: absolute;
+					bottom: 1rem;
+					right: 1rem;
+					width: 3.5rem;
+					height: 3.5rem;
+					padding: 0;
+					margin: 0;
 
-               input {
-                  width: 1px;
-               }
+					input {
+						width: 1px;
+					}
 
-               &__icon {
-                  width: 100%;
-                  height: 100%;
+					&__icon {
+						width: 100%;
+						height: 100%;
 
-                  svg {
-                     display: block;
-                     width: 100%;
-                  }
-               }
-            }
-         }
+						svg {
+							display: block;
+							width: 100%;
+						}
+					}
+				}
+			}
 
-         .files {
-            width: 100%;
+			.files {
+				width: 100%;
 
-            &_list {
-               display: grid;
-               grid-template-columns: repeat(2, 1fr);
-               grid-gap: 3rem;
-               margin-top: 2rem;
-            }
+				&_list {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-gap: 3rem;
+					margin-top: 2rem;
+				}
 
-            &_item {
-               display: flex;
-               align-items: center;
-               padding: 3rem 2rem 3rem 2.7rem;
-               background: #fff;
-               border-radius: 1rem;
+				&_item {
+					display: flex;
+					align-items: center;
+					padding: 3rem 2rem 3rem 2.7rem;
+					background: #fff;
+					border-radius: 1rem;
 
-               &_icon {
-                  flex-shrink: 0;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  width: 4.6rem;
-                  height: 5.5rem;
-                  margin-right: 2rem;
+					&_icon {
+						flex-shrink: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 4.6rem;
+						height: 5.5rem;
+						margin-right: 2rem;
 
-                  svg {
-                     display: block;
-                     width: 100%;
-                  }
-               }
+						svg {
+							display: block;
+							width: 100%;
+						}
+					}
 
-               &_name {
-                  font-weight: 700;
-                  font-size: 1.4rem;
-                  line-height: 2.1rem;
-                  text-transform: uppercase;
-               }
+					&_name {
+						max-width: 23.4rem;
+						font-weight: 700;
+						font-size: 1.4rem;
+						line-height: 2.1rem;
+						text-transform: uppercase;
+						overflow: hidden;
+					}
 
-               &_remove {
-                  flex-shrink: 0;
-                  position: relative;
-                  width: 3rem;
-                  height: 3rem;
-                  margin-left: auto;
+					&_remove {
+						flex-shrink: 0;
+						position: relative;
+						width: 3rem;
+						height: 3rem;
+						margin-left: auto;
 
-                  &::before,
-                  &::after {
-                     content: '';
-                     position: absolute;
-                     top: 50%;
-                     left: 50%;
-                     width: 1.7rem;
-                     height: 2px;
-                     background: #9BA8A8;
-                     transform: translate(-50%, -50%) rotate(45deg);
-                  }
+						&::before,
+						&::after {
+							content: '';
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							width: 1.7rem;
+							height: 2px;
+							background: #9BA8A8;
+							transform: translate(-50%, -50%) rotate(45deg);
+						}
 
-                  &::after {
-                     transform: translate(-50%, -50%) rotate(-45deg);
-                  }
-               }
+						&::after {
+							transform: translate(-50%, -50%) rotate(-45deg);
+						}
+					}
 
-            }
+				}
 
-         }
+			}
 
-         &>button {
-            margin-top: 2.8rem;
-         }
-      }
-   }
+			&>button {
+				margin-top: 2.8rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 48em) {
-   .forms {
-      margin-bottom: 26.8vw;
+	.forms {
+		margin-bottom: 26.8vw;
 
-      &__inner {
-         display: block;
-      }
+		&__inner {
+			display: block;
+		}
 
-      &__imgs {
-         margin-left: 0;
-         margin-bottom: 4.35vw;
-         padding-top: 28.8vw;
-      }
+		&__imgs {
+			margin-left: 0;
+			margin-bottom: 4.35vw;
+			padding-top: 28.8vw;
+		}
 
-      &__img1 {
-         left: -1.5vw;
-         top: 0vw;
-         width: 32.4vw;
-         height: 32.4vw;
-      }
+		&__img1 {
+			left: -1.5vw;
+			top: 0vw;
+			width: 32.4vw;
+			height: 32.4vw;
+		}
 
-      &__img2 {
-         width: 112%;
-         height: 68.1vw;
-         margin-top: 0;
-         margin-left: -4rem;
-      }
+		&__img2 {
+			width: 112%;
+			height: 68.1vw;
+			margin-top: 0;
+			margin-left: -4rem;
+		}
 
-      &__content {
-         width: 100%;
-         margin-top: 0;
+		&__content {
+			width: 100%;
+			margin-top: 0;
 
-         &-title {
-            margin-bottom: 8.2vw;
-            width: 72%;
+			&-title {
+				margin-bottom: 8.2vw;
+				width: 72%;
 
-            & span {
-               font-size: 4.62vw;
-               line-height: 150%;
-               display: block;
-               width: 100%;
-               margin-left: 0;
-               margin-top: 4.35vw;
-            }
-         }
+				& span {
+					font-size: 4.62vw;
+					line-height: 150%;
+					display: block;
+					width: 100%;
+					margin-left: 0;
+					margin-top: 4.35vw;
+				}
+			}
 
-         &-form {
-            display: block;
+			&-form {
+				display: block;
 
-            label {
-               width: 100%;
-               height: 15.4vw;
-               border-radius: 2.8vw;
-               padding-left: 5.1vw;
-               margin-bottom: 3.85vw;
+				label {
+					width: 100%;
+					height: 15.4vw;
+					border-radius: 2.8vw;
+					padding-left: 5.1vw;
+					margin-bottom: 3.85vw;
 
-               &>input {
-                  font-size: 3.6vw;
-                  line-height: 150%;
+					&>input {
+						font-size: 3.6vw;
+						line-height: 150%;
 
-                  &::placeholder {
-                     font-size: 3.6vw;
-                     line-height: 150%;
-                  }
-               }
+						&::placeholder {
+							font-size: 3.6vw;
+							line-height: 150%;
+						}
+					}
 
-               &>textarea {
-                  font-size: 3.6vw;
-                  line-height: 150%;
-                  height: 5.5vw;
+					&>textarea {
+						font-size: 3.6vw;
+						line-height: 150%;
+						height: 5.5vw;
 
-                  &::placeholder {
-                     font-size: 3.6vw;
-                     line-height: 150%;
-                  }
-               }
-            }
+						&::placeholder {
+							font-size: 3.6vw;
+							line-height: 150%;
+						}
+					}
+				}
 
-            .textarea_wrap {
-               label {
-                  padding-top: 4rem;
-                  padding-bottom: 3.7rem;
-               }
-            }
+				.textarea_wrap {
+					label {
+						padding-top: 4rem;
+						padding-bottom: 3.7rem;
+					}
+				}
 
-            .files_wrap {
-               .file {
-                  bottom: 2rem;
-                  right: 2rem;
-                  width: 7rem;
-                  height: 7rem;
-               }
-            }
+				.files_wrap {
+					.file {
+						bottom: 2rem;
+						right: 2rem;
+						width: 7rem;
+						height: 7rem;
+					}
+				}
 
-            .files {
-               width: 100%;
-   
-               &_list {
-                  grid-template-columns: repeat(1, 1fr);
-                  grid-gap: 3rem;
-                  margin-top: 4rem;
-               }
+				.files {
+					width: 100%;
 
-               &_item {
-                  border-radius: 2rem;
-   
-                  &_name {
-                     font-size: 2.6rem;
-                     line-height: 4rem;
-                  }
-   
-                  &_remove {
-                     width: 7rem;
-                     height: 7rem;
-   
-                     &::before,
-                     &::after {
-                        width: 3rem;
-                     }
-                  }
-               }
-            }
+					&_list {
+						grid-template-columns: repeat(1, 1fr);
+						grid-gap: 3rem;
+						margin-top: 4rem;
+					}
 
-            &>button {
-               margin-top: 4.2vw;
-            }
-         }
-      }
-   }
+					&_item {
+						border-radius: 2rem;
+
+						&_name {
+							font-size: 2.6rem;
+							line-height: 4rem;
+						}
+
+						&_remove {
+							width: 7rem;
+							height: 7rem;
+
+							&::before,
+							&::after {
+								width: 3rem;
+							}
+						}
+					}
+				}
+
+				&>button {
+					margin-top: 4.2vw;
+				}
+			}
+		}
+	}
 }
