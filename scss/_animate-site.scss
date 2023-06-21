@@ -120,7 +120,7 @@
       object-fit: contain;
       transition: transform 1s ease, opacity 1s ease;
 
-      &:last-child {
+      &:nth-child(3) {
         opacity: 0;
       }
     }
@@ -255,13 +255,13 @@
     position: relative;
     height: 46rem;
 
-    @media (min-width: 1920px) {
-      width: 1920px;
-      margin: 0 auto;
-    }
   }
 
   &__items {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: visible;
     .swiper-wrapper {
       transition-timing-function: linear;
     }

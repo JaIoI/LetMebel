@@ -11,7 +11,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		margin-bottom: 5.5rem;
+		margin-bottom: 4rem;
 	}
 
 	&__slider {
@@ -28,23 +28,14 @@
 
 	&__slide {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		max-width: 29.6rem;
 		height: 63.6rem;
 		position: relative;
 		z-index: 1;
 		transition: transform 1s;
 		user-select: none;
-		cursor: pointer;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			transition: 500ms;
-		}
 
 		img {
 			display: block;
@@ -57,20 +48,33 @@
 		}
 
 		a {
-			display: block;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			pointer-events: none;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				transition: 500ms;
+			}
 		}
 
 		&.swiper-slide-active {
 			z-index: 99;
-			transform: scale(1) !important;
-
-			&::before {
-				pointer-events: none;
-			}
+			// transform: scale(1) !important;
 
 			a {
 				pointer-events: auto;
+
+				&::before {
+					pointer-events: none;
+				}
 			}
 		}
 
@@ -87,7 +91,8 @@
 			&1 {
 				transform: scale($scale1) translateX($translate);
 				z-index: 9;
-				&::before {
+
+				a::before {
 					background: rgba(255, 255, 255, 0.2);
 				}
 			}
@@ -95,7 +100,8 @@
 			&2 {
 				transform: scale($scale2) translateX($translate * 4);
 				z-index: 8;
-				&::before {
+
+				a::before {
 					background: rgba(255, 255, 255, 0.25);
 					backdrop-filter: blur(0.5px);
 				}
@@ -104,7 +110,8 @@
 			&3 {
 				transform: scale($scale3) translateX($translate * 9.8);
 				z-index: 7;
-				&::before {
+
+				a::before {
 					background: rgba(255, 255, 255, 0.3);
 					backdrop-filter: blur(1px);
 				}
@@ -113,7 +120,8 @@
 			&4 {
 				transform: scale($scale4) translateX($translate * 25);
 				z-index: 6;
-				&::before {
+
+				a::before {
 					background: rgba(255, 255, 255, 0.45);
 					backdrop-filter: blur(1.5px);
 				}
@@ -122,7 +130,8 @@
 			&5 {
 				transform: scale($scale5) translateX($translate * 53);
 				z-index: 5;
-				&::before {
+
+				a::before {
 					background: rgba(255, 255, 255, 0.6);
 					backdrop-filter: blur(2px);
 				}
@@ -166,7 +175,7 @@
 	&__btn-next {
 		top: unset;
 		right: unset;
-		bottom: -6.1rem;
+		bottom: -2.1rem;
 		left: 19rem;
 
 		&::after {
@@ -176,7 +185,7 @@
 
 	&__btn-prev {
 		top: unset;
-		bottom: -8.3rem;
+		bottom: -4.3rem;
 		left: 12rem;
 
 		&::after {
@@ -185,7 +194,7 @@
 	}
 
 	&__btn-slash {
-		bottom: -3.8rem;
+		bottom: 0;
 		left: 15.3rem;
 		z-index: 2;
 
@@ -195,7 +204,7 @@
 	}
 
 	&__swiper-pagination {
-		bottom: -5.8rem;
+		bottom: -1.8rem;
 		left: -0.2rem;
 
 		& .current {
@@ -204,7 +213,9 @@
 	}
 
 	&__swiper-bullet {
-		bottom: -8.1rem;
+		width: auto !important;
+		left: auto !important;
+		bottom: -4.1rem !important;
 		right: 0;
 
 		& .swiper-pagination-bullet {

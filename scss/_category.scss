@@ -135,8 +135,10 @@
       left: -0.2rem;
    }
    &__swiper-bullet {
+      width: auto !important;
+      left: auto !important;
       right: 0;
-      bottom: -11.2rem;
+      bottom: -11.2rem !important;
    }
 
    &__cc {
@@ -266,8 +268,7 @@
          left: 0;
       }
       &__swiper-bullet {
-         right: 0;
-         bottom: -5.2rem;
+         bottom: -5.2rem !important;
       }
    
       &__cc {

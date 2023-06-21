@@ -50,10 +50,10 @@ $(document).ready(function () {
 
         on: {
             beforeTransitionStart: function (slider) {
-                slider.$wrapperEl.css('transition-timing-function', 'linear');
+                $(slider.wrapperEl).css('transition-timing-function', 'linear');
             },
             touchStart: function (slider) {
-                slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.165, 0.840, 0.440, 1.000)');
+                $(slider.wrapperEl).css('transition-timing-function', 'cubic-bezier(0.165, 0.840, 0.440, 1.000)');
             },
         }
     });
