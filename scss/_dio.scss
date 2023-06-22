@@ -1,189 +1,227 @@
 .dio {
-   margin-bottom: 13.7rem;
-   position: relative;
-   & h1 {
-      margin-bottom: 3.5rem;
-   }
-   &__title {
-      margin-bottom: 3.5rem;
-   }
-   &__inner {
-      display: flex;
-      justify-content: space-between;
-   }
-   &__main {
-      width: 65.2%;
-      height: fit-content;
-      &>h3 {
-         font-weight: 700;
-         font-size: 2.2rem;
-         line-height: 145%;
-         margin-bottom: 1.5rem;
-      }
-      &>p {
-         line-height: 150%;
-         margin-bottom: 2.83rem;
-         &>span {
-            display: block;
-         }
-         &>a {
-            color: $green;
-         }
-      }
-   }
-   &__add {
-      width: 28.3%;
-      height: fit-content;
-      &-info {
-         background: #7DCD61;
-         border-radius: 3rem;
-         padding: 5.4rem 3.4rem 3rem 3.4rem;
-         margin-bottom: 3.5rem;
-         &-top {
-            background: rgba(255, 255, 255, 0.35);
-            box-shadow: 2.3rem 4rem 2rem rgba(20, 37, 14, 0.01), 13px 23px 16px rgba(20, 37, 14, 0.02), 6px 10px 12px rgba(20, 37, 14, 0.03), 1px 3px 6px rgba(20, 37, 14, 0.03), 0px 0px 0px rgba(20, 37, 14, 0.03);
-            border-radius: 4.1rem;
-            transform: rotate(-1deg);
-            padding: 3rem;
-            margin-bottom: 1rem;
-         }
-         &-title {
-            font-weight: 700;
-            font-size: 2.2rem;
-            line-height: 145%;
-            transform: rotate(-1deg);
-            color: $white;
-         }
-         &-text {
-            line-height: 130%;
-            color: $white;
-            transform: rotate(-1deg);
-         }
-         &-img {
-            margin: 0 auto;
-            width: 27.7rem;
-            height: 31rem;
-            & img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
-         }
-      }
-      &-calculator {
-         background: #E2E9E9;
-         border-radius: 3rem;
-         min-height: 22.1rem;
-         position: relative;
-         display: block;
-         padding: 6.2rem 13.5rem 6rem 3rem;
-         &-title {
-            font-weight: 700;
-            font-size: 2.2rem;
-            line-height: 145%;
-            width: 70%;
-            margin-bottom: 0.5rem;
-         }
-         &-text {
-            line-height: 150%;
-            color: $grey;
-         }
-         &-img {
-            position: absolute;
-            right: 4rem;
-            bottom: 0rem;
-            width: 13.3rem;
-            height: 16rem;
-            & img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-            }
+	margin-bottom: 13.7rem;
+	position: relative;
 
-         }
-      }
-   }
+	& h1 {
+		margin-bottom: 3.5rem;
+	}
+
+	&__title {
+		margin-bottom: 3.5rem;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__main {
+		width: 65.2%;
+		height: fit-content;
+
+		&>h3 {
+			font-weight: 700;
+			font-size: 2.2rem;
+			line-height: 145%;
+			margin-bottom: 1.5rem;
+		}
+
+		&>p {
+			line-height: 150%;
+			margin-bottom: 2.83rem;
+
+			&>span {
+				display: block;
+			}
+
+			&>a {
+				color: $green;
+			}
+		}
+	}
+
+	&__add {
+		width: 28.3%;
+		height: fit-content;
+
+		&-info {
+			background: #7DCD61;
+			border-radius: 3rem;
+			padding: 5.4rem 3.4rem 3rem 3.4rem;
+			margin-bottom: 3.5rem;
+
+			&-top {
+				background: rgba(255, 255, 255, 0.35);
+				box-shadow: 2.3rem 4rem 2rem rgba(20, 37, 14, 0.01), 13px 23px 16px rgba(20, 37, 14, 0.02), 6px 10px 12px rgba(20, 37, 14, 0.03), 1px 3px 6px rgba(20, 37, 14, 0.03), 0px 0px 0px rgba(20, 37, 14, 0.03);
+				border-radius: 4.1rem;
+				transform: rotate(-1deg);
+				padding: 3rem;
+				margin-bottom: 1rem;
+			}
+
+			&-title {
+				font-weight: 700;
+				font-size: 2.2rem;
+				line-height: 145%;
+				transform: rotate(-1deg);
+				color: $white;
+			}
+
+			&-text {
+				line-height: 130%;
+				color: $white;
+				transform: rotate(-1deg);
+			}
+
+			&-img {
+				margin: 0 auto;
+				width: 27.7rem;
+				height: 31rem;
+
+				& img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+		}
+
+		&-calculator {
+			background: #E2E9E9;
+			border-radius: 3rem;
+			min-height: 22.1rem;
+			position: relative;
+			display: block;
+			padding: 6.2rem 13.5rem 6rem 3rem;
+
+			&-title {
+				font-weight: 700;
+				font-size: 2.2rem;
+				line-height: 145%;
+				width: 70%;
+				margin-bottom: 0.5rem;
+			}
+
+			&-text {
+				line-height: 150%;
+				color: $grey;
+			}
+
+			&-img {
+				position: absolute;
+				right: 4rem;
+				bottom: 0rem;
+				width: 13.3rem;
+				height: 16rem;
+
+				& img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+			}
+		}
+	}
 }
 
 @media (max-width: 48em) {
-   .dio {
-      margin-bottom: 25.5vw;
-      & h1 {
-         margin-bottom: 7.2vw;
-      }
-      &__title {
-         margin-bottom: 7.2vw;
-      }
-      &__inner {
-         display: block;
-      }
-      &__main {
-         width: 100%;
-         margin-bottom: 12.32vw;
-         &>h3 {
-            font-size: 5.65vw;
-            line-height: 145%;
-            margin-bottom: 6.16vw;
-            width: 90%;
-         }
-         &>p {
-            line-height: 150%;
-            font-size: 4.62vw;
-            margin-bottom: 7.05vw;
-            &>span {
-               display: block;
-            }
-            &>a {
-               color: $green;
-            }
-         }
-      }
-      &__add {
-         width: 100%;
-         &-info {
-            border-radius: 7.7vw;
-            padding: 13.86vw 4.88vw 9vw 4.88vw;
-            margin-bottom: 12.32vw;
-            &-top {
-               border-radius: 8vw;
-               box-shadow: 4.6rem 8rem 4rem rgba(20, 37, 14, 0.01), 13px 23px 16px rgba(20, 37, 14, 0.02), 6px 10px 12px rgba(20, 37, 14, 0.03), 1px 3px 6px rgba(20, 37, 14, 0.03), 0px 0px 0px rgba(20, 37, 14, 0.03);
-               padding: 5.9vw 5.1vw;
-               margin-bottom: 4.4vw;
-            }
-            &-title {
-               font-size: 5.1vw;
-               line-height: 145%;
-            }
-            &-text {
-               line-height: 130%;
-               font-size: 4.62vw;
-            }
-            &-img {
-               width: 62.9vw;
-               height: 71vw;
-            }
-         }
-         &-calculator {
-            border-radius: 7.7vw;
-            min-height: 56.7vw;
-            padding: 8.2vw 38vw 6vw 5.13vw;
-            &-title {
-               font-size: 5.13vw;
-               line-height: 145%;
-               width: 100%;
-               margin-bottom: 4.35vw;
-            }
-            &-text {
-               line-height: 150%;
-               font-size: 4.62vw;
-            }
-            &-img {
-               right: 5vw;
-               bottom: 0vw;
-               width: 31vw;
-               height: 37vw;
-            }
-         }
-      }
-   }
+	.dio {
+		margin-bottom: 25.5vw;
+
+		& h1 {
+			margin-bottom: 7.2vw;
+		}
+
+		&__title {
+			margin-bottom: 7.2vw;
+		}
+
+		&__inner {
+			display: block;
+		}
+
+		&__main {
+			width: 100%;
+			margin-bottom: 12.32vw;
+
+			&>h3 {
+				font-size: 5.65vw;
+				line-height: 145%;
+				margin-bottom: 6.16vw;
+				width: 90%;
+			}
+
+			&>p {
+				line-height: 150%;
+				font-size: 4.62vw;
+				margin-bottom: 7.05vw;
+
+				&>span {
+					display: block;
+				}
+
+				&>a {
+					color: $green;
+				}
+			}
+		}
+
+		&__add {
+			width: 100%;
+
+			&-info {
+				border-radius: 7.7vw;
+				padding: 13.86vw 4.88vw 9vw 4.88vw;
+				margin-bottom: 12.32vw;
+
+				&-top {
+					border-radius: 8vw;
+					box-shadow: 4.6rem 8rem 4rem rgba(20, 37, 14, 0.01), 13px 23px 16px rgba(20, 37, 14, 0.02), 6px 10px 12px rgba(20, 37, 14, 0.03), 1px 3px 6px rgba(20, 37, 14, 0.03), 0px 0px 0px rgba(20, 37, 14, 0.03);
+					padding: 5.9vw 5.1vw;
+					margin-bottom: 4.4vw;
+				}
+
+				&-title {
+					font-size: 5.1vw;
+					line-height: 145%;
+				}
+
+				&-text {
+					line-height: 130%;
+					font-size: 4.62vw;
+				}
+
+				&-img {
+					width: 62.9vw;
+					height: 71vw;
+				}
+			}
+
+			&-calculator {
+				border-radius: 7.7vw;
+				min-height: 56.7vw;
+				padding: 8.2vw 38vw 6vw 5.13vw;
+
+				&-title {
+					font-size: 5.13vw;
+					line-height: 145%;
+					width: 100%;
+					margin-bottom: 4.35vw;
+				}
+
+				&-text {
+					line-height: 150%;
+					font-size: 4.62vw;
+				}
+
+				&-img {
+					right: 5vw;
+					bottom: 0vw;
+					width: 31vw;
+					height: 37vw;
+				}
+			}
+		}
+	}
 }
