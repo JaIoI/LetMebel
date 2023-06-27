@@ -141,7 +141,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 
-	$(".header__add-close").click(function (event) {
+	$(".header__add-close").click(function (evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
 		$(".header__category2, .header__add-wrap2").removeClass("active").scrollTop(0);
 		$('html').removeClass('no__scroll');
 

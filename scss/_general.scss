@@ -196,6 +196,8 @@ h1 {
 }
 
 .no__scroll .bc span,
+.mob_menu_active .bc span,
+.mob_menu_active .bc a,
 .no__scroll .bc a {
 	opacity: 0;
 	pointer-events: none;
